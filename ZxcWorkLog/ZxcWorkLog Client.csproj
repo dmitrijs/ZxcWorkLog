@@ -87,6 +87,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppContext.cs" />
     <Compile Include="Common.cs" />
     <Compile Include="FormToDo.cs">
       <SubType>Form</SubType>
@@ -111,6 +112,7 @@
     <Compile Include="Jira\JiraProxy.cs" />
     <Compile Include="Util\Autostarter.cs" />
     <Compile Include="Util\ListViewGroupSorter.cs" />
+    <Compile Include="Util\Updater.cs" />
     <Compile Include="WorkItemAdd.cs">
       <SubType>Form</SubType>
     </Compile>

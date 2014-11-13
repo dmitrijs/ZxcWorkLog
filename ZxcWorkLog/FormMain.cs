@@ -726,5 +726,10 @@ namespace ZxcWorkLog
         {
             checkWorkRatio();
         }
+
+        public void ShowNotifyMessage(string title, string msg)
+        {
+            notifyIcon1.ShowBalloonTip(1000, title, msg, ToolTipIcon.Info);
+        }
     }
 }
