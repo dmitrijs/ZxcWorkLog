@@ -87,7 +87,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppContext.cs" />
     <Compile Include="Common.cs" />
     <Compile Include="FormToDo.cs">
       <SubType>Form</SubType>

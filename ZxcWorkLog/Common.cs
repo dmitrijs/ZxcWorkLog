@@ -116,11 +116,16 @@ namespace ZxcWorkLog
 
         private static void loadWorkItems()
         {
-            if (Common.logpath == "" || !File.Exists(Common.logpath))
+            if (string.IsNullOrEmpty(Common.logpath))
             {
                 Console.WriteLine(@"LogPath is invalid.");
-                Common.wis = new WorkItemCollection();
                 return;
+            }
+
+            if (!File.Exists(Common.logpath))
+            {
+                Common.wis = new WorkItemCollection();
+                saveWorkItems();
             }
 
             WorkItemCollection wis = new WorkItemCollection();
