@@ -38,9 +38,9 @@ namespace ZxcWorkLog.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool IsFirstRun {
+        public string IsFirstRun {
             get {
-                return ((bool)(this["IsFirstRun"]));
+                return ((string)(this["IsFirstRun"]));
             }
             set {
                 this["IsFirstRun"] = value;
