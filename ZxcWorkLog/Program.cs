@@ -20,7 +20,7 @@ namespace ZxcWorkLog
             int processes = 0;
             foreach (Process p in Process.GetProcesses())
             {
-                if (p.ProcessName.Replace(".vshost", "").Equals(Process.GetCurrentProcess().ProcessName.Replace(".vshost", "")))
+                if (p.ProcessName.Equals(Process.GetCurrentProcess().ProcessName.Replace(".vshost", "")))
                 {
                     processes++;
                 }

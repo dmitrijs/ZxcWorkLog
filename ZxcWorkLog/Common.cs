@@ -205,8 +205,9 @@ namespace ZxcWorkLog
                 }
                 textReader.Close();
             }
-            else 
+            else
             {
+                Common.logpath = @".\worklog.xml";
                 Console.WriteLine("settings.xml not found");
             }
         }
