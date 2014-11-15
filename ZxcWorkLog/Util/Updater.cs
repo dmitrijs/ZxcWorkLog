@@ -114,7 +114,8 @@ namespace ZxcWorkLog.Util
             if (MessageBox.Show(message, @"Update found", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 ApplicationDeployment.CurrentDeployment.Update();
-                Program.FormMain.Close();
+                Program.FormMain.RemoveNotifyIcon();
+                Application.Restart();
             }
         }
 

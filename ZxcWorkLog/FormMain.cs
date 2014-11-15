@@ -777,5 +777,10 @@ namespace ZxcWorkLog
                 MessageBox.Show("No updates were found.");
             }
         }
+
+        public void RemoveNotifyIcon()
+        {
+            notifyIcon1.Dispose();
+        }
     }
 }
