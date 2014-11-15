@@ -33,27 +33,41 @@ namespace ZxcWorkLog
         NotifyIconBaloonAction _baloonAction = NotifyIconBaloonAction.None;
 
         private readonly Updater _updater = Updater.GetInstance();
-        
+
         public FormMain()
         {
             InitializeComponent();
 
-            hook.KeyPressed += hook_KeyPressed;
-            hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift,
-                                Keys.Insert);
-            hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift,
-                                Keys.Home);
-            hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift,
-                                Keys.End);
-            hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift,
-                                Keys.Delete);
-            hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift,
-                                Keys.PageUp);
-            hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift,
-                                Keys.PageDown);
-
             timerCheckForUpdates.Interval = (int)new TimeSpan(hours: 0, minutes: 30, seconds: 0).TotalMilliseconds;
             timerCheckForUpdates.Enabled = true;
+
+            var currentVersion = Updater.GetInstance().GetCurrentVersion();
+            if (currentVersion != null)
+            {
+                notifyIcon1.Text += string.Format(" v{0}", currentVersion);
+            }
+        }
+
+        public bool Setup()
+        {
+            var success = true;
+            hook.KeyPressed += hook_KeyPressed;
+            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.Insert);
+            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.Home);
+            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.End);
+            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.Delete);
+            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.PageUp);
+            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.PageDown);
+
+            if (!success)
+            {
+                MessageBox.Show(
+                    "Could not register all required shortcuts.\nPlease check that application is not already running.\n\nApplication will now exit...");
+                canClose = true;
+                Application.Exit();
+            }
+
+            return success;
         }
 
         public Icon getActiveIcon()
@@ -390,17 +404,14 @@ namespace ZxcWorkLog
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (canClose)
+            if (e.CloseReason == CloseReason.UserClosing && !canClose)
             {
-                endProgess();
+                e.Cancel = true;
+                WindowState = FormWindowState.Minimized;
             }
             else
             {
-                if (e.CloseReason == CloseReason.UserClosing)
-                {
-                    e.Cancel = true;
-                    WindowState = FormWindowState.Minimized;
-                }
+                endProgess();
             }
         }
 
@@ -779,11 +790,6 @@ namespace ZxcWorkLog
             {
                 MessageBox.Show("No updates were found.");
             }
-        }
-
-        public void RemoveNotifyIcon()
-        {
-            notifyIcon1.Dispose();
         }
     }
 }

@@ -17,24 +17,12 @@ namespace ZxcWorkLog
         [STAThread]
         static void Main()
         {
-            int processes = 0;
-            foreach (Process p in Process.GetProcesses())
-            {
-                if (p.ProcessName.Equals(Process.GetCurrentProcess().ProcessName.Replace(".vshost", "")))
-                {
-                    processes++;
-                }
-            }
-            if (processes > 1)
-            {
-                MessageBox.Show("Program is already running!");
-            }
-            else
-            {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-                _main = new FormMain();
+            _main = new FormMain();
+            if (_main.Setup())
+            {
                 Application.Run(_main);
             }
         }
