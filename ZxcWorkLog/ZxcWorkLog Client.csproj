@@ -29,7 +29,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -61,10 +61,10 @@
     <StartupObject>ZxcWorkLog.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>EFBE170760B184A0ACC652D5DFFBB961624D290A</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>21770AD2CD8BD61D1AD3CFF307177DE4380F4E2D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>ZxcWorkLog Client_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>certificate\ZxcWorkLog.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -76,7 +76,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>ZxcWorkLog Client_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>certificate\ZxcWorkLog.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -161,7 +161,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ZxcWorkLog Client_TemporaryKey.pfx" />
+    <None Include="certificate\ZxcWorkLog.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
