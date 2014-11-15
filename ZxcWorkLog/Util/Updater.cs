@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Deployment.Application;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using ZxcWorkLog.Properties;
 
@@ -116,8 +114,7 @@ namespace ZxcWorkLog.Util
             if (MessageBox.Show(message, @"Update found", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 ApplicationDeployment.CurrentDeployment.Update();
-                // TODO: refactor to appcontext: AppContext.Instance().Restart();
-                Application.Restart();
+                Program.FormMain.Close();
             }
         }
 
@@ -156,9 +153,7 @@ namespace ZxcWorkLog.Util
 
         private void ShowChangeLog(Version currentVersion, Version previousVersion)
         {
-            var versionToChanges = new Dictionary<Version, List<string>>
-            {
-            };
+            var versionToChanges = new Dictionary<Version, List<string>>();
 
             var changeLog = "";
             foreach (var versionToChange in versionToChanges)
@@ -172,7 +167,7 @@ namespace ZxcWorkLog.Util
 
             if (changeLog.Length == 0)
             {
-                // TODO: show notify message: FormMain.ShowNotifyMessage(@"Success", @"You are now using the latest version of ZxcWorkLog!");
+                Program.FormMain.ShowNotifyMessage(@"Success", @"You are now using the latest version of ZxcWorkLog!");
             }
             else
             {
