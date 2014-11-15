@@ -15,6 +15,12 @@ namespace ZxcWorkLog.Util
         {
         }
 
+        protected void RestartApplication()
+        {
+            Program.FormMain.Close();
+            Application.Restart();
+        }
+
         public static Updater GetInstance()
         {
             if (_instance == null)
@@ -38,7 +44,7 @@ namespace ZxcWorkLog.Util
     {
         public override bool IsAnyUpdateAvailable()
         {
-            return false;
+            return true;
         }
 
         public override bool IsImportantUpdateAvailable()
@@ -48,6 +54,7 @@ namespace ZxcWorkLog.Util
 
         public override void ShowApplicationUpdatePrompt()
         {
+            RestartApplication();
         }
 
         public override void ShowUpdateChangeLog()
@@ -114,8 +121,7 @@ namespace ZxcWorkLog.Util
             if (MessageBox.Show(message, @"Update found", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 ApplicationDeployment.CurrentDeployment.Update();
-                Program.FormMain.RemoveNotifyIcon();
-                Application.Restart();
+                RestartApplication();
             }
         }
 

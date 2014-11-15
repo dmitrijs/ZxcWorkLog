@@ -396,8 +396,11 @@ namespace ZxcWorkLog
             }
             else
             {
-                e.Cancel = true;
-                WindowState = FormWindowState.Minimized;
+                if (e.CloseReason == CloseReason.UserClosing)
+                {
+                    e.Cancel = true;
+                    WindowState = FormWindowState.Minimized;
+                }
             }
         }
 
