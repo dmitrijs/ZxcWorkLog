@@ -25,6 +25,15 @@ namespace ZxcWorkLog
 
         private string originalTitle;
 
+        private enum NotifyIconBaloonAction
+        {
+            None,
+            CheckForUpdates
+        }
+        NotifyIconBaloonAction _baloonAction = NotifyIconBaloonAction.None;
+
+        private readonly Updater _updater = Updater.GetInstance();
+        
         public FormMain()
         {
             InitializeComponent();
@@ -42,6 +51,9 @@ namespace ZxcWorkLog
                                 Keys.PageUp);
             hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift,
                                 Keys.PageDown);
+
+            timerCheckForUpdates.Interval = (int)new TimeSpan(hours: 0, minutes: 30, seconds: 0).TotalMilliseconds;
+            timerCheckForUpdates.Enabled = true;
         }
 
         public Icon getActiveIcon()
@@ -725,6 +737,45 @@ namespace ZxcWorkLog
         private void timerWorkRatio_Tick(object sender, EventArgs e)
         {
             checkWorkRatio();
+        }
+
+        public void ShowNotifyMessage(string title, string msg)
+        {
+            notifyIcon1.ShowBalloonTip(1000, title, msg, ToolTipIcon.Info);
+        }
+
+        private void timerCheckForUpdates_Tick(object sender, EventArgs e)
+        {
+            if (_updater.IsImportantUpdateAvailable())
+            {
+                _baloonAction = NotifyIconBaloonAction.CheckForUpdates;
+                notifyIcon1.ShowBalloonTip(10000, "Update is available", "A new version of ZxcScreenShot is available!", ToolTipIcon.Info);
+            }
+        }
+
+        private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+        {
+            switch (_baloonAction)
+            {
+                case NotifyIconBaloonAction.CheckForUpdates:
+                    _updater.ShowApplicationUpdatePrompt();
+
+                    timerCheckForUpdates.Enabled = false;
+                    break;
+            }
+            _baloonAction = NotifyIconBaloonAction.None;
+        }
+
+        private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_updater.IsAnyUpdateAvailable())
+            {
+                _updater.ShowApplicationUpdatePrompt();
+            }
+            else
+            {
+                MessageBox.Show("No updates were found.");
+            }
         }
     }
 }
