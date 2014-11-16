@@ -469,6 +469,7 @@ namespace ZxcWorkLog
 
         public void showGhost(int milis = 2000)
         {
+            TopMost = true;
             timerGhost.Stop();
             Opacity = 1;
             Show();
@@ -480,6 +481,7 @@ namespace ZxcWorkLog
 
         private void timerGhost_Tick(object sender, EventArgs e)
         {
+            if (TopMost) TopMost = false;
             if (Opacity <= 0)
             {
                 timerGhost.Stop();

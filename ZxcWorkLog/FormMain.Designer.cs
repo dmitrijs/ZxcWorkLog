@@ -33,6 +33,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerWorkRatio = new System.Windows.Forms.Timer(this.components);
             this.timerCheckForUpdates = new System.Windows.Forms.Timer(this.components);
-            this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStripList.SuspendLayout();
             this.SuspendLayout();
@@ -78,42 +78,51 @@
             this.checkForUpdatesToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(172, 98);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(200, 82);
             // 
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
             this.showToolStripMenuItem.Text = "Show";
             this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(100, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 6);
+            // 
+            // checkForUpdatesToolStripMenuItem
+            // 
+            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
+            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
+            this.checkForUpdatesToolStripMenuItem.Text = "Check for Updates";
+            this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 26);
+            this.label1.Size = new System.Drawing.Size(202, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Effectiveness: __%\r\nEnd of work: ______________\r\n";
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(385, 12);
+            this.button1.Location = new System.Drawing.Point(513, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(59, 23);
+            this.button1.Size = new System.Drawing.Size(79, 28);
             this.button1.TabIndex = 1;
             this.button1.Text = "Settings";
             this.button1.UseVisualStyleBackColor = true;
@@ -133,9 +142,10 @@
             this.listView1.FullRowSelect = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 41);
+            this.listView1.Location = new System.Drawing.Point(16, 50);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(432, 329);
+            this.listView1.Size = new System.Drawing.Size(575, 404);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -172,7 +182,7 @@
             this.markWorkLoggedToolStripMenuItem,
             this.add5MinutesToolStripMenuItem});
             this.contextMenuStripList.Name = "contextMenuStripList";
-            this.contextMenuStripList.Size = new System.Drawing.Size(171, 76);
+            this.contextMenuStripList.Size = new System.Drawing.Size(200, 82);
             this.contextMenuStripList.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripList_Opening);
             // 
             // moveToGroupToolStripMenuItem
@@ -180,27 +190,27 @@
             this.moveToGroupToolStripMenuItem.Enabled = false;
             this.moveToGroupToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.moveToGroupToolStripMenuItem.Name = "moveToGroupToolStripMenuItem";
-            this.moveToGroupToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.moveToGroupToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
             this.moveToGroupToolStripMenuItem.Text = "Move to group:";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(167, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(196, 6);
             // 
             // markWorkLoggedToolStripMenuItem
             // 
             this.markWorkLoggedToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.markWorkLoggedNowToolStripMenuItem});
             this.markWorkLoggedToolStripMenuItem.Name = "markWorkLoggedToolStripMenuItem";
-            this.markWorkLoggedToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.markWorkLoggedToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
             this.markWorkLoggedToolStripMenuItem.Text = "Mark work logged";
             this.markWorkLoggedToolStripMenuItem.Click += new System.EventHandler(this.markWorkLoggedToolStripMenuItem_Click);
             // 
             // markWorkLoggedNowToolStripMenuItem
             // 
             this.markWorkLoggedNowToolStripMenuItem.Name = "markWorkLoggedNowToolStripMenuItem";
-            this.markWorkLoggedNowToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.markWorkLoggedNowToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
             this.markWorkLoggedNowToolStripMenuItem.Text = "Now";
             this.markWorkLoggedNowToolStripMenuItem.Click += new System.EventHandler(this.markWorkLoggedNowToolStripMenuItem_Click);
             // 
@@ -209,22 +219,23 @@
             this.add5MinutesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.add5MinutesNowToolStripMenuItem});
             this.add5MinutesToolStripMenuItem.Name = "add5MinutesToolStripMenuItem";
-            this.add5MinutesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.add5MinutesToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
             this.add5MinutesToolStripMenuItem.Text = "Add 5 minutes";
             // 
             // add5MinutesNowToolStripMenuItem
             // 
             this.add5MinutesNowToolStripMenuItem.Name = "add5MinutesNowToolStripMenuItem";
-            this.add5MinutesNowToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.add5MinutesNowToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
             this.add5MinutesNowToolStripMenuItem.Text = "Now";
             this.add5MinutesNowToolStripMenuItem.Click += new System.EventHandler(this.add5MinutesNowToolStripMenuItem_Click);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(301, 12);
+            this.button2.Location = new System.Drawing.Point(401, 15);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 23);
+            this.button2.Size = new System.Drawing.Size(104, 28);
             this.button2.TabIndex = 3;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
@@ -234,9 +245,10 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 373);
+            this.label2.Location = new System.Drawing.Point(16, 459);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 13);
+            this.label2.Size = new System.Drawing.Size(20, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "...";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -273,27 +285,20 @@
             // 
             this.timerCheckForUpdates.Tick += new System.EventHandler(this.timerCheckForUpdates_Tick);
             // 
-            // checkForUpdatesToolStripMenuItem
-            // 
-            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
-            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.checkForUpdatesToolStripMenuItem.Text = "Check for Updates";
-            this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
-            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 395);
+            this.ClientSize = new System.Drawing.Size(612, 486);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dev Work Log v1.00";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
