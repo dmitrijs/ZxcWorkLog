@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using ZxcWorkLog.Data;
 
 namespace ZxcWorkLog
 {
@@ -31,7 +32,7 @@ namespace ZxcWorkLog
             }
             _editedItem.PeriodTicks = Common.fromReadableTime(textBox2.Text).Ticks;
             _editedItem.WasWorkLogged = checkBox1.Checked;
-            Common.updateItem(_editedItem.ID, _editedItem);
+            Common.updateItem(_editedItem.Id, _editedItem);
 
             _formMain.LoadWorkItems();
             Close();

@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
+using ZxcWorkLog.Data;
 using ZxcWorkLog.Properties;
 using ZxcWorkLog.Util;
 
@@ -53,12 +54,12 @@ namespace ZxcWorkLog
         {
             var success = true;
             hook.KeyPressed += hook_KeyPressed;
-            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.Insert);
-            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.Home);
-            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.End);
-            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.Delete);
-            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.PageUp);
-            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift,
+            success &= hook.RegisterHotKey(Util.ModifierKeys.Control | Util.ModifierKeys.Shift, Keys.Insert);
+            success &= hook.RegisterHotKey(Util.ModifierKeys.Control | Util.ModifierKeys.Shift, Keys.Home);
+            success &= hook.RegisterHotKey(Util.ModifierKeys.Control | Util.ModifierKeys.Shift, Keys.End);
+            success &= hook.RegisterHotKey(Util.ModifierKeys.Control | Util.ModifierKeys.Shift, Keys.Delete);
+            success &= hook.RegisterHotKey(Util.ModifierKeys.Control | Util.ModifierKeys.Shift, Keys.PageUp);
+            success &= hook.RegisterHotKey(Util.ModifierKeys.Control | Util.ModifierKeys.Shift,
                 Keys.PageDown);
 
             if (!success)
@@ -84,8 +85,8 @@ namespace ZxcWorkLog
 
         private void hook_KeyPressed(object sender, KeyPressedEventArgs e)
         {
-            if ((e.Modifier & (ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift))
-                == (ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift))
+            if ((e.Modifier & (Util.ModifierKeys.Control | Util.ModifierKeys.Shift))
+                == (Util.ModifierKeys.Control | Util.ModifierKeys.Shift))
             {
                 if (e.Key == Keys.Insert)
                 {
@@ -245,7 +246,7 @@ namespace ZxcWorkLog
 
             var i = 0;
             var wis = Common.getWorkItems();
-            foreach (WorkItem wi in wis.getSortedList())
+            foreach (WorkItem wi in wis.GetSortedList())
             {
                 var group = GetGroupByName(wi.GroupName);
                 if (wi.GroupName != "" && group == null)
@@ -265,7 +266,7 @@ namespace ZxcWorkLog
                 {
                     wi.Font = new Font(DefaultFont, FontStyle.Bold);
                 }
-                if (itemInProgress != null && itemInProgress.ID == wi.ID)
+                if (itemInProgress != null && itemInProgress.Id == wi.Id)
                 {
                     wi.ForeColor = Color.Green;
                 }
@@ -327,7 +328,7 @@ namespace ZxcWorkLog
             itemInProgress = wi;
             timerStart = DateTime.Now;
             timer1.Start();
-            wi.startProgress();
+            wi.StartProgress();
             LoadWorkItems();
         }
 
@@ -341,7 +342,7 @@ namespace ZxcWorkLog
             var timeTotal = itemInProgress.PeriodTicks + (timeSpent > TimeSpan.FromMinutes(2).Ticks ? timeSpent : 0);
 
             timer1.Stop();
-            itemInProgress.stopProgress();
+            itemInProgress.StopProgress();
 
             if (timeSpent > TimeSpan.FromMinutes(2).Ticks)
             {
@@ -353,7 +354,7 @@ namespace ZxcWorkLog
                                         (extraTicksToSubtract > 0
                                             ? " (excl " + Common.toReadableTime(extraTicksToSubtract) + " idle)"
                                             : "") + " - ";
-                Common.updateItem(itemInProgress.ID, itemInProgress);
+                Common.updateItem(itemInProgress.Id, itemInProgress);
             }
 
             var tipText =

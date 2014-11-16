@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Xml;
+using ZxcWorkLog.Data;
 
 namespace ZxcWorkLog
 {
@@ -61,7 +62,7 @@ namespace ZxcWorkLog
                 textWriter.WriteStartElement("WorkItem");
 
                 textWriter.WriteStartAttribute("ID");
-                textWriter.WriteString(wi.ID.ToString());
+                textWriter.WriteString(wi.Id.ToString());
                 textWriter.WriteEndAttribute();
 
                 textWriter.WriteStartAttribute("Title");
@@ -121,7 +122,7 @@ namespace ZxcWorkLog
                 if (textReader.Name == "WorkItem")
                 {
                     WorkItem wi = new WorkItem();
-                    wi.ID = Int32.Parse(textReader.GetAttribute("ID"));
+                    wi.Id = Int32.Parse(textReader.GetAttribute("ID"));
                     wi.PeriodTicks = long.Parse(textReader.GetAttribute("PeriodTicks"));
                     wi.StartTime = DateTime.Parse(textReader.GetAttribute("StartTime"));
                     wi.Title = textReader.GetAttribute("Title");
@@ -137,8 +138,8 @@ namespace ZxcWorkLog
                     {
                         wi.GroupName = "Default";
                     }
-                    wi.ID = wis.nextFreeKey();
-                    wis.Add(wi.ID, wi);
+                    wi.Id = wis.NextFreeKey();
+                    wis.Add(wi.Id, wi);
                 }
             }
             textReader.Close();
@@ -202,13 +203,13 @@ namespace ZxcWorkLog
             long ticks = fromReadableTime(periodText).Ticks;
             var wi = new WorkItem
                      {
-                         ID = wis.nextFreeKey(),
+                         Id = wis.NextFreeKey(),
                          Title = (ticks > 0 ? "* " : "") + title,
                          StartTime = DateTime.Now,
                          PeriodTicks = ticks,
                          GroupName = groupName
                      };
-            wis.Add(wi.ID, wi);
+            wis.Add(wi.Id, wi);
             saveWorkItems();
             return wi;
         }

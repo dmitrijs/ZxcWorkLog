@@ -1,36 +1,33 @@
 ﻿using System.Collections.Generic;
 
-namespace ZxcWorkLog
+namespace ZxcWorkLog.Data
 {
     internal class WorkItemCollection : Dictionary<int, WorkItem>
     {
-        public int nextFreeKey()
+        public int NextFreeKey()
         {
-            int max = -1;
-            foreach (int key in Keys)
+            var max = -1;
+            foreach (var key in Keys)
             {
                 if (key > max) max = key;
             }
             return max + 1;
         }
 
-        public List<WorkItem> getSortedList()
+        public IEnumerable<WorkItem> GetSortedList()
         {
-            List<WorkItem> list = new List<WorkItem>(Values);
-            list.Sort(compareWorkItems);
+            var list = new List<WorkItem>(Values);
+            list.Sort(CompareWorkItems);
             return list;
         }
 
-        private int compareWorkItems(WorkItem wi1, WorkItem wi2)
+        private static int CompareWorkItems(WorkItem wi1, WorkItem wi2)
         {
             if (wi1.StartTime > wi2.StartTime)
             {
                 return -1;
             }
-            else
-            {
-                return 1;
-            }
+            return 1;
         }
     }
 }
