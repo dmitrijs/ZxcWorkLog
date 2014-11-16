@@ -11,7 +11,7 @@
 0.05  - low work effectiveness warning
 0.05a - check work ratio after any work is updated
 0.05b - working hours decreased to 80%; show work done also in hours
-1.00  - imported to svn
+1.0  - imported to git
 
 FUTURE:
-1.20 - replace listView with objectListView (http://www.codeproject.com/KB/list/objectlistview.aspx)
+1.* - replace listView with objectListView (http://www.codeproject.com/KB/list/objectlistview.aspx)
