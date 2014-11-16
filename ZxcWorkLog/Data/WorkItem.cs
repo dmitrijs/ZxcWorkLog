@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ZxcWorkLog
@@ -23,13 +20,17 @@ namespace ZxcWorkLog
                 return spanTicks;
             }
         }
-        
+
         public long PeriodTicks { get; set; }
 
         public string Title
         {
             get { return title; }
-            set { this.title = value; this.Text = value; }
+            set
+            {
+                title = value;
+                Text = value;
+            }
         }
 
         public DateTime StartTime { get; set; }
@@ -41,11 +42,12 @@ namespace ZxcWorkLog
 
         public void startProgress()
         {
-            this.inProgress = true;
+            inProgress = true;
         }
+
         public void stopProgress()
         {
-            this.inProgress = false;
+            inProgress = false;
         }
 
         public bool WasWorkLogged { get; set; }

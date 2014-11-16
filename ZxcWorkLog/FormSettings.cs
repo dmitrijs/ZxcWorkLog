@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using ZxcWorkLog.Util;
 
 namespace ZxcWorkLog
 {
@@ -16,23 +11,24 @@ namespace ZxcWorkLog
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            Common.settingsUpdate(textBox1.Text, textBoxJiraUser.Text, textBoxJiraPass.Text, textBoxJiraJQL.Text, inpScreenShotEnabled.Checked, Int32.Parse(inpScreenShotTimeout.Text), inpScreenShotDir.Text);
+            Common.settingsUpdate(textBox1.Text, textBoxJiraUser.Text, textBoxJiraPass.Text, textBoxJiraJQL.Text,
+                inpScreenShotEnabled.Checked, Int32.Parse(inpScreenShotTimeout.Text), inpScreenShotDir.Text);
             if (checkBoxAutostart.Checked)
             {
-                Util.AutoStarter.SetAutoStart();
+                AutoStarter.SetAutoStart();
             }
             else
             {
-                Util.AutoStarter.UnSetAutoStart();
+                AutoStarter.UnSetAutoStart();
             }
-            this.Close();
+            Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void FormSettings_Load(object sender, EventArgs e)
@@ -42,9 +38,9 @@ namespace ZxcWorkLog
             textBoxJiraPass.Text = Common.JiraPass;
             textBoxJiraJQL.Text = Common.JiraJQL;
             inpScreenShotEnabled.Checked = Common.ScreenShotsEnabled;
-            inpScreenShotTimeout.Text = Common.ScreenShotsTimeout.ToString();
+            inpScreenShotTimeout.Text = string.Format("{0}", Common.ScreenShotsTimeout);
             inpScreenShotDir.Text = Common.ScreenShotsDir;
-            checkBoxAutostart.Checked = Util.AutoStarter.IsAutoStartEnabled;
+            checkBoxAutostart.Checked = AutoStarter.IsAutoStartEnabled;
         }
     }
 }

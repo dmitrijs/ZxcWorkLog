@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ZxcWorkLog.Util
 {
     public class ListViewGroupSorter
     {
-        internal ListView _listview;
+        private readonly ListView _listview;
 
         public static bool operator ==(ListView listview, ListViewGroupSorter sorter)
         {
             return listview == sorter._listview;
         }
+
         public static bool operator !=(ListView listview, ListViewGroupSorter sorter)
         {
             return listview != sorter._listview;
@@ -23,12 +22,13 @@ namespace ZxcWorkLog.Util
         {
             return sorter._listview;
         }
+
         public static implicit operator ListViewGroupSorter(ListView listview)
         {
             return new ListViewGroupSorter(listview);
         }
 
-        internal ListViewGroupSorter(ListView listview)
+        private ListViewGroupSorter(ListView listview)
         {
             _listview = listview;
         }
@@ -38,7 +38,9 @@ namespace ZxcWorkLog.Util
             _listview.BeginUpdate();
             var lvgs = new List<ListViewGroup>();
             foreach (ListViewGroup lvg in _listview.Groups)
+            {
                 lvgs.Add(lvg);
+            }
             _listview.Groups.Clear();
             lvgs.Sort(new ListViewGroupHeaderSorter());
             _listview.Groups.AddRange(lvgs.ToArray());

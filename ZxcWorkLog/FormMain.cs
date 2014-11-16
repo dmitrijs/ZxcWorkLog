@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ZxcWorkLog.Properties;
 using ZxcWorkLog.Util;
@@ -12,7 +12,7 @@ namespace ZxcWorkLog
 {
     public partial class FormMain : Form
     {
-        private const double WORKING_HOURS = 32.0 / 5;
+        private const double WORKING_HOURS = 32.0/5;
 
         private readonly KeyboardHook hook = new KeyboardHook();
         private bool canClose;
@@ -30,7 +30,8 @@ namespace ZxcWorkLog
             None,
             CheckForUpdates
         }
-        NotifyIconBaloonAction _baloonAction = NotifyIconBaloonAction.None;
+
+        private NotifyIconBaloonAction _baloonAction = NotifyIconBaloonAction.None;
 
         private readonly Updater _updater = Updater.GetInstance();
 
@@ -38,7 +39,7 @@ namespace ZxcWorkLog
         {
             InitializeComponent();
 
-            timerCheckForUpdates.Interval = (int)new TimeSpan(hours: 0, minutes: 30, seconds: 0).TotalMilliseconds;
+            timerCheckForUpdates.Interval = (int) new TimeSpan(hours: 0, minutes: 30, seconds: 0).TotalMilliseconds;
             timerCheckForUpdates.Enabled = true;
 
             var currentVersion = Updater.GetInstance().GetCurrentVersion();
@@ -57,7 +58,8 @@ namespace ZxcWorkLog
             success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.End);
             success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.Delete);
             success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.PageUp);
-            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift, Keys.PageDown);
+            success &= hook.RegisterHotKey(ZxcWorkLog.ModifierKeys.Control | ZxcWorkLog.ModifierKeys.Shift,
+                Keys.PageDown);
 
             if (!success)
             {
@@ -89,13 +91,13 @@ namespace ZxcWorkLog
                 {
                     if (itemInProgress != null)
                     {
-                        long timeSpent = DateTime.Now.Ticks - timerStart.Ticks;
-                        long timeTotal = itemInProgress.PeriodTicks + timeSpent;
+                        var timeSpent = DateTime.Now.Ticks - timerStart.Ticks;
+                        var timeTotal = itemInProgress.PeriodTicks + timeSpent;
 
-                        string tipTitle = "Already In Progress";
-                        string tipText =
-                            string.Format("Work Item: {0}\n\nTime spent now: {1}\nTime spent total: {2}", itemInProgress.Title, Common.toReadableTime(timeSpent), Common.toReadableTime(timeTotal));
-                        notifyIcon1.ShowBalloonTip(1, tipTitle, tipText, ToolTipIcon.Info);
+                        var tipText =
+                            string.Format("Work Item: {0}\n\nTime spent now: {1}\nTime spent total: {2}",
+                                itemInProgress.Title, Common.toReadableTime(timeSpent), Common.toReadableTime(timeTotal));
+                        notifyIcon1.ShowBalloonTip(1, "Already In Progress", tipText, ToolTipIcon.Info);
                         return;
                     }
 
@@ -106,40 +108,41 @@ namespace ZxcWorkLog
                 {
                     if (itemInProgress != null)
                     {
-                        endProgess();
+                        EndProgess();
                         return;
                     }
                     if (listView1.Items.Count == 0) return;
-                    var wi = (WorkItem)listView1.Items[listItemId];
+                    var wi = (WorkItem) listView1.Items[listItemId];
                     if (wi.WasWorkLogged)
                     {
                         MessageBox.Show(@"This work log item was already logged.");
                         return;
                     }
-                    startProgess(wi);
-                    showGhost();
+                    StartProgess(wi);
+                    ShowGhost();
                 }
                 if (e.Key == Keys.Delete)
                 {
                     if (listView1.Items.Count > 0)
                     {
-                        var wi = (WorkItem)listView1.Items[listItemId];
-                        editItem(wi);
+                        var wi = (WorkItem) listView1.Items[listItemId];
+                        EditItem(wi);
                     }
                 }
                 if (e.Key == Keys.End)
                 {
-                    WorkItem wi = itemInProgress;
-                    endProgess();
-                    editItem(wi);
+                    var wi = itemInProgress;
+                    EndProgess();
+                    EditItem(wi);
                 }
                 if (e.Key == Keys.PageUp)
                 {
-                    string tipText;
                     if (itemInProgress != null)
                     {
-                        tipText =
-                            string.Format("Please stop current work before continuing.\nWork Item: {0}\n\nTime spent before: {1}", itemInProgress.Title, Common.toReadableTime(itemInProgress.PeriodTicks));
+                        var tipText =
+                            string.Format(
+                                "Please stop current work before continuing.\nWork Item: {0}\n\nTime spent before: {1}",
+                                itemInProgress.Title, Common.toReadableTime(itemInProgress.PeriodTicks));
                         notifyIcon1.ShowBalloonTip(1, "Work is in progress", tipText, ToolTipIcon.Error);
                         return;
                     }
@@ -157,26 +160,18 @@ namespace ZxcWorkLog
                         listItemId = prevGroup.Items[prevGroup.Items.Count - 1].Index;
                     }
 
-                    /*
-                    var wi = (WorkItem)listView1.Items[listItemId];
-                    
-                    string tipTitle = "Selected item:";
-                    tipText =
-                        string.Format("Work Item: {0}\n\nTime spent before: {1}", wi.Title, Common.toReadableTime(wi.PeriodTicks));
-
-                    notifyIcon1.ShowBalloonTip(3, tipTitle, tipText, ToolTipIcon.Info);
-                     */
-                    loadWorkItems();
-                    if (timerGhost.Enabled || WindowState != FormWindowState.Normal) showGhost();
+                    LoadWorkItems();
+                    if (timerGhost.Enabled || WindowState != FormWindowState.Normal) ShowGhost();
                     return;
                 }
                 if (e.Key == Keys.PageDown)
                 {
-                    string tipText;
                     if (itemInProgress != null)
                     {
-                        tipText =
-                            string.Format("Please stop current work before continuing.\nWork Item: {0}\n\nTime spent before: {1}", itemInProgress.Title, Common.toReadableTime(itemInProgress.PeriodTicks));
+                        var tipText =
+                            string.Format(
+                                "Please stop current work before continuing.\nWork Item: {0}\n\nTime spent before: {1}",
+                                itemInProgress.Title, Common.toReadableTime(itemInProgress.PeriodTicks));
                         notifyIcon1.ShowBalloonTip(1, "Work is in progress", tipText, ToolTipIcon.Error);
                         return;
                     }
@@ -187,31 +182,18 @@ namespace ZxcWorkLog
                         listItemId = prevItem.Group.Items[prevItem.Group.Items.IndexOf(prevItem) + 1].Index;
                     }
                     // down to next group
-                    if (prevItem.Group.Items.IndexOf(prevItem) == prevItem.Group.Items.Count - 1 && listView1.Groups.IndexOf(prevItem.Group) < listView1.Groups.Count - 1)
+                    if (prevItem.Group.Items.IndexOf(prevItem) == prevItem.Group.Items.Count - 1 &&
+                        listView1.Groups.IndexOf(prevItem.Group) < listView1.Groups.Count - 1)
                     {
                         var prevGoupIndex = listView1.Groups.IndexOf(prevItem.Group) + 1;
                         var prevGroup = listView1.Groups[prevGoupIndex];
                         listItemId = prevGroup.Items[0].Index;
                     }
 
-                    /*
-                    var wi = (WorkItem)listView1.Items[listItemId];
-                    
-                    string tipTitle = "Selected item:";
-                    tipText =
-                        string.Format("Work Item: {0}\n\nTime spent before: {1}", wi.Title, Common.toReadableTime(wi.PeriodTicks));
-
-                    notifyIcon1.ShowBalloonTip(3, tipTitle, tipText, ToolTipIcon.Info);
-                    */
-                    loadWorkItems();
-                    if (timerGhost.Enabled || WindowState != FormWindowState.Normal) showGhost();
+                    LoadWorkItems();
+                    if (timerGhost.Enabled || WindowState != FormWindowState.Normal) ShowGhost();
                     return;
                 }
-            }
-            // show the keys pressed in a label.
-            if ((e.Modifier & ZxcWorkLog.ModifierKeys.Control) == ZxcWorkLog.ModifierKeys.Control)
-            {
-                //MessageBox.Show("control");
             }
         }
 
@@ -222,7 +204,7 @@ namespace ZxcWorkLog
             //Hide();
             notifyIcon1.Icon = Icon = getInactiveIcon();
             Common.settingsLoad();
-            loadWorkItems();
+            LoadWorkItems();
 
             if (Common.ScreenShotsEnabled)
             {
@@ -231,7 +213,7 @@ namespace ZxcWorkLog
             }
 
             timerWorkRatio.Start();
-            checkWorkRatio();
+            CheckWorkRatio();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -242,10 +224,10 @@ namespace ZxcWorkLog
 
         private void button2_Click(object sender, EventArgs e)
         {
-            loadWorkItems();
+            LoadWorkItems();
         }
 
-        public ListViewGroup getGroupByName(string name)
+        private ListViewGroup GetGroupByName(string name)
         {
             foreach (ListViewGroup listViewGroup in getItemGroups())
             {
@@ -257,16 +239,15 @@ namespace ZxcWorkLog
             return null;
         }
 
-        public void loadWorkItems()
+        public void LoadWorkItems()
         {
             listView1.Items.Clear();
 
-            int i = 0;
-            WorkItemCollection wis = Common.getWorkItems();
-            ListViewItem.ListViewSubItem lvsi;
+            var i = 0;
+            var wis = Common.getWorkItems();
             foreach (WorkItem wi in wis.getSortedList())
             {
-                var group = getGroupByName(wi.GroupName);
+                var group = GetGroupByName(wi.GroupName);
                 if (wi.GroupName != "" && group == null)
                 {
                     group = listView1.Groups.Add(wi.GroupName, wi.GroupName);
@@ -289,11 +270,11 @@ namespace ZxcWorkLog
                     wi.ForeColor = Color.Green;
                 }
 
-                lvsi = new ListViewItem.ListViewSubItem
+                var lvsi = new ListViewItem.ListViewSubItem
                            {
                                Text =
                                    string.Format("{0}.{1} {2}", wi.StartTime.Day, wi.StartTime.Month,
-                                                 wi.StartTime.ToShortTimeString())
+                                       wi.StartTime.ToShortTimeString())
                            };
                 wi.SubItems.Add(lvsi);
 
@@ -302,62 +283,62 @@ namespace ZxcWorkLog
                 {
                     var numberOfLines = 0;
                     var lines = wi.Title.Split(new[] {'\n'});
-                    foreach (string line in lines)
+                    foreach (var line in lines)
                     {
                         if (line.Trim().Length != 0) numberOfLines++;
                     }
-                    firstLine = string.Format("{0} (+{1} lines)", wi.Title.Substring(0, wi.Title.IndexOf("\n")), numberOfLines - 1);
+                    firstLine = string.Format("{0} (+{1} lines)", wi.Title.Substring(0, wi.Title.IndexOf("\n")),
+                        numberOfLines - 1);
                 }
-                else 
+                else
                 {
                     firstLine = wi.Title;
                 }
                 wi.ToolTipText = wi.Title;
 
-                lvsi = new ListViewItem.ListViewSubItem { Text = firstLine };
+                lvsi = new ListViewItem.ListViewSubItem {Text = firstLine};
                 wi.SubItems.Add(lvsi);
 
                 lvsi = new ListViewItem.ListViewSubItem
-                           {
-                               Text = (wi.InProgress ? "> " : "") + Common.toReadableTime(wi.PeriodTicks)
-                           };
+                       {
+                           Text = (wi.InProgress ? "> " : "") + Common.toReadableTime(wi.PeriodTicks)
+                       };
                 wi.SubItems.Add(lvsi);
 
                 listView1.Items.Add(wi);
                 i++;
             }
             OriganizeGroups();
-            checkWorkRatio(true);
+            CheckWorkRatio(true);
         }
 
-        public void startProgess(WorkItem wi)
+        public void StartProgess(WorkItem wi)
         {
             if (itemInProgress != null) return;
 
-            string tipTitle = "Work Started";
-            string tipText =
+            var tipText =
                 "Work Item: " + wi.Title + "\n" +
                 "\n" +
                 "Time spent before: " + Common.toReadableTime(wi.PeriodTicks);
 
             notifyIcon1.Icon = Icon = getActiveIcon();
-            notifyIcon1.ShowBalloonTip(3, tipTitle, tipText, ToolTipIcon.Info);
+            notifyIcon1.ShowBalloonTip(3, "Work Started", tipText, ToolTipIcon.Info);
 
             itemInProgress = wi;
             timerStart = DateTime.Now;
             timer1.Start();
             wi.startProgress();
-            loadWorkItems();
+            LoadWorkItems();
         }
 
-        public void endProgess(long extraTicksToSubtract = 0)
+        private void EndProgess(long extraTicksToSubtract = 0)
         {
             if (itemInProgress == null) return;
 
             notifyIcon1.Icon = Icon = getInactiveIcon();
 
-            long timeSpent = DateTime.Now.Ticks - timerStart.Ticks - extraTicksToSubtract;
-            long timeTotal = itemInProgress.PeriodTicks + (timeSpent > TimeSpan.FromMinutes(2).Ticks ? timeSpent : 0);
+            var timeSpent = DateTime.Now.Ticks - timerStart.Ticks - extraTicksToSubtract;
+            var timeTotal = itemInProgress.PeriodTicks + (timeSpent > TimeSpan.FromMinutes(2).Ticks ? timeSpent : 0);
 
             timer1.Stop();
             itemInProgress.stopProgress();
@@ -368,17 +349,21 @@ namespace ZxcWorkLog
                 itemInProgress.Title += "\r\n" + "(" + timerStart.Day + "." + timerStart.Month + " " +
                                         timerStart.ToShortTimeString() + " -> " + DateTime.Now.ToShortTimeString() +
                                         ") " +
-                                        Common.toReadableTime(timeSpent) + (extraTicksToSubtract > 0 ? " (excl " + Common.toReadableTime(extraTicksToSubtract) + " idle)" : "") + " - ";
+                                        Common.toReadableTime(timeSpent) +
+                                        (extraTicksToSubtract > 0
+                                            ? " (excl " + Common.toReadableTime(extraTicksToSubtract) + " idle)"
+                                            : "") + " - ";
                 Common.updateItem(itemInProgress.ID, itemInProgress);
             }
 
-            string tipTitle = "Work Stopped";
-            string tipText =
-                string.Format("Work Item: {0}\n\nTime spent now: {1}{2}\nTime spent total: {3}", itemInProgress.Title, Common.toReadableTime(timeSpent), (timeSpent <= TimeSpan.FromMinutes(2).Ticks ? " (ignored)" : ""), Common.toReadableTime(timeTotal));
-            notifyIcon1.ShowBalloonTip(3, tipTitle, tipText, ToolTipIcon.Info);
+            var tipText =
+                string.Format("Work Item: {0}\n\nTime spent now: {1}{2}\nTime spent total: {3}", itemInProgress.Title,
+                    Common.toReadableTime(timeSpent), (timeSpent <= TimeSpan.FromMinutes(2).Ticks ? " (ignored)" : ""),
+                    Common.toReadableTime(timeTotal));
+            notifyIcon1.ShowBalloonTip(3, "Work Stopped", tipText, ToolTipIcon.Info);
 
             itemInProgress = null;
-            loadWorkItems();
+            LoadWorkItems();
         }
 
         private void FormMain_Resize(object sender, EventArgs e)
@@ -411,18 +396,18 @@ namespace ZxcWorkLog
             }
             else
             {
-                endProgess();
+                EndProgess();
             }
         }
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (listView1.SelectedItems.Count != 1) return;
-            var wi = (WorkItem)listView1.SelectedItems[0];
-            editItem(wi);
+            var wi = (WorkItem) listView1.SelectedItems[0];
+            EditItem(wi);
         }
 
-        private void editItem(WorkItem wi)
+        private void EditItem(WorkItem wi)
         {
             var wie = new WorkItemEdit(this, wi);
             wie.Show();
@@ -455,9 +440,9 @@ namespace ZxcWorkLog
             long ticks = 0;
             foreach (var item in listView1.Items)
             {
-                if (item is WorkItem && ((WorkItem)item).Selected)
+                if (item is WorkItem && ((WorkItem) item).Selected)
                 {
-                    ticks += ((WorkItem)item).PeriodTicks;
+                    ticks += ((WorkItem) item).PeriodTicks;
                 }
             }
             label2.Text = string.Format("Total time: {0}", Common.toReadableTime(ticks, false, false));
@@ -467,7 +452,7 @@ namespace ZxcWorkLog
         {
         }
 
-        public void showGhost(int milis = 2000)
+        private void ShowGhost()
         {
             TopMost = true;
             timerGhost.Stop();
@@ -475,7 +460,7 @@ namespace ZxcWorkLog
             Show();
             WindowState = FormWindowState.Normal;
 
-            timerGhost.Interval = milis;
+            timerGhost.Interval = 2000;
             timerGhost.Start();
         }
 
@@ -500,7 +485,8 @@ namespace ZxcWorkLog
             if (itemInProgress == null) return;
             if (!Directory.Exists(Common.ScreenShotsDir))
             {
-                MessageBox.Show(@"Directory where screenshots are saved doesn't exist!\nScreen shot saving will be disabled.");
+                MessageBox.Show(
+                    @"Directory where screenshots are saved doesn't exist!\nScreen shot saving will be disabled.");
                 timerScreenShots.Stop();
             }
 
@@ -510,7 +496,8 @@ namespace ZxcWorkLog
 
                 var identifier = itemInProgress.StartTime.ToString("yy-MM-dd H.mm.ss");
                 var timeNow = DateTime.Now.ToString("yy-MM-dd H.mm.ss");
-                var screenShotFileName = string.Format(@"{0}\Task {1} at {2}.jpg", Common.ScreenShotsDir, identifier, timeNow);
+                var screenShotFileName = string.Format(@"{0}\Task {1} at {2}.jpg", Common.ScreenShotsDir, identifier,
+                    timeNow);
 
                 var bounds = Screen.GetBounds(Point.Empty);
                 using (var bitmap = new Bitmap(bounds.Width, bounds.Height))
@@ -529,10 +516,12 @@ namespace ZxcWorkLog
             if (itemInProgress == null) return;
 
             var idleSeconds = IdleTime.GetUserIdleSeconds();
-            if (idleSeconds >= 5 * 60)
+            if (idleSeconds >= 5*60)
             {
-                endProgess(TimeSpan.FromSeconds(idleSeconds).Ticks);
-                MessageBox.Show(string.Format("You were idle for {0} seconds ({1} minutes), so timer was stopped automatically.", idleSeconds, (idleSeconds / 60)), Text);
+                EndProgess(TimeSpan.FromSeconds(idleSeconds).Ticks);
+                MessageBox.Show(
+                    string.Format("You were idle for {0} seconds ({1} minutes), so timer was stopped automatically.",
+                        idleSeconds, (idleSeconds/60)), Text);
             }
         }
 
@@ -541,10 +530,10 @@ namespace ZxcWorkLog
             return listView1.Groups;
         }
 
-        public List<ListViewItem> getOrderedItems()
+        public IEnumerable<ListViewItem> getOrderedItems()
         {
             var items = new List<ListViewItem>();
-            
+
             foreach (ListViewGroup itemGroup in getItemGroups())
             {
                 foreach (ListViewItem item in itemGroup.Items)
@@ -555,7 +544,7 @@ namespace ZxcWorkLog
             return items;
         }
 
-        private void contextMenuStripList_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        private void contextMenuStripList_Opening(object sender, CancelEventArgs e)
         {
             //var label = contextMenuStripList.Items[0];
             moveToGroupToolStripMenuItem.DropDownItems.Clear();
@@ -571,23 +560,23 @@ namespace ZxcWorkLog
             }
         }
 
-        void GroupChangeClick(object sender, EventArgs e)
+        private void GroupChangeClick(object sender, EventArgs e)
         {
             // find group
-            var group = getGroupByName(((ToolStripItem)sender).Text);
+            var group = GetGroupByName(((ToolStripItem) sender).Text);
             if (group == null) return;
 
             foreach (ListViewItem selectedItem in listView1.SelectedItems)
             {
-                ((WorkItem)selectedItem).GroupName = group.Name;
+                ((WorkItem) selectedItem).GroupName = group.Name;
                 // selectedItem.Group = group;
             }
             Common.saveWorkItems();
-            loadWorkItems();
+            LoadWorkItems();
             OriganizeGroups();
         }
 
-        public void OriganizeGroups()
+        private void OriganizeGroups()
         {
             var toBeRemoved = new List<ListViewGroup>();
             foreach (ListViewGroup listViewGroup in listView1.Groups)
@@ -603,156 +592,165 @@ namespace ZxcWorkLog
                     {
                         ticks += wi.PeriodTicks;
                     }
-                    listViewGroup.Header = string.Format("{0}   -   {1}", listViewGroup.Name, Common.toReadableTime(ticks, false));
+                    listViewGroup.Header = string.Format("{0}   -   {1}", listViewGroup.Name,
+                        Common.toReadableTime(ticks, false));
                 }
             }
             foreach (var listViewGroup in toBeRemoved)
             {
                 listView1.Groups.Remove(listViewGroup);
             }
-            ((ListViewGroupSorter)listView1).SortGroups();
+            ((ListViewGroupSorter) listView1).SortGroups();
         }
 
         private void markWorkLoggedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void listView1_MouseHover(object sender, EventArgs e)
         {
-            
         }
 
         private void markWorkLoggedNowToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem selectedItem in listView1.SelectedItems)
             {
-                ((WorkItem)selectedItem).WasWorkLogged = true;
+                ((WorkItem) selectedItem).WasWorkLogged = true;
             }
             Common.saveWorkItems();
-            loadWorkItems();
+            LoadWorkItems();
         }
 
         private void add5MinutesNowToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem selectedItem in listView1.SelectedItems)
             {
-                if (((WorkItem)selectedItem).WasWorkLogged) continue;
+                if (((WorkItem) selectedItem).WasWorkLogged) continue;
 
-                if (!((WorkItem)selectedItem).Title.EndsWith("\n"))
+                if (!((WorkItem) selectedItem).Title.EndsWith("\n"))
                 {
                     ((WorkItem) selectedItem).Title += "\r\n";
                 }
-                ((WorkItem)selectedItem).Title += string.Format("+5 minutes ({0})\r\n", DateTime.Now.ToString("yyyy.MM.dd H:mm:ss"));
-                ((WorkItem)selectedItem).PeriodTicks += TimeSpan.FromMinutes(5).Ticks;
+                ((WorkItem) selectedItem).Title += string.Format("+5 minutes ({0})\r\n",
+                    DateTime.Now.ToString("yyyy.MM.dd H:mm:ss"));
+                ((WorkItem) selectedItem).PeriodTicks += TimeSpan.FromMinutes(5).Ticks;
             }
             Common.saveWorkItems();
-            loadWorkItems();
+            LoadWorkItems();
         }
 
         private void listView1_MouseMove(object sender, MouseEventArgs e)
         {
             var item = listView1.GetItemAt(e.X, e.Y);
             if (item == hoveredItem) return;
-            
+
             hoveredItem = item;
             if (hoveredItem is WorkItem)
             {
-                toolTip1.SetToolTip(this.listView1, ((WorkItem)hoveredItem).Title);
+                toolTip1.SetToolTip(listView1, ((WorkItem) hoveredItem).Title);
             }
             else
             {
-                toolTip1.SetToolTip(this.listView1, "");
+                toolTip1.SetToolTip(listView1, "");
             }
         }
 
-        private void checkWorkRatio(bool quiet = false)
+        private void CheckWorkRatio(bool quiet = false)
         {
             var todayGroupName = DateTime.Now.Hour < 10
-                                 ? DateTime.Now.AddDays(-1).ToString("yyyy.MM.dd")
-                                 : DateTime.Now.ToString("yyyy.MM.dd");
-            var todayGroup = getGroupByName(todayGroupName);
-            if (todayGroup != null)
+                ? DateTime.Now.AddDays(-1).ToString("yyyy.MM.dd")
+                : DateTime.Now.ToString("yyyy.MM.dd");
+            var todayGroup = GetGroupByName(todayGroupName);
+            if (todayGroup == null)
             {
-                long workedTicks = 0;
-                foreach (var item in todayGroup.Items)
+                return;
+            }
+
+            long workedTicks = 0;
+            foreach (var item in todayGroup.Items)
+            {
+                if (item is WorkItem)
                 {
-                    if (item is WorkItem)
-                    {
-                        workedTicks += ((WorkItem) item).PeriodTicks;
-                    }
+                    workedTicks += ((WorkItem) item).PeriodTicks;
                 }
-                if (workedTicks <= 0) return;
+            }
+            if (workedTicks <= 0) return;
 
-                var workedHours = Common.toReadableTime(workedTicks);
+            var workedHours = Common.toReadableTime(workedTicks);
 
-                var workingDayStartTime = DateTime.Now.Date;
-                if (DateTime.Now.Hour < 10)
+            var workingDayStartTime = DateTime.Now.Date;
+            if (DateTime.Now.Hour < 10)
+            {
+                workingDayStartTime = DateTime.Now.AddDays(-1).Date;
+            }
+            workingDayStartTime = workingDayStartTime.AddHours(10);
+
+            var elapsedTicks = DateTime.Now.Ticks - workingDayStartTime.Ticks;
+            var ticksNeedToWork = TimeSpan.FromHours(WORKING_HOURS).Ticks;
+
+            var effectiveness = Math.Round((workedTicks*100.0)/elapsedTicks);
+            var percent = Math.Round((workedTicks*100.0)/ticksNeedToWork);
+
+            Console.WriteLine(@"Worked: {0}, Elapsed: {1}, % of work done: {2}, efectiveness: {3}%",
+                TimeSpan.FromTicks(workedTicks), TimeSpan.FromTicks(elapsedTicks), percent, effectiveness);
+
+            if (percent <= 0) return;
+
+            var x1 = (1.0*elapsedTicks)/percent;
+            var x2 = 100*x1;
+            var ticksTotalToWork = (long) x2;
+            Console.WriteLine(@"Work will be done at {0}", workingDayStartTime.AddTicks(ticksTotalToWork));
+
+            Text = string.Format(@"{0} - {1}% done, {2}% effective", originalTitle, percent, effectiveness);
+            notifyIcon1.Text = Text;
+
+            label1.Text = string.Format("Effectiveness: {0}%\r\nEnd of work: {1}", effectiveness,
+                workingDayStartTime.AddTicks(ticksTotalToWork).ToString("yyyy.MM.dd HH:mm:ss"));
+
+            if (quiet || itemInProgress != null) return;
+
+            if (percent >= 100)
+            {
+                return;
+            }
+
+            if (ticksTotalToWork > TimeSpan.FromHours(14).Ticks)
+            {
+                var tipText =
+                    string.Format("Work done: {0}% ({1})\nEffectiveness: {2}%\n\nEnd of work: {3} (> midnight)", percent,
+                        workedHours.Trim(), effectiveness,
+                        workingDayStartTime.AddTicks(ticksTotalToWork).ToString("yyyy.MM.dd HH:mm:ss"));
+                notifyIcon1.ShowBalloonTip(3, "WARNING!", tipText, ToolTipIcon.Error);
+            }
+            else
+            {
+                if (effectiveness < 60)
                 {
-                    workingDayStartTime = DateTime.Now.AddDays(-1).Date;
+                    var tipText =
+                        string.Format("Work done: {0}% ({1})\nEffectiveness: {2}% (< 60%)\n\nEnd of work: {3}", percent,
+                            workedHours.Trim(), effectiveness,
+                            workingDayStartTime.AddTicks(ticksTotalToWork).ToString("yyyy.MM.dd HH:mm:ss"));
+                    notifyIcon1.ShowBalloonTip(5, "WARNING!", tipText, ToolTipIcon.Error);
                 }
-                workingDayStartTime = workingDayStartTime.AddHours(10);
+            }
 
-                long elapsedTicks = DateTime.Now.Ticks - workingDayStartTime.Ticks;
-                var ticksNeedToWork = TimeSpan.FromHours(WORKING_HOURS).Ticks;
-
-                var effectiveness = Math.Round((workedTicks * 100.0) / elapsedTicks);
-                var percent = Math.Round((workedTicks * 100.0) / ticksNeedToWork);
-
-                Console.WriteLine(@"Worked: {0}, Elapsed: {1}, % of work done: {2}, efectiveness: {3}%", TimeSpan.FromTicks(workedTicks), TimeSpan.FromTicks(elapsedTicks), percent, effectiveness);
-
-                if (percent <= 0) return;
-
-                var x1 = (1.0 * elapsedTicks) / percent;
-                var x2 = 100*x1;
-                var ticksTotalToWork = (long) x2;
-                Console.WriteLine(@"Work will be done at {0}", workingDayStartTime.AddTicks(ticksTotalToWork));
-
-                Text = string.Format(@"{0} - {1}% done, {2}% effective", originalTitle, percent, effectiveness);
-                notifyIcon1.Text = Text;
-
-                label1.Text = string.Format("Effectiveness: {0}%\r\nEnd of work: {1}", effectiveness,
-                                      workingDayStartTime.AddTicks(ticksTotalToWork).ToString("yyyy.MM.dd HH:mm:ss"));
-
-                if (quiet || itemInProgress != null) return;
-
-                if (percent < 100)
-                {
-                    if (ticksTotalToWork > TimeSpan.FromHours(14).Ticks)
-                    {
-                        string tipText =
-                        string.Format("Work done: {0}% ({1})\nEffectiveness: {2}%\n\nEnd of work: {3} (> midnight)", percent, workedHours.Trim(), effectiveness, workingDayStartTime.AddTicks(ticksTotalToWork).ToString("yyyy.MM.dd HH:mm:ss"));
-                        notifyIcon1.ShowBalloonTip(3, "WARNING!", tipText, ToolTipIcon.Error);
-                    }
-                    else
-                    {
-                        if (effectiveness < 60)
-                        {
-                            string tipText =
-                        string.Format("Work done: {0}% ({1})\nEffectiveness: {2}% (< 60%)\n\nEnd of work: {3}", percent, workedHours.Trim(), effectiveness, workingDayStartTime.AddTicks(ticksTotalToWork).ToString("yyyy.MM.dd HH:mm:ss"));
-                            notifyIcon1.ShowBalloonTip(5, "WARNING!", tipText, ToolTipIcon.Error);
-                        }
-                    }
-
-                    if (effectiveness < 50)
-                    {
-                        timerWorkRatio.Interval = 3000;
-                    }
-                    else if (effectiveness < 60)
-                    {
-                        timerWorkRatio.Interval = 10000;
-                    }
-                    else
-                    {
-                        timerWorkRatio.Interval = 30000;
-                    }
-                }
+            if (effectiveness < 50)
+            {
+                timerWorkRatio.Interval = 3000;
+            }
+            else if (effectiveness < 60)
+            {
+                timerWorkRatio.Interval = 10000;
+            }
+            else
+            {
+                timerWorkRatio.Interval = 30000;
             }
         }
 
         private void timerWorkRatio_Tick(object sender, EventArgs e)
         {
-            checkWorkRatio();
+            CheckWorkRatio();
         }
 
         public void ShowNotifyMessage(string title, string msg)
@@ -765,7 +763,8 @@ namespace ZxcWorkLog
             if (_updater.IsImportantUpdateAvailable())
             {
                 _baloonAction = NotifyIconBaloonAction.CheckForUpdates;
-                notifyIcon1.ShowBalloonTip(10000, "Update is available", "A new version of ZxcScreenShot is available!", ToolTipIcon.Info);
+                notifyIcon1.ShowBalloonTip(10000, "Update is available", "A new version of ZxcScreenShot is available!",
+                    ToolTipIcon.Info);
             }
         }
 

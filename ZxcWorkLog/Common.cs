@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.IO;
-using System.Xml;
+using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
+using System.Xml;
 
 namespace ZxcWorkLog
 {
-    class Common
+    internal class Common
     {
         private static string logpath;
         private static string jiraUser;
@@ -23,53 +20,40 @@ namespace ZxcWorkLog
 
         public static string JiraUser
         {
-            get
-            {
-                return jiraUser;
-            }
+            get { return jiraUser; }
         }
+
         public static string JiraPass
         {
-            get
-            {
-                return jiraPass;
-            }
+            get { return jiraPass; }
         }
+
         public static string JiraJQL
         {
-            get
-            {
-                return jiraJQL;
-            }
+            get { return jiraJQL; }
         }
 
         public static string ScreenShotsDir
         {
-            get
-            {
-                return ssDir;
-            }
+            get { return ssDir; }
         }
+
         public static int ScreenShotsTimeout
         {
-            get
-            {
-                return ssTimeout;
-            }
+            get { return ssTimeout; }
         }
+
         public static bool ScreenShotsEnabled
         {
-            get
-            {
-                return ssEnabled;
-            }
+            get { return ssEnabled; }
         }
+
         public static void saveWorkItems()
         {
-            if (Common.wis == null) Common.loadWorkItems();
-            if (Common.logpath == "") return;
+            if (wis == null) loadWorkItems();
+            if (logpath == "") return;
 
-            XmlTextWriter textWriter = new XmlTextWriter(Common.logpath, null);
+            XmlTextWriter textWriter = new XmlTextWriter(logpath, null);
             textWriter.WriteStartDocument();
             textWriter.WriteStartElement("WorkItems");
             foreach (WorkItem wi in wis.Values)
@@ -110,19 +94,19 @@ namespace ZxcWorkLog
 
         public static WorkItemCollection getWorkItems()
         {
-            if (Common.wis == null) Common.loadWorkItems();
-            return Common.wis;
+            if (wis == null) loadWorkItems();
+            return wis;
         }
 
         private static void loadWorkItems()
         {
-            if (string.IsNullOrEmpty(Common.logpath))
+            if (string.IsNullOrEmpty(logpath))
             {
                 Console.WriteLine(@"LogPath is invalid.");
                 return;
             }
 
-            if (!File.Exists(Common.logpath))
+            if (!File.Exists(logpath))
             {
                 Common.wis = new WorkItemCollection();
                 saveWorkItems();
@@ -130,7 +114,7 @@ namespace ZxcWorkLog
 
             WorkItemCollection wis = new WorkItemCollection();
 
-            XmlTextReader textReader = new XmlTextReader(Common.logpath);
+            XmlTextReader textReader = new XmlTextReader(logpath);
             textReader.Read();
             while (textReader.Read())
             {
@@ -162,9 +146,9 @@ namespace ZxcWorkLog
             Common.wis = wis;
         }
 
-        public static string getLogPath() 
+        public static string getLogPath()
         {
-            return Common.logpath;
+            return logpath;
         }
 
         public static void settingsLoad()
@@ -180,25 +164,25 @@ namespace ZxcWorkLog
                         switch (textReader.GetAttribute("name"))
                         {
                             case "LogPath":
-                                Common.logpath = textReader.GetAttribute("value");
+                                logpath = textReader.GetAttribute("value");
                                 break;
                             case "JiraUser":
-                                Common.jiraUser = textReader.GetAttribute("value");
+                                jiraUser = textReader.GetAttribute("value");
                                 break;
                             case "JiraPass":
-                                Common.jiraPass = textReader.GetAttribute("value");
+                                jiraPass = textReader.GetAttribute("value");
                                 break;
                             case "JiraJQL":
-                                Common.jiraJQL = textReader.GetAttribute("value");
+                                jiraJQL = textReader.GetAttribute("value");
                                 break;
                             case "ScreenShotsEnabled":
-                                Common.ssEnabled = Boolean.Parse(textReader.GetAttribute("value"));
+                                ssEnabled = Boolean.Parse(textReader.GetAttribute("value"));
                                 break;
                             case "ScreenShotsDir":
-                                Common.ssDir = textReader.GetAttribute("value");
+                                ssDir = textReader.GetAttribute("value");
                                 break;
                             case "ScreenShotsTimeout":
-                                Common.ssTimeout = Int32.Parse(textReader.GetAttribute("value"));
+                                ssTimeout = Int32.Parse(textReader.GetAttribute("value"));
                                 break;
                         }
                     }
@@ -207,38 +191,39 @@ namespace ZxcWorkLog
             }
             else
             {
-                Common.logpath = @".\worklog.xml";
+                logpath = @".\worklog.xml";
                 Console.WriteLine("settings.xml not found");
             }
         }
 
         public static WorkItem addNewWorkItem(string title, string periodText, string groupName)
         {
-            if (Common.wis == null) Common.loadWorkItems();
+            if (wis == null) loadWorkItems();
             long ticks = fromReadableTime(periodText).Ticks;
             var wi = new WorkItem
-                              {
-                                  ID = wis.nextFreeKey(),
-                                  Title = (ticks > 0 ? "* " : "") + title,
-                                  StartTime = DateTime.Now,
-                                  PeriodTicks = ticks,
-                                  GroupName = groupName
-                              };
+                     {
+                         ID = wis.nextFreeKey(),
+                         Title = (ticks > 0 ? "* " : "") + title,
+                         StartTime = DateTime.Now,
+                         PeriodTicks = ticks,
+                         GroupName = groupName
+                     };
             wis.Add(wi.ID, wi);
-            Common.saveWorkItems();
+            saveWorkItems();
             return wi;
         }
 
-        public static void settingsUpdate(string _logpath, string _jiraUser, string _jiraPass, string _jiraJQL, bool _ssEnabled, int _ssTimeout, string _ssDir)
+        public static void settingsUpdate(string _logpath, string _jiraUser, string _jiraPass, string _jiraJQL,
+            bool _ssEnabled, int _ssTimeout, string _ssDir)
         {
-            Common.logpath = _logpath;
-            Common.jiraUser = _jiraUser;
-            Common.jiraPass = _jiraPass;
-            Common.jiraJQL = _jiraJQL;
-            Common.ssEnabled = _ssEnabled;
-            Common.ssTimeout = _ssTimeout;
-            Common.ssDir = _ssDir;
-            Common.settingsSave();
+            logpath = _logpath;
+            jiraUser = _jiraUser;
+            jiraPass = _jiraPass;
+            jiraJQL = _jiraJQL;
+            ssEnabled = _ssEnabled;
+            ssTimeout = _ssTimeout;
+            ssDir = _ssDir;
+            settingsSave();
         }
 
         private static void settingsSave()
@@ -246,62 +231,62 @@ namespace ZxcWorkLog
             XmlTextWriter textWriter = new XmlTextWriter("settings.xml", null);
             textWriter.WriteStartDocument();
             textWriter.WriteStartElement("settings");
-                textWriter.WriteStartElement("setting");
-                    textWriter.WriteStartAttribute("name");
-                    textWriter.WriteString("LogPath");
-                    textWriter.WriteEndAttribute();
-                    textWriter.WriteStartAttribute("value");
-                    textWriter.WriteString(Common.logpath);
-                    textWriter.WriteEndAttribute();
-                textWriter.WriteEndElement();
-                textWriter.WriteStartElement("setting");
-                    textWriter.WriteStartAttribute("name");
-                    textWriter.WriteString("JiraUser");
-                    textWriter.WriteEndAttribute();
-                    textWriter.WriteStartAttribute("value");
-                    textWriter.WriteString(Common.jiraUser);
-                    textWriter.WriteEndAttribute();
-                textWriter.WriteEndElement();
-                textWriter.WriteStartElement("setting");
-                    textWriter.WriteStartAttribute("name");
-                    textWriter.WriteString("JiraPass");
-                    textWriter.WriteEndAttribute();
-                    textWriter.WriteStartAttribute("value");
-                    textWriter.WriteString(Common.jiraPass);
-                    textWriter.WriteEndAttribute();
-                textWriter.WriteEndElement();
-                textWriter.WriteStartElement("setting");
-                    textWriter.WriteStartAttribute("name");
-                    textWriter.WriteString("JiraJQL");
-                    textWriter.WriteEndAttribute();
-                    textWriter.WriteStartAttribute("value");
-                    textWriter.WriteString(Common.jiraJQL);
-                    textWriter.WriteEndAttribute();
-                textWriter.WriteEndElement();
-                textWriter.WriteStartElement("setting");
-                    textWriter.WriteStartAttribute("name");
-                    textWriter.WriteString("ScreenShotsEnabled");
-                    textWriter.WriteEndAttribute();
-                    textWriter.WriteStartAttribute("value");
-                    textWriter.WriteString(Common.ssEnabled.ToString());
-                    textWriter.WriteEndAttribute();
-                textWriter.WriteEndElement();
-                textWriter.WriteStartElement("setting");
-                    textWriter.WriteStartAttribute("name");
-                    textWriter.WriteString("ScreenShotsTimeout");
-                    textWriter.WriteEndAttribute();
-                    textWriter.WriteStartAttribute("value");
-                    textWriter.WriteString(Common.ssTimeout.ToString());
-                    textWriter.WriteEndAttribute();
-                textWriter.WriteEndElement();
-                textWriter.WriteStartElement("setting");
-                    textWriter.WriteStartAttribute("name");
-                    textWriter.WriteString("ScreenShotsDir");
-                    textWriter.WriteEndAttribute();
-                    textWriter.WriteStartAttribute("value");
-                    textWriter.WriteString(Common.ssDir);
-                    textWriter.WriteEndAttribute();
-                textWriter.WriteEndElement();
+            textWriter.WriteStartElement("setting");
+            textWriter.WriteStartAttribute("name");
+            textWriter.WriteString("LogPath");
+            textWriter.WriteEndAttribute();
+            textWriter.WriteStartAttribute("value");
+            textWriter.WriteString(logpath);
+            textWriter.WriteEndAttribute();
+            textWriter.WriteEndElement();
+            textWriter.WriteStartElement("setting");
+            textWriter.WriteStartAttribute("name");
+            textWriter.WriteString("JiraUser");
+            textWriter.WriteEndAttribute();
+            textWriter.WriteStartAttribute("value");
+            textWriter.WriteString(jiraUser);
+            textWriter.WriteEndAttribute();
+            textWriter.WriteEndElement();
+            textWriter.WriteStartElement("setting");
+            textWriter.WriteStartAttribute("name");
+            textWriter.WriteString("JiraPass");
+            textWriter.WriteEndAttribute();
+            textWriter.WriteStartAttribute("value");
+            textWriter.WriteString(jiraPass);
+            textWriter.WriteEndAttribute();
+            textWriter.WriteEndElement();
+            textWriter.WriteStartElement("setting");
+            textWriter.WriteStartAttribute("name");
+            textWriter.WriteString("JiraJQL");
+            textWriter.WriteEndAttribute();
+            textWriter.WriteStartAttribute("value");
+            textWriter.WriteString(jiraJQL);
+            textWriter.WriteEndAttribute();
+            textWriter.WriteEndElement();
+            textWriter.WriteStartElement("setting");
+            textWriter.WriteStartAttribute("name");
+            textWriter.WriteString("ScreenShotsEnabled");
+            textWriter.WriteEndAttribute();
+            textWriter.WriteStartAttribute("value");
+            textWriter.WriteString(ssEnabled.ToString());
+            textWriter.WriteEndAttribute();
+            textWriter.WriteEndElement();
+            textWriter.WriteStartElement("setting");
+            textWriter.WriteStartAttribute("name");
+            textWriter.WriteString("ScreenShotsTimeout");
+            textWriter.WriteEndAttribute();
+            textWriter.WriteStartAttribute("value");
+            textWriter.WriteString(ssTimeout.ToString());
+            textWriter.WriteEndAttribute();
+            textWriter.WriteEndElement();
+            textWriter.WriteStartElement("setting");
+            textWriter.WriteStartAttribute("name");
+            textWriter.WriteString("ScreenShotsDir");
+            textWriter.WriteEndAttribute();
+            textWriter.WriteStartAttribute("value");
+            textWriter.WriteString(ssDir);
+            textWriter.WriteEndAttribute();
+            textWriter.WriteEndElement();
             textWriter.WriteEndElement();
             textWriter.WriteEndDocument();
             textWriter.Close();
@@ -309,8 +294,8 @@ namespace ZxcWorkLog
 
         public static void updateItem(int key, WorkItem wi)
         {
-            Common.wis[key] = wi;
-            Common.saveWorkItems();
+            wis[key] = wi;
+            saveWorkItems();
         }
 
         public static string toReadableTime(long ticks, bool showSeconds = true, bool showDays = true)
@@ -344,7 +329,7 @@ namespace ZxcWorkLog
 
             Regex r = new Regex(pat);
 
-            int days=0, hours=0, minutes=0, seconds=0;
+            int days = 0, hours = 0, minutes = 0, seconds = 0;
 
             Match m = r.Match(text);
             while (m.Success)
@@ -355,10 +340,18 @@ namespace ZxcWorkLog
 
                     switch (m.Groups[2].Captures[0].Value)
                     {
-                        case "d": days = num; break;
-                        case "h": hours = num; break;
-                        case "m": minutes = num; break;
-                        case "s": seconds = num; break;
+                        case "d":
+                            days = num;
+                            break;
+                        case "h":
+                            hours = num;
+                            break;
+                        case "m":
+                            minutes = num;
+                            break;
+                        case "s":
+                            seconds = num;
+                            break;
                     }
                 }
                 catch (Exception)
@@ -377,6 +370,6 @@ namespace ZxcWorkLog
 
         [DllImport("user32.dll")]
         public static extern
-            bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);
+        bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);
     }
 }

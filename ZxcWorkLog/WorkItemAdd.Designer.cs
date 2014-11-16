@@ -51,7 +51,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(311, 21);
             this.comboBox1.TabIndex = 0;
-            this.comboBox1.DropDown += new System.EventHandler(this.comboBox1_DropDown);
             // 
             // button1
             // 
@@ -62,7 +61,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -73,7 +72,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label1
             // 
@@ -91,7 +90,7 @@
             this.textBox1.Size = new System.Drawing.Size(375, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "0s";
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Enter += new System.EventHandler(this.TextBox1_Enter);
             // 
             // checkBox1
             // 
@@ -121,7 +120,7 @@
             this.btnUpdate.TabStop = false;
             this.btnUpdate.Text = "update";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.button3_Click);
+            this.btnUpdate.Click += new System.EventHandler(this.Button3_Click);
             // 
             // label3
             // 
@@ -139,8 +138,7 @@
             this.inpGroup.Name = "inpGroup";
             this.inpGroup.Size = new System.Drawing.Size(231, 21);
             this.inpGroup.TabIndex = 2;
-            this.inpGroup.TextUpdate += new System.EventHandler(this.inpGroup_TextUpdate);
-            this.inpGroup.TextChanged += new System.EventHandler(this.inpGroup_TextChanged);
+            this.inpGroup.TextChanged += new System.EventHandler(this.InpGroup_TextChanged);
             // 
             // buttonYesterday
             // 
@@ -151,7 +149,7 @@
             this.buttonYesterday.TabStop = false;
             this.buttonYesterday.Text = "yesterday";
             this.buttonYesterday.UseVisualStyleBackColor = true;
-            this.buttonYesterday.Click += new System.EventHandler(this.button3_Click_1);
+            this.buttonYesterday.Click += new System.EventHandler(this.Button3_Click_1);
             // 
             // buttonToday
             // 
@@ -162,7 +160,7 @@
             this.buttonToday.TabStop = false;
             this.buttonToday.Text = "today";
             this.buttonToday.UseVisualStyleBackColor = true;
-            this.buttonToday.Click += new System.EventHandler(this.button4_Click);
+            this.buttonToday.Click += new System.EventHandler(this.Button4_Click);
             // 
             // WorkItemAdd
             // 

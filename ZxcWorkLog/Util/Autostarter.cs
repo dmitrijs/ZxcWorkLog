@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Win32;
+using System.Diagnostics;
 using System.Reflection;
+using Microsoft.Win32;
 
 namespace ZxcWorkLog.Util
 {
@@ -14,7 +12,8 @@ namespace ZxcWorkLog.Util
 
         public static void SetAutoStart()
         {
-            RegistryKey key = Registry.CurrentUser.CreateSubKey(RUN_LOCATION);
+            var key = Registry.CurrentUser.CreateSubKey(RUN_LOCATION);
+            Debug.Assert(key != null);
             key.SetValue(PROGRAM_NAME, Assembly.GetExecutingAssembly().Location);
         }
 
@@ -22,11 +21,11 @@ namespace ZxcWorkLog.Util
         {
             get
             {
-                RegistryKey key = Registry.CurrentUser.OpenSubKey(RUN_LOCATION);
+                var key = Registry.CurrentUser.OpenSubKey(RUN_LOCATION);
                 if (key == null)
                     return false;
 
-                string value = (string)key.GetValue(PROGRAM_NAME);
+                var value = (string) key.GetValue(PROGRAM_NAME);
                 if (value == null)
                     return false;
                 return (value == Assembly.GetExecutingAssembly().Location);
@@ -37,11 +36,13 @@ namespace ZxcWorkLog.Util
         {
             try
             {
-                RegistryKey key = Registry.CurrentUser.CreateSubKey(RUN_LOCATION);
+                var key = Registry.CurrentUser.CreateSubKey(RUN_LOCATION);
+                Debug.Assert(key != null);
                 key.DeleteValue(PROGRAM_NAME);
             }
             catch (Exception)
-            { }
+            {
+            }
         }
     }
 }

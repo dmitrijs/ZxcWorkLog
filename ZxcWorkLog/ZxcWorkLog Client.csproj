@@ -99,12 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
-    <Compile Include="FormToDo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormToDo.Designer.cs">
-      <DependentUpon>FormToDo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Util\IdleTime.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -139,9 +133,6 @@
     <Compile Include="WorkItemEdit.Designer.cs">
       <DependentUpon>WorkItemEdit.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormToDo.resx">
-      <DependentUpon>FormToDo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

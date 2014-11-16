@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Collections;
+﻿using System.Collections.Generic;
 
 namespace ZxcWorkLog
 {
-    class WorkItemCollection : Dictionary<int, WorkItem>
+    internal class WorkItemCollection : Dictionary<int, WorkItem>
     {
         public int nextFreeKey()
         {
@@ -20,7 +16,7 @@ namespace ZxcWorkLog
 
         public List<WorkItem> getSortedList()
         {
-            List<WorkItem> list = new List<WorkItem>(this.Values);
+            List<WorkItem> list = new List<WorkItem>(Values);
             list.Sort(compareWorkItems);
             return list;
         }

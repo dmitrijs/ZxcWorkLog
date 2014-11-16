@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Runtime.InteropServices;
-using System.Threading;
-using System.Windows;
 using System.Windows.Forms;
 
 namespace ZxcWorkLog
@@ -14,6 +9,7 @@ namespace ZxcWorkLog
         // Registers a hot key with Windows.
         [DllImport("user32.dll")]
         private static extern bool RegisterHotKey(IntPtr hWnd, int id, uint fsModifiers, uint vk);
+
         // Unregisters the hot key with Windows.
         [DllImport("user32.dll")]
         private static extern bool UnregisterHotKey(IntPtr hWnd, int id);
@@ -29,7 +25,7 @@ namespace ZxcWorkLog
             public Window()
             {
                 // create the handle for the window.
-                this.CreateHandle(new CreateParams());
+                CreateHandle(new CreateParams());
             }
 
             /// <summary>
@@ -44,8 +40,8 @@ namespace ZxcWorkLog
                 if (m.Msg == WM_HOTKEY)
                 {
                     // get the keys.
-                    Keys key = (Keys)(((int)m.LParam >> 16) & 0xFFFF);
-                    ModifierKeys modifier = (ModifierKeys)((int)m.LParam & 0xFFFF);
+                    Keys key = (Keys) (((int) m.LParam >> 16) & 0xFFFF);
+                    ModifierKeys modifier = (ModifierKeys) ((int) m.LParam & 0xFFFF);
 
                     // invoke the event to notify the parent.
                     if (KeyPressed != null)
@@ -59,23 +55,23 @@ namespace ZxcWorkLog
 
             public void Dispose()
             {
-                this.DestroyHandle();
+                DestroyHandle();
             }
 
             #endregion
         }
 
-        private Window _window = new Window();
+        private readonly Window _window = new Window();
         private int _currentId;
 
         public KeyboardHook()
         {
             // register the event of the inner native window.
             _window.KeyPressed += delegate(object sender, KeyPressedEventArgs args)
-            {
-                if (KeyPressed != null)
-                    KeyPressed(this, args);
-            };
+                                  {
+                                      if (KeyPressed != null)
+                                          KeyPressed(this, args);
+                                  };
         }
 
         /// <summary>
@@ -89,7 +85,7 @@ namespace ZxcWorkLog
             _currentId = _currentId + 1;
 
             // register the hot key.
-            return RegisterHotKey(_window.Handle, _currentId, (uint)modifier, (uint)key);
+            return RegisterHotKey(_window.Handle, _currentId, (uint) modifier, (uint) key);
         }
 
         /// <summary>
@@ -119,8 +115,8 @@ namespace ZxcWorkLog
     /// </summary>
     public class KeyPressedEventArgs : EventArgs
     {
-        private ModifierKeys _modifier;
-        private Keys _key;
+        private readonly ModifierKeys _modifier;
+        private readonly Keys _key;
 
         internal KeyPressedEventArgs(ModifierKeys modifier, Keys key)
         {

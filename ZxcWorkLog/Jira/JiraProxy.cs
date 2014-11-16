@@ -1,7 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.ServiceModel;
+using System.ServiceModel.Channels;
+using System.Xml.Serialization;
 
 namespace ZxcWorkLog.Jira
 {
@@ -15,1106 +18,1122 @@ namespace ZxcWorkLog.Jira
     // </auto-generated>
     //------------------------------------------------------------------------------
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", ConfigurationName = "JiraSoapService")]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [ServiceContract(Namespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2",
+        ConfigurationName = "JiraSoapService")]
     public interface JiraSoapService
     {
-
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getCommentRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getCommentResponse getComment(getCommentRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message createGroupRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         createGroupResponse createGroup(createGroupRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getServerInfoRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getServerInfoResponse getServerInfo(getServerInfoRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getGroupRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getGroupResponse getGroup(getGroupRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message loginRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         loginResponse login(loginRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getUserRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getUserResponse getUser(getUserRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getComponentsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getComponentsResponse getComponents(getComponentsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message createUserRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         createUserResponse createUser(createUserRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getIssueRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getIssueResponse getIssue(getIssueRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message createIssueRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         createIssueResponse createIssue(createIssueRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getAvailableActionsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getAvailableActionsResponse getAvailableActions(getAvailableActionsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getSubTaskIssueTypesRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getSubTaskIssueTypesResponse getSubTaskIssueTypes(getSubTaskIssueTypesRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getConfigurationRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getConfigurationResponse getConfiguration(getConfigurationRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message createProjectRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         createProjectResponse createProject(createProjectRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message updateProjectRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         updateProjectResponse updateProject(updateProjectRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getProjectByKeyRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getProjectByKeyResponse getProjectByKey(getProjectByKeyRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message removeAllRoleActorsByProjectRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         removeAllRoleActorsByProjectResponse removeAllRoleActorsByProject(removeAllRoleActorsByProjectRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getPrioritiesRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getPrioritiesResponse getPriorities(getPrioritiesRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getResolutionsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getResolutionsResponse getResolutions(getResolutionsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getIssueTypesRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getIssueTypesResponse getIssueTypes(getIssueTypesRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getStatusesRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getStatusesResponse getStatuses(getStatusesRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getProjectRolesRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getProjectRolesResponse getProjectRoles(getProjectRolesRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getProjectRoleRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getProjectRoleResponse getProjectRole(getProjectRoleRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getProjectRoleActorsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getProjectRoleActorsResponse getProjectRoleActors(getProjectRoleActorsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getDefaultRoleActorsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getDefaultRoleActorsResponse getDefaultRoleActors(getDefaultRoleActorsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message removeAllRoleActorsByNameAndTypeRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        removeAllRoleActorsByNameAndTypeResponse removeAllRoleActorsByNameAndType(removeAllRoleActorsByNameAndTypeRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        removeAllRoleActorsByNameAndTypeResponse removeAllRoleActorsByNameAndType(
+            removeAllRoleActorsByNameAndTypeRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message deleteProjectRoleRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         deleteProjectRoleResponse deleteProjectRole(deleteProjectRoleRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message updateProjectRoleRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         updateProjectRoleResponse updateProjectRole(updateProjectRoleRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message createProjectRoleRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         createProjectRoleResponse createProjectRole(createProjectRoleRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message isProjectRoleNameUniqueRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         isProjectRoleNameUniqueResponse isProjectRoleNameUnique(isProjectRoleNameUniqueRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message addActorsToProjectRoleRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         addActorsToProjectRoleResponse addActorsToProjectRole(addActorsToProjectRoleRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message removeActorsFromProjectRoleRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         removeActorsFromProjectRoleResponse removeActorsFromProjectRole(removeActorsFromProjectRoleRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message addDefaultActorsToProjectRoleRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         addDefaultActorsToProjectRoleResponse addDefaultActorsToProjectRole(addDefaultActorsToProjectRoleRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message removeDefaultActorsFromProjectRoleRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        removeDefaultActorsFromProjectRoleResponse removeDefaultActorsFromProjectRole(removeDefaultActorsFromProjectRoleRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        removeDefaultActorsFromProjectRoleResponse removeDefaultActorsFromProjectRole(
+            removeDefaultActorsFromProjectRoleRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getAssociatedNotificationSchemesRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        getAssociatedNotificationSchemesResponse getAssociatedNotificationSchemes(getAssociatedNotificationSchemesRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        getAssociatedNotificationSchemesResponse getAssociatedNotificationSchemes(
+            getAssociatedNotificationSchemesRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getAssociatedPermissionSchemesRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        getAssociatedPermissionSchemesResponse getAssociatedPermissionSchemes(getAssociatedPermissionSchemesRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        getAssociatedPermissionSchemesResponse getAssociatedPermissionSchemes(
+            getAssociatedPermissionSchemesRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message deleteProjectRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         deleteProjectResponse deleteProject(deleteProjectRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getProjectByIdRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getProjectByIdResponse getProjectById(getProjectByIdRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getVersionsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getVersionsResponse getVersions(getVersionsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getCustomFieldsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getCustomFieldsResponse getCustomFields(getCustomFieldsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getCommentsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getCommentsResponse getComments(getCommentsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getFavouriteFiltersRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getFavouriteFiltersResponse getFavouriteFilters(getFavouriteFiltersRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message releaseVersionRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         releaseVersionResponse releaseVersion(releaseVersionRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message archiveVersionRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         archiveVersionResponse archiveVersion(archiveVersionRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message updateIssueRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         updateIssueResponse updateIssue(updateIssueRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getFieldsForEditRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getFieldsForEditResponse getFieldsForEdit(getFieldsForEditRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getIssueTypesForProjectRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getIssueTypesForProjectResponse getIssueTypesForProject(getIssueTypesForProjectRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getSubTaskIssueTypesForProjectRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        getSubTaskIssueTypesForProjectResponse getSubTaskIssueTypesForProject(getSubTaskIssueTypesForProjectRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        getSubTaskIssueTypesForProjectResponse getSubTaskIssueTypesForProject(
+            getSubTaskIssueTypesForProjectRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message addUserToGroupRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         addUserToGroupResponse addUserToGroup(addUserToGroupRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message removeUserFromGroupRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         removeUserFromGroupResponse removeUserFromGroup(removeUserFromGroupRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getSecurityLevelRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getSecurityLevelResponse getSecurityLevel(getSecurityLevelRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message addCommentRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         addCommentResponse addComment(addCommentRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message logoutRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         logoutResponse logout(logoutRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getProjectWithSchemesByIdRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getProjectWithSchemesByIdResponse getProjectWithSchemesById(getProjectWithSchemesByIdRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getSecurityLevelsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getSecurityLevelsResponse getSecurityLevels(getSecurityLevelsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getProjectAvatarsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getProjectAvatarsResponse getProjectAvatars(getProjectAvatarsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message setProjectAvatarRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         setProjectAvatarResponse setProjectAvatar(setProjectAvatarRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getProjectAvatarRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getProjectAvatarResponse getProjectAvatar(getProjectAvatarRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message deleteProjectAvatarRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         deleteProjectAvatarResponse deleteProjectAvatar(deleteProjectAvatarRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getNotificationSchemesRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getNotificationSchemesResponse getNotificationSchemes(getNotificationSchemesRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getPermissionSchemesRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getPermissionSchemesResponse getPermissionSchemes(getPermissionSchemesRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getAllPermissionsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getAllPermissionsResponse getAllPermissions(getAllPermissionsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message createPermissionSchemeRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         createPermissionSchemeResponse createPermissionScheme(createPermissionSchemeRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message addPermissionToRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         addPermissionToResponse addPermissionTo(addPermissionToRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message deletePermissionFromRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         deletePermissionFromResponse deletePermissionFrom(deletePermissionFromRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message deletePermissionSchemeRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         deletePermissionSchemeResponse deletePermissionScheme(deletePermissionSchemeRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message createIssueWithSecurityLevelRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         createIssueWithSecurityLevelResponse createIssueWithSecurityLevel(createIssueWithSecurityLevelRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message addAttachmentsToIssueRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         addAttachmentsToIssueResponse addAttachmentsToIssue(addAttachmentsToIssueRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getAttachmentsFromIssueRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getAttachmentsFromIssueResponse getAttachmentsFromIssue(getAttachmentsFromIssueRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message deleteIssueRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         deleteIssueResponse deleteIssue(deleteIssueRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message hasPermissionToEditCommentRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         hasPermissionToEditCommentResponse hasPermissionToEditComment(hasPermissionToEditCommentRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message editCommentRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         editCommentResponse editComment(editCommentRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getFieldsForActionRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getFieldsForActionResponse getFieldsForAction(getFieldsForActionRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message progressWorkflowActionRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         progressWorkflowActionResponse progressWorkflowAction(progressWorkflowActionRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getIssueByIdRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getIssueByIdResponse getIssueById(getIssueByIdRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message adZxcWorkLogWithNewRemainingEstimateRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        adZxcWorkLogWithNewRemainingEstimateResponse adZxcWorkLogWithNewRemainingEstimate(adZxcWorkLogWithNewRemainingEstimateRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        adZxcWorkLogWithNewRemainingEstimateResponse adZxcWorkLogWithNewRemainingEstimate(
+            adZxcWorkLogWithNewRemainingEstimateRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message adZxcWorkLogAndAutoAdjustRemainingEstimateRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        adZxcWorkLogAndAutoAdjustRemainingEstimateResponse adZxcWorkLogAndAutoAdjustRemainingEstimate(adZxcWorkLogAndAutoAdjustRemainingEstimateRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        adZxcWorkLogAndAutoAdjustRemainingEstimateResponse adZxcWorkLogAndAutoAdjustRemainingEstimate(
+            adZxcWorkLogAndAutoAdjustRemainingEstimateRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message adZxcWorkLogAndRetainRemainingEstimateRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        adZxcWorkLogAndRetainRemainingEstimateResponse adZxcWorkLogAndRetainRemainingEstimate(adZxcWorkLogAndRetainRemainingEstimateRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        adZxcWorkLogAndRetainRemainingEstimateResponse adZxcWorkLogAndRetainRemainingEstimate(
+            adZxcWorkLogAndRetainRemainingEstimateRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message deleteWorklogWithNewRemainingEstimateRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        deleteWorklogWithNewRemainingEstimateResponse deleteWorklogWithNewRemainingEstimate(deleteWorklogWithNewRemainingEstimateRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        deleteWorklogWithNewRemainingEstimateResponse deleteWorklogWithNewRemainingEstimate(
+            deleteWorklogWithNewRemainingEstimateRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message deleteWorklogAndAutoAdjustRemainingEstimateRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        deleteWorklogAndAutoAdjustRemainingEstimateResponse deleteWorklogAndAutoAdjustRemainingEstimate(deleteWorklogAndAutoAdjustRemainingEstimateRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        deleteWorklogAndAutoAdjustRemainingEstimateResponse deleteWorklogAndAutoAdjustRemainingEstimate(
+            deleteWorklogAndAutoAdjustRemainingEstimateRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message deleteWorklogAndRetainRemainingEstimateRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        deleteWorklogAndRetainRemainingEstimateResponse deleteWorklogAndRetainRemainingEstimate(deleteWorklogAndRetainRemainingEstimateRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        deleteWorklogAndRetainRemainingEstimateResponse deleteWorklogAndRetainRemainingEstimate(
+            deleteWorklogAndRetainRemainingEstimateRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message updateWorklogWithNewRemainingEstimateRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        updateWorklogWithNewRemainingEstimateResponse updateWorklogWithNewRemainingEstimate(updateWorklogWithNewRemainingEstimateRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        updateWorklogWithNewRemainingEstimateResponse updateWorklogWithNewRemainingEstimate(
+            updateWorklogWithNewRemainingEstimateRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message updateWorklogAndAutoAdjustRemainingEstimateRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        updateWorklogAndAutoAdjustRemainingEstimateResponse updateWorklogAndAutoAdjustRemainingEstimate(updateWorklogAndAutoAdjustRemainingEstimateRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        updateWorklogAndAutoAdjustRemainingEstimateResponse updateWorklogAndAutoAdjustRemainingEstimate(
+            updateWorklogAndAutoAdjustRemainingEstimateRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message updateWorklogAndRetainRemainingEstimateRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        updateWorklogAndRetainRemainingEstimateResponse updateWorklogAndRetainRemainingEstimate(updateWorklogAndRetainRemainingEstimateRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        updateWorklogAndRetainRemainingEstimateResponse updateWorklogAndRetainRemainingEstimate(
+            updateWorklogAndRetainRemainingEstimateRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getWorklogsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getWorklogsResponse getWorklogs(getWorklogsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message hasPermissionToCreateWorklogRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         hasPermissionToCreateWorklogResponse hasPermissionToCreateWorklog(hasPermissionToCreateWorklogRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message hasPermissionToDeleteWorklogRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         hasPermissionToDeleteWorklogResponse hasPermissionToDeleteWorklog(hasPermissionToDeleteWorklogRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message hasPermissionToUpdateWorklogRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         hasPermissionToUpdateWorklogResponse hasPermissionToUpdateWorklog(hasPermissionToUpdateWorklogRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getResolutionDateByKeyRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getResolutionDateByKeyResponse getResolutionDateByKey(getResolutionDateByKeyRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getResolutionDateByIdRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getResolutionDateByIdResponse getResolutionDateById(getResolutionDateByIdRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getIssueCountForFilterRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getIssueCountForFilterResponse getIssueCountForFilter(getIssueCountForFilterRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getIssuesFromTextSearchRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getIssuesFromTextSearchResponse getIssuesFromTextSearch(getIssuesFromTextSearchRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getIssuesFromTextSearchWithProjectRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        getIssuesFromTextSearchWithProjectResponse getIssuesFromTextSearchWithProject(getIssuesFromTextSearchWithProjectRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        getIssuesFromTextSearchWithProjectResponse getIssuesFromTextSearchWithProject(
+            getIssuesFromTextSearchWithProjectRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getIssuesFromJqlSearchRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getIssuesFromJqlSearchResponse getIssuesFromJqlSearch(getIssuesFromJqlSearchRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message deleteUserRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         deleteUserResponse deleteUser(deleteUserRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message updateGroupRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         updateGroupResponse updateGroup(updateGroupRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message deleteGroupRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         deleteGroupResponse deleteGroup(deleteGroupRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message refreshCustomFieldsRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         refreshCustomFieldsResponse refreshCustomFields(refreshCustomFieldsRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getSavedFiltersRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getSavedFiltersResponse getSavedFilters(getSavedFiltersRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message addBase64EncodedAttachmentsToIssueRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        addBase64EncodedAttachmentsToIssueResponse addBase64EncodedAttachmentsToIssue(addBase64EncodedAttachmentsToIssueRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        addBase64EncodedAttachmentsToIssueResponse addBase64EncodedAttachmentsToIssue(
+            addBase64EncodedAttachmentsToIssueRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message createProjectFromObjectRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         createProjectFromObjectResponse createProjectFromObject(createProjectFromObjectRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getSecuritySchemesRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getSecuritySchemesResponse getSecuritySchemes(getSecuritySchemesRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message addVersionRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         addVersionResponse addVersion(addVersionRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getIssuesFromFilterRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getIssuesFromFilterResponse getIssuesFromFilter(getIssuesFromFilterRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getIssuesFromFilterWithLimitRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getIssuesFromFilterWithLimitResponse getIssuesFromFilterWithLimit(getIssuesFromFilterWithLimitRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getIssuesFromTextSearchWithLimitRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
-        getIssuesFromTextSearchWithLimitResponse getIssuesFromTextSearchWithLimit(getIssuesFromTextSearchWithLimitRequest request);
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
+        getIssuesFromTextSearchWithLimitResponse getIssuesFromTextSearchWithLimit(
+            getIssuesFromTextSearchWithLimitRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message getProjectsNoSchemesRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         getProjectsNoSchemesResponse getProjectsNoSchemes(getProjectsNoSchemesRequest request);
 
         // CODEGEN: Generating message contract since the wrapper namespace (http://soap.rpc.jira.atlassian.com) of message setNewProjectAvatarRequest does not match the default value (http://dev.prognett.no/rpc/soap/jirasoapservice-v2)
-        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style = System.ServiceModel.OperationFormatStyle.Rpc, Use = System.ServiceModel.OperationFormatUse.Encoded)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteRoleActor))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemoteCustomFieldValue))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(RemotePermissionMapping))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AbstractRemoteEntity))]
+        [OperationContract(Action = "", ReplyAction = "*")]
+        [XmlSerializerFormat(Style = OperationFormatStyle.Rpc, Use = OperationFormatUse.Encoded)]
+        [ServiceKnownType(typeof (RemoteFieldValue))]
+        [ServiceKnownType(typeof (RemoteRoleActor))]
+        [ServiceKnownType(typeof (RemoteCustomFieldValue))]
+        [ServiceKnownType(typeof (RemotePermissionMapping))]
+        [ServiceKnownType(typeof (AbstractRemoteEntity))]
         setNewProjectAvatarResponse setNewProjectAvatar(setNewProjectAvatarRequest request);
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteComment
     {
-
         private string authorField;
 
         private string bodyField;
 
-        private System.Nullable<System.DateTime> createdField;
+        private Nullable<DateTime> createdField;
 
         private string groupLevelField;
 
@@ -1124,135 +1143,86 @@ namespace ZxcWorkLog.Jira
 
         private string updateAuthorField;
 
-        private System.Nullable<System.DateTime> updatedField;
+        private Nullable<DateTime> updatedField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string author
         {
-            get
-            {
-                return this.authorField;
-            }
-            set
-            {
-                this.authorField = value;
-            }
+            get { return authorField; }
+            set { authorField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string body
         {
-            get
-            {
-                return this.bodyField;
-            }
-            set
-            {
-                this.bodyField = value;
-            }
+            get { return bodyField; }
+            set { bodyField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<System.DateTime> created
+        [SoapElement(IsNullable = true)]
+        public Nullable<DateTime> created
         {
-            get
-            {
-                return this.createdField;
-            }
-            set
-            {
-                this.createdField = value;
-            }
+            get { return createdField; }
+            set { createdField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string groupLevel
         {
-            get
-            {
-                return this.groupLevelField;
-            }
-            set
-            {
-                this.groupLevelField = value;
-            }
+            get { return groupLevelField; }
+            set { groupLevelField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string id
         {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
+            get { return idField; }
+            set { idField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string roleLevel
         {
-            get
-            {
-                return this.roleLevelField;
-            }
-            set
-            {
-                this.roleLevelField = value;
-            }
+            get { return roleLevelField; }
+            set { roleLevelField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string updateAuthor
         {
-            get
-            {
-                return this.updateAuthorField;
-            }
-            set
-            {
-                this.updateAuthorField = value;
-            }
+            get { return updateAuthorField; }
+            set { updateAuthorField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<System.DateTime> updated
+        [SoapElement(IsNullable = true)]
+        public Nullable<DateTime> updated
         {
-            get
-            {
-                return this.updatedField;
-            }
-            set
-            {
-                this.updatedField = value;
-            }
+            get { return updatedField; }
+            set { updatedField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteWorklog
     {
-
         private string authorField;
 
         private string commentField;
 
-        private System.Nullable<System.DateTime> createdField;
+        private Nullable<DateTime> createdField;
 
         private string groupLevelField;
 
@@ -1260,7 +1230,7 @@ namespace ZxcWorkLog.Jira
 
         private string roleLevelIdField;
 
-        private System.Nullable<System.DateTime> startDateField;
+        private Nullable<DateTime> startDateField;
 
         private string timeSpentField;
 
@@ -1268,171 +1238,104 @@ namespace ZxcWorkLog.Jira
 
         private string updateAuthorField;
 
-        private System.Nullable<System.DateTime> updatedField;
+        private Nullable<DateTime> updatedField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string author
         {
-            get
-            {
-                return this.authorField;
-            }
-            set
-            {
-                this.authorField = value;
-            }
+            get { return authorField; }
+            set { authorField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string comment
         {
-            get
-            {
-                return this.commentField;
-            }
-            set
-            {
-                this.commentField = value;
-            }
+            get { return commentField; }
+            set { commentField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<System.DateTime> created
+        [SoapElement(IsNullable = true)]
+        public Nullable<DateTime> created
         {
-            get
-            {
-                return this.createdField;
-            }
-            set
-            {
-                this.createdField = value;
-            }
+            get { return createdField; }
+            set { createdField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string groupLevel
         {
-            get
-            {
-                return this.groupLevelField;
-            }
-            set
-            {
-                this.groupLevelField = value;
-            }
+            get { return groupLevelField; }
+            set { groupLevelField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string id
         {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
+            get { return idField; }
+            set { idField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string roleLevelId
         {
-            get
-            {
-                return this.roleLevelIdField;
-            }
-            set
-            {
-                this.roleLevelIdField = value;
-            }
+            get { return roleLevelIdField; }
+            set { roleLevelIdField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<System.DateTime> startDate
+        [SoapElement(IsNullable = true)]
+        public Nullable<DateTime> startDate
         {
-            get
-            {
-                return this.startDateField;
-            }
-            set
-            {
-                this.startDateField = value;
-            }
+            get { return startDateField; }
+            set { startDateField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string timeSpent
         {
-            get
-            {
-                return this.timeSpentField;
-            }
-            set
-            {
-                this.timeSpentField = value;
-            }
+            get { return timeSpentField; }
+            set { timeSpentField = value; }
         }
 
         /// <remarks/>
         public long timeSpentInSeconds
         {
-            get
-            {
-                return this.timeSpentInSecondsField;
-            }
-            set
-            {
-                this.timeSpentInSecondsField = value;
-            }
+            get { return timeSpentInSecondsField; }
+            set { timeSpentInSecondsField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string updateAuthor
         {
-            get
-            {
-                return this.updateAuthorField;
-            }
-            set
-            {
-                this.updateAuthorField = value;
-            }
+            get { return updateAuthorField; }
+            set { updateAuthorField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<System.DateTime> updated
+        [SoapElement(IsNullable = true)]
+        public Nullable<DateTime> updated
         {
-            get
-            {
-                return this.updatedField;
-            }
-            set
-            {
-                this.updatedField = value;
-            }
+            get { return updatedField; }
+            set { updatedField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteAvatar
     {
-
         private string base64DataField;
 
         private string contentTypeField;
@@ -1446,139 +1349,89 @@ namespace ZxcWorkLog.Jira
         private string typeField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string base64Data
         {
-            get
-            {
-                return this.base64DataField;
-            }
-            set
-            {
-                this.base64DataField = value;
-            }
+            get { return base64DataField; }
+            set { base64DataField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string contentType
         {
-            get
-            {
-                return this.contentTypeField;
-            }
-            set
-            {
-                this.contentTypeField = value;
-            }
+            get { return contentTypeField; }
+            set { contentTypeField = value; }
         }
 
         /// <remarks/>
         public long id
         {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
+            get { return idField; }
+            set { idField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string owner
         {
-            get
-            {
-                return this.ownerField;
-            }
-            set
-            {
-                this.ownerField = value;
-            }
+            get { return ownerField; }
+            set { ownerField = value; }
         }
 
         /// <remarks/>
         public bool system
         {
-            get
-            {
-                return this.systemField;
-            }
-            set
-            {
-                this.systemField = value;
-            }
+            get { return systemField; }
+            set { systemField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string type
         {
-            get
-            {
-                return this.typeField;
-            }
-            set
-            {
-                this.typeField = value;
-            }
+            get { return typeField; }
+            set { typeField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteFieldValue
     {
-
         private string idField;
 
         private string[] valuesField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string id
         {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
+            get { return idField; }
+            set { idField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string[] values
         {
-            get
-            {
-                return this.valuesField;
-            }
-            set
-            {
-                this.valuesField = value;
-            }
+            get { return valuesField; }
+            set { valuesField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteRoleActor
     {
-
         private string descriptorField;
 
         private string parameterField;
@@ -1590,143 +1443,93 @@ namespace ZxcWorkLog.Jira
         private RemoteUser[] usersField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string descriptor
         {
-            get
-            {
-                return this.descriptorField;
-            }
-            set
-            {
-                this.descriptorField = value;
-            }
+            get { return descriptorField; }
+            set { descriptorField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string parameter
         {
-            get
-            {
-                return this.parameterField;
-            }
-            set
-            {
-                this.parameterField = value;
-            }
+            get { return parameterField; }
+            set { parameterField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteProjectRole projectRole
         {
-            get
-            {
-                return this.projectRoleField;
-            }
-            set
-            {
-                this.projectRoleField = value;
-            }
+            get { return projectRoleField; }
+            set { projectRoleField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string type
         {
-            get
-            {
-                return this.typeField;
-            }
-            set
-            {
-                this.typeField = value;
-            }
+            get { return typeField; }
+            set { typeField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteUser[] users
         {
-            get
-            {
-                return this.usersField;
-            }
-            set
-            {
-                this.usersField = value;
-            }
+            get { return usersField; }
+            set { usersField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteProjectRole
     {
-
         private string descriptionField;
 
-        private System.Nullable<long> idField;
+        private Nullable<long> idField;
 
         private string nameField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string description
         {
-            get
-            {
-                return this.descriptionField;
-            }
-            set
-            {
-                this.descriptionField = value;
-            }
+            get { return descriptionField; }
+            set { descriptionField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<long> id
+        [SoapElement(IsNullable = true)]
+        public Nullable<long> id
         {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
+            get { return idField; }
+            set { idField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string name
         {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
+            get { return nameField; }
+            set { nameField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteUser : RemoteEntity
     {
-
         private string emailField;
 
         private string fullnameField;
@@ -1734,112 +1537,80 @@ namespace ZxcWorkLog.Jira
         private string nameField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string email
         {
-            get
-            {
-                return this.emailField;
-            }
-            set
-            {
-                this.emailField = value;
-            }
+            get { return emailField; }
+            set { emailField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string fullname
         {
-            get
-            {
-                return this.fullnameField;
-            }
-            set
-            {
-                this.fullnameField = value;
-            }
+            get { return fullnameField; }
+            set { fullnameField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string name
         {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
+            get { return nameField; }
+            set { nameField = value; }
         }
     }
 
     /// <remarks/>
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteGroup))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteUser))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [SoapInclude(typeof (RemoteGroup))]
+    [SoapInclude(typeof (RemoteUser))]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteEntity
     {
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteGroup : RemoteEntity
     {
-
         private string nameField;
 
         private RemoteUser[] usersField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string name
         {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
+            get { return nameField; }
+            set { nameField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteUser[] users
         {
-            get
-            {
-                return this.usersField;
-            }
-            set
-            {
-                this.usersField = value;
-            }
+            get { return usersField; }
+            set { usersField = value; }
         }
     }
 
     /// <remarks/>
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteProjectRoleActors))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [SoapInclude(typeof (RemoteProjectRoleActors))]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteRoleActors
     {
-
         private RemoteProjectRole projectRoleField;
 
         private RemoteRoleActor[] roleActorsField;
@@ -1847,83 +1618,57 @@ namespace ZxcWorkLog.Jira
         private RemoteUser[] usersField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteProjectRole projectRole
         {
-            get
-            {
-                return this.projectRoleField;
-            }
-            set
-            {
-                this.projectRoleField = value;
-            }
+            get { return projectRoleField; }
+            set { projectRoleField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteRoleActor[] roleActors
         {
-            get
-            {
-                return this.roleActorsField;
-            }
-            set
-            {
-                this.roleActorsField = value;
-            }
+            get { return roleActorsField; }
+            set { roleActorsField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteUser[] users
         {
-            get
-            {
-                return this.usersField;
-            }
-            set
-            {
-                this.usersField = value;
-            }
+            get { return usersField; }
+            set { usersField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteProjectRoleActors : RemoteRoleActors
     {
-
         private RemoteProject projectField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteProject project
         {
-            get
-            {
-                return this.projectField;
-            }
-            set
-            {
-                this.projectField = value;
-            }
+            get { return projectField; }
+            set { projectField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteProject : AbstractNamedRemoteEntity
     {
-
         private string descriptionField;
 
         private RemoteScheme issueSecuritySchemeField;
@@ -1941,481 +1686,329 @@ namespace ZxcWorkLog.Jira
         private string urlField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string description
         {
-            get
-            {
-                return this.descriptionField;
-            }
-            set
-            {
-                this.descriptionField = value;
-            }
+            get { return descriptionField; }
+            set { descriptionField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteScheme issueSecurityScheme
         {
-            get
-            {
-                return this.issueSecuritySchemeField;
-            }
-            set
-            {
-                this.issueSecuritySchemeField = value;
-            }
+            get { return issueSecuritySchemeField; }
+            set { issueSecuritySchemeField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string key
         {
-            get
-            {
-                return this.keyField;
-            }
-            set
-            {
-                this.keyField = value;
-            }
+            get { return keyField; }
+            set { keyField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string lead
         {
-            get
-            {
-                return this.leadField;
-            }
-            set
-            {
-                this.leadField = value;
-            }
+            get { return leadField; }
+            set { leadField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteScheme notificationScheme
         {
-            get
-            {
-                return this.notificationSchemeField;
-            }
-            set
-            {
-                this.notificationSchemeField = value;
-            }
+            get { return notificationSchemeField; }
+            set { notificationSchemeField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemotePermissionScheme permissionScheme
         {
-            get
-            {
-                return this.permissionSchemeField;
-            }
-            set
-            {
-                this.permissionSchemeField = value;
-            }
+            get { return permissionSchemeField; }
+            set { permissionSchemeField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string projectUrl
         {
-            get
-            {
-                return this.projectUrlField;
-            }
-            set
-            {
-                this.projectUrlField = value;
-            }
+            get { return projectUrlField; }
+            set { projectUrlField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string url
         {
-            get
-            {
-                return this.urlField;
-            }
-            set
-            {
-                this.urlField = value;
-            }
+            get { return urlField; }
+            set { urlField = value; }
         }
     }
 
     /// <remarks/>
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemotePermissionScheme))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [SoapInclude(typeof (RemotePermissionScheme))]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteScheme
     {
-
         private string descriptionField;
 
-        private System.Nullable<long> idField;
+        private Nullable<long> idField;
 
         private string nameField;
 
         private string typeField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string description
         {
-            get
-            {
-                return this.descriptionField;
-            }
-            set
-            {
-                this.descriptionField = value;
-            }
+            get { return descriptionField; }
+            set { descriptionField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<long> id
+        [SoapElement(IsNullable = true)]
+        public Nullable<long> id
         {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
+            get { return idField; }
+            set { idField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string name
         {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
+            get { return nameField; }
+            set { nameField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string type
         {
-            get
-            {
-                return this.typeField;
-            }
-            set
-            {
-                this.typeField = value;
-            }
+            get { return typeField; }
+            set { typeField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemotePermissionScheme : RemoteScheme
     {
-
         private RemotePermissionMapping[] permissionMappingsField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemotePermissionMapping[] permissionMappings
         {
-            get
-            {
-                return this.permissionMappingsField;
-            }
-            set
-            {
-                this.permissionMappingsField = value;
-            }
+            get { return permissionMappingsField; }
+            set { permissionMappingsField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemotePermissionMapping
     {
-
         private RemotePermission permissionField;
 
         private RemoteEntity[] remoteEntitiesField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemotePermission permission
         {
-            get
-            {
-                return this.permissionField;
-            }
-            set
-            {
-                this.permissionField = value;
-            }
+            get { return permissionField; }
+            set { permissionField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteEntity[] remoteEntities
         {
-            get
-            {
-                return this.remoteEntitiesField;
-            }
-            set
-            {
-                this.remoteEntitiesField = value;
-            }
+            get { return remoteEntitiesField; }
+            set { remoteEntitiesField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemotePermission
     {
-
         private string nameField;
 
-        private System.Nullable<long> permissionField;
+        private Nullable<long> permissionField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string name
         {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
+            get { return nameField; }
+            set { nameField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<long> permission
+        [SoapElement(IsNullable = true)]
+        public Nullable<long> permission
         {
-            get
-            {
-                return this.permissionField;
-            }
-            set
-            {
-                this.permissionField = value;
-            }
+            get { return permissionField; }
+            set { permissionField = value; }
         }
     }
 
     /// <remarks/>
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteSecurityLevel))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteFilter))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteField))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteProject))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(AbstractRemoteConstant))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteStatus))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteResolution))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemotePriority))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteIssueType))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteNamedObject))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteVersion))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteComponent))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [SoapInclude(typeof (RemoteSecurityLevel))]
+    [SoapInclude(typeof (RemoteFilter))]
+    [SoapInclude(typeof (RemoteField))]
+    [SoapInclude(typeof (RemoteProject))]
+    [SoapInclude(typeof (AbstractRemoteConstant))]
+    [SoapInclude(typeof (RemoteStatus))]
+    [SoapInclude(typeof (RemoteResolution))]
+    [SoapInclude(typeof (RemotePriority))]
+    [SoapInclude(typeof (RemoteIssueType))]
+    [SoapInclude(typeof (RemoteNamedObject))]
+    [SoapInclude(typeof (RemoteVersion))]
+    [SoapInclude(typeof (RemoteComponent))]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public abstract partial class AbstractNamedRemoteEntity : AbstractRemoteEntity
     {
-
         private string nameField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string name
         {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
+            get { return nameField; }
+            set { nameField = value; }
         }
     }
 
     /// <remarks/>
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteAttachment))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteIssue))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(AbstractNamedRemoteEntity))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteSecurityLevel))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteFilter))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteField))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteProject))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(AbstractRemoteConstant))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteStatus))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteResolution))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemotePriority))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteIssueType))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteNamedObject))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteVersion))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteComponent))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [SoapInclude(typeof (RemoteAttachment))]
+    [SoapInclude(typeof (RemoteIssue))]
+    [SoapInclude(typeof (AbstractNamedRemoteEntity))]
+    [SoapInclude(typeof (RemoteSecurityLevel))]
+    [SoapInclude(typeof (RemoteFilter))]
+    [SoapInclude(typeof (RemoteField))]
+    [SoapInclude(typeof (RemoteProject))]
+    [SoapInclude(typeof (AbstractRemoteConstant))]
+    [SoapInclude(typeof (RemoteStatus))]
+    [SoapInclude(typeof (RemoteResolution))]
+    [SoapInclude(typeof (RemotePriority))]
+    [SoapInclude(typeof (RemoteIssueType))]
+    [SoapInclude(typeof (RemoteNamedObject))]
+    [SoapInclude(typeof (RemoteVersion))]
+    [SoapInclude(typeof (RemoteComponent))]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public abstract partial class AbstractRemoteEntity
     {
-
         private string idField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string id
         {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
+            get { return idField; }
+            set { idField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteAttachment : AbstractRemoteEntity
     {
-
         private string authorField;
 
-        private System.Nullable<System.DateTime> createdField;
+        private Nullable<DateTime> createdField;
 
         private string filenameField;
 
-        private System.Nullable<long> filesizeField;
+        private Nullable<long> filesizeField;
 
         private string mimetypeField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string author
         {
-            get
-            {
-                return this.authorField;
-            }
-            set
-            {
-                this.authorField = value;
-            }
+            get { return authorField; }
+            set { authorField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<System.DateTime> created
+        [SoapElement(IsNullable = true)]
+        public Nullable<DateTime> created
         {
-            get
-            {
-                return this.createdField;
-            }
-            set
-            {
-                this.createdField = value;
-            }
+            get { return createdField; }
+            set { createdField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string filename
         {
-            get
-            {
-                return this.filenameField;
-            }
-            set
-            {
-                this.filenameField = value;
-            }
+            get { return filenameField; }
+            set { filenameField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<long> filesize
+        [SoapElement(IsNullable = true)]
+        public Nullable<long> filesize
         {
-            get
-            {
-                return this.filesizeField;
-            }
-            set
-            {
-                this.filesizeField = value;
-            }
+            get { return filesizeField; }
+            set { filesizeField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string mimetype
         {
-            get
-            {
-                return this.mimetypeField;
-            }
-            set
-            {
-                this.mimetypeField = value;
-            }
+            get { return mimetypeField; }
+            set { mimetypeField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteIssue : AbstractRemoteEntity
     {
-
         private RemoteVersion[] affectsVersionsField;
 
         private string assigneeField;
@@ -2424,13 +2017,13 @@ namespace ZxcWorkLog.Jira
 
         private RemoteComponent[] componentsField;
 
-        private System.Nullable<System.DateTime> createdField;
+        private Nullable<DateTime> createdField;
 
         private RemoteCustomFieldValue[] customFieldValuesField;
 
         private string descriptionField;
 
-        private System.Nullable<System.DateTime> duedateField;
+        private Nullable<DateTime> duedateField;
 
         private string environmentField;
 
@@ -2452,382 +2045,236 @@ namespace ZxcWorkLog.Jira
 
         private string typeField;
 
-        private System.Nullable<System.DateTime> updatedField;
+        private Nullable<DateTime> updatedField;
 
-        private System.Nullable<long> votesField;
+        private Nullable<long> votesField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteVersion[] affectsVersions
         {
-            get
-            {
-                return this.affectsVersionsField;
-            }
-            set
-            {
-                this.affectsVersionsField = value;
-            }
+            get { return affectsVersionsField; }
+            set { affectsVersionsField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string assignee
         {
-            get
-            {
-                return this.assigneeField;
-            }
-            set
-            {
-                this.assigneeField = value;
-            }
+            get { return assigneeField; }
+            set { assigneeField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string[] attachmentNames
         {
-            get
-            {
-                return this.attachmentNamesField;
-            }
-            set
-            {
-                this.attachmentNamesField = value;
-            }
+            get { return attachmentNamesField; }
+            set { attachmentNamesField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteComponent[] components
         {
-            get
-            {
-                return this.componentsField;
-            }
-            set
-            {
-                this.componentsField = value;
-            }
+            get { return componentsField; }
+            set { componentsField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<System.DateTime> created
+        [SoapElement(IsNullable = true)]
+        public Nullable<DateTime> created
         {
-            get
-            {
-                return this.createdField;
-            }
-            set
-            {
-                this.createdField = value;
-            }
+            get { return createdField; }
+            set { createdField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteCustomFieldValue[] customFieldValues
         {
-            get
-            {
-                return this.customFieldValuesField;
-            }
-            set
-            {
-                this.customFieldValuesField = value;
-            }
+            get { return customFieldValuesField; }
+            set { customFieldValuesField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string description
         {
-            get
-            {
-                return this.descriptionField;
-            }
-            set
-            {
-                this.descriptionField = value;
-            }
+            get { return descriptionField; }
+            set { descriptionField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<System.DateTime> duedate
+        [SoapElement(IsNullable = true)]
+        public Nullable<DateTime> duedate
         {
-            get
-            {
-                return this.duedateField;
-            }
-            set
-            {
-                this.duedateField = value;
-            }
+            get { return duedateField; }
+            set { duedateField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string environment
         {
-            get
-            {
-                return this.environmentField;
-            }
-            set
-            {
-                this.environmentField = value;
-            }
+            get { return environmentField; }
+            set { environmentField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteVersion[] fixVersions
         {
-            get
-            {
-                return this.fixVersionsField;
-            }
-            set
-            {
-                this.fixVersionsField = value;
-            }
+            get { return fixVersionsField; }
+            set { fixVersionsField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string key
         {
-            get
-            {
-                return this.keyField;
-            }
-            set
-            {
-                this.keyField = value;
-            }
+            get { return keyField; }
+            set { keyField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string priority
         {
-            get
-            {
-                return this.priorityField;
-            }
-            set
-            {
-                this.priorityField = value;
-            }
+            get { return priorityField; }
+            set { priorityField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string project
         {
-            get
-            {
-                return this.projectField;
-            }
-            set
-            {
-                this.projectField = value;
-            }
+            get { return projectField; }
+            set { projectField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string reporter
         {
-            get
-            {
-                return this.reporterField;
-            }
-            set
-            {
-                this.reporterField = value;
-            }
+            get { return reporterField; }
+            set { reporterField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string resolution
         {
-            get
-            {
-                return this.resolutionField;
-            }
-            set
-            {
-                this.resolutionField = value;
-            }
+            get { return resolutionField; }
+            set { resolutionField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string status
         {
-            get
-            {
-                return this.statusField;
-            }
-            set
-            {
-                this.statusField = value;
-            }
+            get { return statusField; }
+            set { statusField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string summary
         {
-            get
-            {
-                return this.summaryField;
-            }
-            set
-            {
-                this.summaryField = value;
-            }
+            get { return summaryField; }
+            set { summaryField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string type
         {
-            get
-            {
-                return this.typeField;
-            }
-            set
-            {
-                this.typeField = value;
-            }
+            get { return typeField; }
+            set { typeField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<System.DateTime> updated
+        [SoapElement(IsNullable = true)]
+        public Nullable<DateTime> updated
         {
-            get
-            {
-                return this.updatedField;
-            }
-            set
-            {
-                this.updatedField = value;
-            }
+            get { return updatedField; }
+            set { updatedField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<long> votes
+        [SoapElement(IsNullable = true)]
+        public Nullable<long> votes
         {
-            get
-            {
-                return this.votesField;
-            }
-            set
-            {
-                this.votesField = value;
-            }
+            get { return votesField; }
+            set { votesField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteVersion : AbstractNamedRemoteEntity
     {
-
         private bool archivedField;
 
-        private System.Nullable<System.DateTime> releaseDateField;
+        private Nullable<DateTime> releaseDateField;
 
         private bool releasedField;
 
-        private System.Nullable<long> sequenceField;
+        private Nullable<long> sequenceField;
 
         /// <remarks/>
         public bool archived
         {
-            get
-            {
-                return this.archivedField;
-            }
-            set
-            {
-                this.archivedField = value;
-            }
+            get { return archivedField; }
+            set { archivedField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<System.DateTime> releaseDate
+        [SoapElement(IsNullable = true)]
+        public Nullable<DateTime> releaseDate
         {
-            get
-            {
-                return this.releaseDateField;
-            }
-            set
-            {
-                this.releaseDateField = value;
-            }
+            get { return releaseDateField; }
+            set { releaseDateField = value; }
         }
 
         /// <remarks/>
         public bool released
         {
-            get
-            {
-                return this.releasedField;
-            }
-            set
-            {
-                this.releasedField = value;
-            }
+            get { return releasedField; }
+            set { releasedField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<long> sequence
+        [SoapElement(IsNullable = true)]
+        public Nullable<long> sequence
         {
-            get
-            {
-                return this.sequenceField;
-            }
-            set
-            {
-                this.sequenceField = value;
-            }
+            get { return sequenceField; }
+            set { sequenceField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteComponent : AbstractNamedRemoteEntity
     {
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteCustomFieldValue
     {
-
         private string customfieldIdField;
 
         private string keyField;
@@ -2835,83 +2282,57 @@ namespace ZxcWorkLog.Jira
         private string[] valuesField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string customfieldId
         {
-            get
-            {
-                return this.customfieldIdField;
-            }
-            set
-            {
-                this.customfieldIdField = value;
-            }
+            get { return customfieldIdField; }
+            set { customfieldIdField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string key
         {
-            get
-            {
-                return this.keyField;
-            }
-            set
-            {
-                this.keyField = value;
-            }
+            get { return keyField; }
+            set { keyField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string[] values
         {
-            get
-            {
-                return this.valuesField;
-            }
-            set
-            {
-                this.valuesField = value;
-            }
+            get { return valuesField; }
+            set { valuesField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteSecurityLevel : AbstractNamedRemoteEntity
     {
-
         private string descriptionField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string description
         {
-            get
-            {
-                return this.descriptionField;
-            }
-            set
-            {
-                this.descriptionField = value;
-            }
+            get { return descriptionField; }
+            set { descriptionField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteFilter : AbstractNamedRemoteEntity
     {
-
         private string authorField;
 
         private string descriptionField;
@@ -2921,208 +2342,156 @@ namespace ZxcWorkLog.Jira
         private string xmlField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string author
         {
-            get
-            {
-                return this.authorField;
-            }
-            set
-            {
-                this.authorField = value;
-            }
+            get { return authorField; }
+            set { authorField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string description
         {
-            get
-            {
-                return this.descriptionField;
-            }
-            set
-            {
-                this.descriptionField = value;
-            }
+            get { return descriptionField; }
+            set { descriptionField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string project
         {
-            get
-            {
-                return this.projectField;
-            }
-            set
-            {
-                this.projectField = value;
-            }
+            get { return projectField; }
+            set { projectField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string xml
         {
-            get
-            {
-                return this.xmlField;
-            }
-            set
-            {
-                this.xmlField = value;
-            }
+            get { return xmlField; }
+            set { xmlField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteField : AbstractNamedRemoteEntity
     {
     }
 
     /// <remarks/>
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteStatus))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteResolution))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemotePriority))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(RemoteIssueType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [SoapInclude(typeof (RemoteStatus))]
+    [SoapInclude(typeof (RemoteResolution))]
+    [SoapInclude(typeof (RemotePriority))]
+    [SoapInclude(typeof (RemoteIssueType))]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public abstract partial class AbstractRemoteConstant : AbstractNamedRemoteEntity
     {
-
         private string descriptionField;
 
         private string iconField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string description
         {
-            get
-            {
-                return this.descriptionField;
-            }
-            set
-            {
-                this.descriptionField = value;
-            }
+            get { return descriptionField; }
+            set { descriptionField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string icon
         {
-            get
-            {
-                return this.iconField;
-            }
-            set
-            {
-                this.iconField = value;
-            }
+            get { return iconField; }
+            set { iconField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteStatus : AbstractRemoteConstant
     {
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteResolution : AbstractRemoteConstant
     {
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemotePriority : AbstractRemoteConstant
     {
-
         private string colorField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string color
         {
-            get
-            {
-                return this.colorField;
-            }
-            set
-            {
-                this.colorField = value;
-            }
+            get { return colorField; }
+            set { colorField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteIssueType : AbstractRemoteConstant
     {
-
         private bool subTaskField;
 
         /// <remarks/>
         public bool subTask
         {
-            get
-            {
-                return this.subTaskField;
-            }
-            set
-            {
-                this.subTaskField = value;
-            }
+            get { return subTaskField; }
+            set { subTaskField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteNamedObject : AbstractNamedRemoteEntity
     {
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteConfiguration
     {
-
         private bool allowAttachmentsField;
 
         private bool allowExternalUserManagmentField;
@@ -3146,188 +2515,114 @@ namespace ZxcWorkLog.Jira
         /// <remarks/>
         public bool allowAttachments
         {
-            get
-            {
-                return this.allowAttachmentsField;
-            }
-            set
-            {
-                this.allowAttachmentsField = value;
-            }
+            get { return allowAttachmentsField; }
+            set { allowAttachmentsField = value; }
         }
 
         /// <remarks/>
         public bool allowExternalUserManagment
         {
-            get
-            {
-                return this.allowExternalUserManagmentField;
-            }
-            set
-            {
-                this.allowExternalUserManagmentField = value;
-            }
+            get { return allowExternalUserManagmentField; }
+            set { allowExternalUserManagmentField = value; }
         }
 
         /// <remarks/>
         public bool allowIssueLinking
         {
-            get
-            {
-                return this.allowIssueLinkingField;
-            }
-            set
-            {
-                this.allowIssueLinkingField = value;
-            }
+            get { return allowIssueLinkingField; }
+            set { allowIssueLinkingField = value; }
         }
 
         /// <remarks/>
         public bool allowSubTasks
         {
-            get
-            {
-                return this.allowSubTasksField;
-            }
-            set
-            {
-                this.allowSubTasksField = value;
-            }
+            get { return allowSubTasksField; }
+            set { allowSubTasksField = value; }
         }
 
         /// <remarks/>
         public bool allowTimeTracking
         {
-            get
-            {
-                return this.allowTimeTrackingField;
-            }
-            set
-            {
-                this.allowTimeTrackingField = value;
-            }
+            get { return allowTimeTrackingField; }
+            set { allowTimeTrackingField = value; }
         }
 
         /// <remarks/>
         public bool allowUnassignedIssues
         {
-            get
-            {
-                return this.allowUnassignedIssuesField;
-            }
-            set
-            {
-                this.allowUnassignedIssuesField = value;
-            }
+            get { return allowUnassignedIssuesField; }
+            set { allowUnassignedIssuesField = value; }
         }
 
         /// <remarks/>
         public bool allowVoting
         {
-            get
-            {
-                return this.allowVotingField;
-            }
-            set
-            {
-                this.allowVotingField = value;
-            }
+            get { return allowVotingField; }
+            set { allowVotingField = value; }
         }
 
         /// <remarks/>
         public bool allowWatching
         {
-            get
-            {
-                return this.allowWatchingField;
-            }
-            set
-            {
-                this.allowWatchingField = value;
-            }
+            get { return allowWatchingField; }
+            set { allowWatchingField = value; }
         }
 
         /// <remarks/>
         public int timeTrackingDaysPerWeek
         {
-            get
-            {
-                return this.timeTrackingDaysPerWeekField;
-            }
-            set
-            {
-                this.timeTrackingDaysPerWeekField = value;
-            }
+            get { return timeTrackingDaysPerWeekField; }
+            set { timeTrackingDaysPerWeekField = value; }
         }
 
         /// <remarks/>
         public int timeTrackingHoursPerDay
         {
-            get
-            {
-                return this.timeTrackingHoursPerDayField;
-            }
-            set
-            {
-                this.timeTrackingHoursPerDayField = value;
-            }
+            get { return timeTrackingHoursPerDayField; }
+            set { timeTrackingHoursPerDayField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteTimeInfo
     {
-
         private string serverTimeField;
 
         private string timeZoneIdField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string serverTime
         {
-            get
-            {
-                return this.serverTimeField;
-            }
-            set
-            {
-                this.serverTimeField = value;
-            }
+            get { return serverTimeField; }
+            set { serverTimeField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string timeZoneId
         {
-            get
-            {
-                return this.timeZoneIdField;
-            }
-            set
-            {
-                this.timeZoneIdField = value;
-            }
+            get { return timeZoneIdField; }
+            set { timeZoneIdField = value; }
         }
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
+    [GeneratedCode("svcutil", "4.0.30319.1")]
+    [Serializable()]
+    [DebuggerStepThrough()]
+    [DesignerCategory("code")]
+    [SoapType(Namespace = "http://beans.soap.rpc.jira.atlassian.com")]
     public partial class RemoteServerInfo
     {
-
         private string baseUrlField;
 
-        private System.Nullable<System.DateTime> buildDateField;
+        private Nullable<DateTime> buildDateField;
 
         private string buildNumberField;
 
@@ -3338,102 +2633,64 @@ namespace ZxcWorkLog.Jira
         private string versionField;
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string baseUrl
         {
-            get
-            {
-                return this.baseUrlField;
-            }
-            set
-            {
-                this.baseUrlField = value;
-            }
+            get { return baseUrlField; }
+            set { baseUrlField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
-        public System.Nullable<System.DateTime> buildDate
+        [SoapElement(IsNullable = true)]
+        public Nullable<DateTime> buildDate
         {
-            get
-            {
-                return this.buildDateField;
-            }
-            set
-            {
-                this.buildDateField = value;
-            }
+            get { return buildDateField; }
+            set { buildDateField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string buildNumber
         {
-            get
-            {
-                return this.buildNumberField;
-            }
-            set
-            {
-                this.buildNumberField = value;
-            }
+            get { return buildNumberField; }
+            set { buildNumberField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string edition
         {
-            get
-            {
-                return this.editionField;
-            }
-            set
-            {
-                this.editionField = value;
-            }
+            get { return editionField; }
+            set { editionField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public RemoteTimeInfo serverTime
         {
-            get
-            {
-                return this.serverTimeField;
-            }
-            set
-            {
-                this.serverTimeField = value;
-            }
+            get { return serverTimeField; }
+            set { serverTimeField = value; }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable = true)]
+        [SoapElement(IsNullable = true)]
         public string version
         {
-            get
-            {
-                return this.versionField;
-            }
-            set
-            {
-                this.versionField = value;
-            }
+            get { return versionField; }
+            set { versionField = value; }
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getComment", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getComment", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getCommentRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public long in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public long in1;
 
         public getCommentRequest()
         {
@@ -3446,15 +2703,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getCommentResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getCommentResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getCommentResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteComment getCommentReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteComment getCommentReturn;
 
         public getCommentResponse()
         {
@@ -3466,21 +2722,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class createGroupRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteUser in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteUser in2;
 
         public createGroupRequest()
         {
@@ -3494,15 +2747,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createGroupResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createGroupResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class createGroupResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteGroup createGroupReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteGroup createGroupReturn;
 
         public createGroupResponse()
         {
@@ -3514,15 +2766,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getServerInfo", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getServerInfo", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getServerInfoRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getServerInfoRequest()
         {
@@ -3534,15 +2785,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getServerInfoResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getServerInfoResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getServerInfoResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteServerInfo getServerInfoReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteServerInfo getServerInfoReturn;
 
         public getServerInfoResponse()
         {
@@ -3554,18 +2804,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true
+        )]
     public partial class getGroupRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getGroupRequest()
         {
@@ -3578,15 +2826,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getGroupResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getGroupResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getGroupResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteGroup getGroupReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteGroup getGroupReturn;
 
         public getGroupResponse()
         {
@@ -3598,18 +2845,15 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "login", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "login", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class loginRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public loginRequest()
         {
@@ -3622,15 +2866,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "loginResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "loginResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class loginResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string loginReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string loginReturn;
 
         public loginResponse()
         {
@@ -3642,18 +2885,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getUser", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getUser", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)
+    ]
     public partial class getUserRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getUserRequest()
         {
@@ -3666,15 +2907,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getUserResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getUserResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getUserResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteUser getUserReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteUser getUserReturn;
 
         public getUserResponse()
         {
@@ -3686,18 +2926,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getComponents", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getComponents", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getComponentsRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getComponentsRequest()
         {
@@ -3710,15 +2948,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getComponentsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getComponentsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getComponentsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteComponent[] getComponentsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteComponent[] getComponentsReturn;
 
         public getComponentsResponse()
         {
@@ -3730,27 +2967,22 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createUser", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createUser", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class createUserRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
+        [MessageBodyMember(Namespace = "", Order = 3)] public string in3;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public string in3;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 4)]
-        public string in4;
+        [MessageBodyMember(Namespace = "", Order = 4)] public string in4;
 
         public createUserRequest()
         {
@@ -3766,15 +2998,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createUserResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createUserResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class createUserResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteUser createUserReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteUser createUserReturn;
 
         public createUserResponse()
         {
@@ -3786,18 +3017,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true
+        )]
     public partial class getIssueRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getIssueRequest()
         {
@@ -3810,15 +3039,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssueResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssueResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getIssueResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue getIssueReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue getIssueReturn;
 
         public getIssueResponse()
         {
@@ -3830,18 +3058,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class createIssueRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteIssue in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteIssue in1;
 
         public createIssueRequest()
         {
@@ -3854,15 +3080,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createIssueResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createIssueResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class createIssueResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue createIssueReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue createIssueReturn;
 
         public createIssueResponse()
         {
@@ -3874,18 +3099,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getAvailableActions", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getAvailableActions", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getAvailableActionsRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getAvailableActionsRequest()
         {
@@ -3898,15 +3121,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getAvailableActionsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getAvailableActionsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getAvailableActionsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteNamedObject[] getAvailableActionsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteNamedObject[] getAvailableActionsReturn;
 
         public getAvailableActionsResponse()
         {
@@ -3918,15 +3140,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSubTaskIssueTypes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSubTaskIssueTypes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getSubTaskIssueTypesRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getSubTaskIssueTypesRequest()
         {
@@ -3938,15 +3159,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSubTaskIssueTypesResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSubTaskIssueTypesResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getSubTaskIssueTypesResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssueType[] getSubTaskIssueTypesReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssueType[] getSubTaskIssueTypesReturn;
 
         public getSubTaskIssueTypesResponse()
         {
@@ -3958,15 +3178,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getConfiguration", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getConfiguration", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getConfigurationRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getConfigurationRequest()
         {
@@ -3978,15 +3197,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getConfigurationResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getConfigurationResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getConfigurationResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteConfiguration getConfigurationReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteConfiguration getConfigurationReturn;
 
         public getConfigurationResponse()
         {
@@ -3998,45 +3216,37 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createProject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createProject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class createProjectRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
+        [MessageBodyMember(Namespace = "", Order = 3)] public string in3;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public string in3;
+        [MessageBodyMember(Namespace = "", Order = 4)] public string in4;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 4)]
-        public string in4;
+        [MessageBodyMember(Namespace = "", Order = 5)] public string in5;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 5)]
-        public string in5;
+        [MessageBodyMember(Namespace = "", Order = 6)] public RemotePermissionScheme in6;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 6)]
-        public RemotePermissionScheme in6;
+        [MessageBodyMember(Namespace = "", Order = 7)] public RemoteScheme in7;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 7)]
-        public RemoteScheme in7;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 8)]
-        public RemoteScheme in8;
+        [MessageBodyMember(Namespace = "", Order = 8)] public RemoteScheme in8;
 
         public createProjectRequest()
         {
         }
 
-        public createProjectRequest(string in0, string in1, string in2, string in3, string in4, string in5, RemotePermissionScheme in6, RemoteScheme in7, RemoteScheme in8)
+        public createProjectRequest(string in0, string in1, string in2, string in3, string in4, string in5,
+            RemotePermissionScheme in6, RemoteScheme in7, RemoteScheme in8)
         {
             this.in0 = in0;
             this.in1 = in1;
@@ -4050,15 +3260,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createProjectResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createProjectResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class createProjectResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteProject createProjectReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteProject createProjectReturn;
 
         public createProjectResponse()
         {
@@ -4070,18 +3279,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateProject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateProject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class updateProjectRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteProject in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteProject in1;
 
         public updateProjectRequest()
         {
@@ -4094,15 +3301,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateProjectResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateProjectResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class updateProjectResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteProject updateProjectReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteProject updateProjectReturn;
 
         public updateProjectResponse()
         {
@@ -4114,18 +3320,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectByKey", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectByKey", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getProjectByKeyRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getProjectByKeyRequest()
         {
@@ -4138,15 +3342,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectByKeyResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectByKeyResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getProjectByKeyResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteProject getProjectByKeyReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteProject getProjectByKeyReturn;
 
         public getProjectByKeyResponse()
         {
@@ -4158,18 +3361,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "removeAllRoleActorsByProject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "removeAllRoleActorsByProject",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class removeAllRoleActorsByProjectRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteProject in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteProject in1;
 
         public removeAllRoleActorsByProjectRequest()
         {
@@ -4182,27 +3383,26 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "removeAllRoleActorsByProjectResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "removeAllRoleActorsByProjectResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class removeAllRoleActorsByProjectResponse
     {
-
         public removeAllRoleActorsByProjectResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getPriorities", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getPriorities", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getPrioritiesRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getPrioritiesRequest()
         {
@@ -4214,15 +3414,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getPrioritiesResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getPrioritiesResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getPrioritiesResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemotePriority[] getPrioritiesReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemotePriority[] getPrioritiesReturn;
 
         public getPrioritiesResponse()
         {
@@ -4234,15 +3433,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getResolutions", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getResolutions", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getResolutionsRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getResolutionsRequest()
         {
@@ -4254,15 +3452,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getResolutionsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getResolutionsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getResolutionsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteResolution[] getResolutionsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteResolution[] getResolutionsReturn;
 
         public getResolutionsResponse()
         {
@@ -4274,15 +3471,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssueTypes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssueTypes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getIssueTypesRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getIssueTypesRequest()
         {
@@ -4294,15 +3490,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssueTypesResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssueTypesResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getIssueTypesResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssueType[] getIssueTypesReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssueType[] getIssueTypesReturn;
 
         public getIssueTypesResponse()
         {
@@ -4314,15 +3509,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getStatuses", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getStatuses", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getStatusesRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getStatusesRequest()
         {
@@ -4334,15 +3528,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getStatusesResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getStatusesResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getStatusesResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteStatus[] getStatusesReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteStatus[] getStatusesReturn;
 
         public getStatusesResponse()
         {
@@ -4354,15 +3547,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectRoles", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectRoles", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getProjectRolesRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getProjectRolesRequest()
         {
@@ -4374,15 +3566,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectRolesResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectRolesResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getProjectRolesResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteProjectRole[] getProjectRolesReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteProjectRole[] getProjectRolesReturn;
 
         public getProjectRolesResponse()
         {
@@ -4394,18 +3585,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getProjectRoleRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public long in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public long in1;
 
         public getProjectRoleRequest()
         {
@@ -4418,15 +3607,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectRoleResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectRoleResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getProjectRoleResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteProjectRole getProjectRoleReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteProjectRole getProjectRoleReturn;
 
         public getProjectRoleResponse()
         {
@@ -4438,21 +3626,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectRoleActors", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectRoleActors", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getProjectRoleActorsRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteProjectRole in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteProjectRole in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteProject in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteProject in2;
 
         public getProjectRoleActorsRequest()
         {
@@ -4466,15 +3651,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectRoleActorsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectRoleActorsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getProjectRoleActorsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteProjectRoleActors getProjectRoleActorsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteProjectRoleActors getProjectRoleActorsReturn;
 
         public getProjectRoleActorsResponse()
         {
@@ -4486,18 +3670,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getDefaultRoleActors", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getDefaultRoleActors", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getDefaultRoleActorsRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteProjectRole in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteProjectRole in1;
 
         public getDefaultRoleActorsRequest()
         {
@@ -4510,15 +3692,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getDefaultRoleActorsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getDefaultRoleActorsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getDefaultRoleActorsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteRoleActors getDefaultRoleActorsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteRoleActors getDefaultRoleActorsReturn;
 
         public getDefaultRoleActorsResponse()
         {
@@ -4530,21 +3711,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "removeAllRoleActorsByNameAndType", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "removeAllRoleActorsByNameAndType",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class removeAllRoleActorsByNameAndTypeRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
         public removeAllRoleActorsByNameAndTypeRequest()
         {
@@ -4558,33 +3736,30 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "removeAllRoleActorsByNameAndTypeResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "removeAllRoleActorsByNameAndTypeResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class removeAllRoleActorsByNameAndTypeResponse
     {
-
         public removeAllRoleActorsByNameAndTypeResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class deleteProjectRoleRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteProjectRole in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteProjectRole in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public bool in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public bool in2;
 
         public deleteProjectRoleRequest()
         {
@@ -4598,30 +3773,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteProjectRoleResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteProjectRoleResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class deleteProjectRoleResponse
     {
-
         public deleteProjectRoleResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class updateProjectRoleRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteProjectRole in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteProjectRole in1;
 
         public updateProjectRoleRequest()
         {
@@ -4634,30 +3807,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateProjectRoleResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateProjectRoleResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class updateProjectRoleResponse
     {
-
         public updateProjectRoleResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class createProjectRoleRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteProjectRole in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteProjectRole in1;
 
         public createProjectRoleRequest()
         {
@@ -4670,15 +3841,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createProjectRoleResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createProjectRoleResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class createProjectRoleResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteProjectRole createProjectRoleReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteProjectRole createProjectRoleReturn;
 
         public createProjectRoleResponse()
         {
@@ -4690,18 +3860,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "isProjectRoleNameUnique", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "isProjectRoleNameUnique", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class isProjectRoleNameUniqueRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public isProjectRoleNameUniqueRequest()
         {
@@ -4714,15 +3882,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "isProjectRoleNameUniqueResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "isProjectRoleNameUniqueResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class isProjectRoleNameUniqueResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public bool isProjectRoleNameUniqueReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public bool isProjectRoleNameUniqueReturn;
 
         public isProjectRoleNameUniqueResponse()
         {
@@ -4734,33 +3901,29 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addActorsToProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addActorsToProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class addActorsToProjectRoleRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string[] in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string[] in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteProjectRole in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteProjectRole in2;
+        [MessageBodyMember(Namespace = "", Order = 3)] public RemoteProject in3;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public RemoteProject in3;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 4)]
-        public string in4;
+        [MessageBodyMember(Namespace = "", Order = 4)] public string in4;
 
         public addActorsToProjectRoleRequest()
         {
         }
 
-        public addActorsToProjectRoleRequest(string in0, string[] in1, RemoteProjectRole in2, RemoteProject in3, string in4)
+        public addActorsToProjectRoleRequest(string in0, string[] in1, RemoteProjectRole in2, RemoteProject in3,
+            string in4)
         {
             this.in0 = in0;
             this.in1 = in1;
@@ -4770,45 +3933,41 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addActorsToProjectRoleResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addActorsToProjectRoleResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class addActorsToProjectRoleResponse
     {
-
         public addActorsToProjectRoleResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "removeActorsFromProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "removeActorsFromProjectRole",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class removeActorsFromProjectRoleRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string[] in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string[] in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteProjectRole in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteProjectRole in2;
+        [MessageBodyMember(Namespace = "", Order = 3)] public RemoteProject in3;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public RemoteProject in3;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 4)]
-        public string in4;
+        [MessageBodyMember(Namespace = "", Order = 4)] public string in4;
 
         public removeActorsFromProjectRoleRequest()
         {
         }
 
-        public removeActorsFromProjectRoleRequest(string in0, string[] in1, RemoteProjectRole in2, RemoteProject in3, string in4)
+        public removeActorsFromProjectRoleRequest(string in0, string[] in1, RemoteProjectRole in2, RemoteProject in3,
+            string in4)
         {
             this.in0 = in0;
             this.in1 = in1;
@@ -4818,36 +3977,32 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "removeActorsFromProjectRoleResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "removeActorsFromProjectRoleResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class removeActorsFromProjectRoleResponse
     {
-
         public removeActorsFromProjectRoleResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addDefaultActorsToProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addDefaultActorsToProjectRole",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class addDefaultActorsToProjectRoleRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string[] in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string[] in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteProjectRole in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteProjectRole in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public string in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public string in3;
 
         public addDefaultActorsToProjectRoleRequest()
         {
@@ -4862,36 +4017,32 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addDefaultActorsToProjectRoleResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addDefaultActorsToProjectRoleResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class addDefaultActorsToProjectRoleResponse
     {
-
         public addDefaultActorsToProjectRoleResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "removeDefaultActorsFromProjectRole", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "removeDefaultActorsFromProjectRole",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class removeDefaultActorsFromProjectRoleRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string[] in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string[] in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteProjectRole in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteProjectRole in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public string in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public string in3;
 
         public removeDefaultActorsFromProjectRoleRequest()
         {
@@ -4906,30 +4057,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "removeDefaultActorsFromProjectRoleResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "removeDefaultActorsFromProjectRoleResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class removeDefaultActorsFromProjectRoleResponse
     {
-
         public removeDefaultActorsFromProjectRoleResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getAssociatedNotificationSchemes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getAssociatedNotificationSchemes",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class getAssociatedNotificationSchemesRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteProjectRole in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteProjectRole in1;
 
         public getAssociatedNotificationSchemesRequest()
         {
@@ -4942,15 +4091,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getAssociatedNotificationSchemesResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getAssociatedNotificationSchemesResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getAssociatedNotificationSchemesResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteScheme[] getAssociatedNotificationSchemesReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteScheme[] getAssociatedNotificationSchemesReturn;
 
         public getAssociatedNotificationSchemesResponse()
         {
@@ -4962,18 +4110,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getAssociatedPermissionSchemes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getAssociatedPermissionSchemes",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class getAssociatedPermissionSchemesRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteProjectRole in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteProjectRole in1;
 
         public getAssociatedPermissionSchemesRequest()
         {
@@ -4986,15 +4132,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getAssociatedPermissionSchemesResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getAssociatedPermissionSchemesResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getAssociatedPermissionSchemesResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteScheme[] getAssociatedPermissionSchemesReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteScheme[] getAssociatedPermissionSchemesReturn;
 
         public getAssociatedPermissionSchemesResponse()
         {
@@ -5006,18 +4151,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteProject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteProject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class deleteProjectRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public deleteProjectRequest()
         {
@@ -5030,30 +4173,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteProjectResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteProjectResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class deleteProjectResponse
     {
-
         public deleteProjectResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectById", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectById", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getProjectByIdRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public long in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public long in1;
 
         public getProjectByIdRequest()
         {
@@ -5066,15 +4207,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectByIdResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectByIdResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getProjectByIdResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteProject getProjectByIdReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteProject getProjectByIdReturn;
 
         public getProjectByIdResponse()
         {
@@ -5086,18 +4226,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getVersions", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getVersions", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getVersionsRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getVersionsRequest()
         {
@@ -5110,15 +4248,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getVersionsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getVersionsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getVersionsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteVersion[] getVersionsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteVersion[] getVersionsReturn;
 
         public getVersionsResponse()
         {
@@ -5130,15 +4267,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getCustomFields", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getCustomFields", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getCustomFieldsRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getCustomFieldsRequest()
         {
@@ -5150,15 +4286,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getCustomFieldsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getCustomFieldsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getCustomFieldsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteField[] getCustomFieldsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteField[] getCustomFieldsReturn;
 
         public getCustomFieldsResponse()
         {
@@ -5170,18 +4305,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getComments", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getComments", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getCommentsRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getCommentsRequest()
         {
@@ -5194,15 +4327,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getCommentsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getCommentsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getCommentsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteComment[] getCommentsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteComment[] getCommentsReturn;
 
         public getCommentsResponse()
         {
@@ -5214,15 +4346,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getFavouriteFilters", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getFavouriteFilters", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getFavouriteFiltersRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getFavouriteFiltersRequest()
         {
@@ -5234,15 +4365,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getFavouriteFiltersResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getFavouriteFiltersResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getFavouriteFiltersResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteFilter[] getFavouriteFiltersReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteFilter[] getFavouriteFiltersReturn;
 
         public getFavouriteFiltersResponse()
         {
@@ -5254,21 +4384,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "releaseVersion", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "releaseVersion", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class releaseVersionRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteVersion in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteVersion in2;
 
         public releaseVersionRequest()
         {
@@ -5282,36 +4409,32 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "releaseVersionResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "releaseVersionResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class releaseVersionResponse
     {
-
         public releaseVersionResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "archiveVersion", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "archiveVersion", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class archiveVersionRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public bool in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public bool in3;
 
         public archiveVersionRequest()
         {
@@ -5326,33 +4449,30 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "archiveVersionResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "archiveVersionResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class archiveVersionResponse
     {
-
         public archiveVersionResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class updateIssueRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteFieldValue[] in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteFieldValue[] in2;
 
         public updateIssueRequest()
         {
@@ -5366,15 +4486,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateIssueResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateIssueResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class updateIssueResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue updateIssueReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue updateIssueReturn;
 
         public updateIssueResponse()
         {
@@ -5386,18 +4505,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getFieldsForEdit", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getFieldsForEdit", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getFieldsForEditRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getFieldsForEditRequest()
         {
@@ -5410,15 +4527,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getFieldsForEditResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getFieldsForEditResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getFieldsForEditResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteField[] getFieldsForEditReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteField[] getFieldsForEditReturn;
 
         public getFieldsForEditResponse()
         {
@@ -5430,18 +4546,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssueTypesForProject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssueTypesForProject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getIssueTypesForProjectRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getIssueTypesForProjectRequest()
         {
@@ -5454,15 +4568,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssueTypesForProjectResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssueTypesForProjectResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getIssueTypesForProjectResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssueType[] getIssueTypesForProjectReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssueType[] getIssueTypesForProjectReturn;
 
         public getIssueTypesForProjectResponse()
         {
@@ -5474,18 +4587,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSubTaskIssueTypesForProject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSubTaskIssueTypesForProject",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class getSubTaskIssueTypesForProjectRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getSubTaskIssueTypesForProjectRequest()
         {
@@ -5498,15 +4609,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSubTaskIssueTypesForProjectResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSubTaskIssueTypesForProjectResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getSubTaskIssueTypesForProjectResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssueType[] getSubTaskIssueTypesForProjectReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssueType[] getSubTaskIssueTypesForProjectReturn;
 
         public getSubTaskIssueTypesForProjectResponse()
         {
@@ -5518,21 +4628,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addUserToGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addUserToGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class addUserToGroupRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteGroup in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteGroup in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteUser in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteUser in2;
 
         public addUserToGroupRequest()
         {
@@ -5546,33 +4653,30 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addUserToGroupResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addUserToGroupResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class addUserToGroupResponse
     {
-
         public addUserToGroupResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "removeUserFromGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "removeUserFromGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class removeUserFromGroupRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteGroup in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteGroup in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteUser in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteUser in2;
 
         public removeUserFromGroupRequest()
         {
@@ -5586,30 +4690,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "removeUserFromGroupResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "removeUserFromGroupResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class removeUserFromGroupResponse
     {
-
         public removeUserFromGroupResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSecurityLevel", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSecurityLevel", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getSecurityLevelRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getSecurityLevelRequest()
         {
@@ -5622,15 +4724,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSecurityLevelResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSecurityLevelResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getSecurityLevelResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteSecurityLevel getSecurityLevelReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteSecurityLevel getSecurityLevelReturn;
 
         public getSecurityLevelResponse()
         {
@@ -5642,21 +4743,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addComment", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addComment", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class addCommentRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteComment in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteComment in2;
 
         public addCommentRequest()
         {
@@ -5670,27 +4768,25 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addCommentResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addCommentResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class addCommentResponse
     {
-
         public addCommentResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "logout", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "logout", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class logoutRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public logoutRequest()
         {
@@ -5702,15 +4798,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "logoutResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "logoutResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class logoutResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public bool logoutReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public bool logoutReturn;
 
         public logoutResponse()
         {
@@ -5722,18 +4817,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectWithSchemesById", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectWithSchemesById", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getProjectWithSchemesByIdRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public long in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public long in1;
 
         public getProjectWithSchemesByIdRequest()
         {
@@ -5746,15 +4839,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectWithSchemesByIdResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectWithSchemesByIdResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getProjectWithSchemesByIdResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteProject getProjectWithSchemesByIdReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteProject getProjectWithSchemesByIdReturn;
 
         public getProjectWithSchemesByIdResponse()
         {
@@ -5766,18 +4858,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSecurityLevels", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSecurityLevels", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getSecurityLevelsRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getSecurityLevelsRequest()
         {
@@ -5790,15 +4880,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSecurityLevelsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSecurityLevelsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getSecurityLevelsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteSecurityLevel[] getSecurityLevelsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteSecurityLevel[] getSecurityLevelsReturn;
 
         public getSecurityLevelsResponse()
         {
@@ -5810,21 +4899,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectAvatars", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectAvatars", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getProjectAvatarsRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public bool in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public bool in2;
 
         public getProjectAvatarsRequest()
         {
@@ -5838,15 +4924,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectAvatarsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectAvatarsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getProjectAvatarsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteAvatar[] getProjectAvatarsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteAvatar[] getProjectAvatarsReturn;
 
         public getProjectAvatarsResponse()
         {
@@ -5858,21 +4943,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "setProjectAvatar", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "setProjectAvatar", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class setProjectAvatarRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public long in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public long in2;
 
         public setProjectAvatarRequest()
         {
@@ -5886,30 +4968,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "setProjectAvatarResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "setProjectAvatarResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class setProjectAvatarResponse
     {
-
         public setProjectAvatarResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectAvatar", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectAvatar", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getProjectAvatarRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getProjectAvatarRequest()
         {
@@ -5922,15 +5002,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectAvatarResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectAvatarResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getProjectAvatarResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteAvatar getProjectAvatarReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteAvatar getProjectAvatarReturn;
 
         public getProjectAvatarResponse()
         {
@@ -5942,18 +5021,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteProjectAvatar", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteProjectAvatar", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class deleteProjectAvatarRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public long in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public long in1;
 
         public deleteProjectAvatarRequest()
         {
@@ -5966,27 +5043,26 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteProjectAvatarResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteProjectAvatarResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class deleteProjectAvatarResponse
     {
-
         public deleteProjectAvatarResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getNotificationSchemes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getNotificationSchemes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getNotificationSchemesRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getNotificationSchemesRequest()
         {
@@ -5998,15 +5074,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getNotificationSchemesResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getNotificationSchemesResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getNotificationSchemesResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteScheme[] getNotificationSchemesReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteScheme[] getNotificationSchemesReturn;
 
         public getNotificationSchemesResponse()
         {
@@ -6018,15 +5093,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getPermissionSchemes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getPermissionSchemes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getPermissionSchemesRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getPermissionSchemesRequest()
         {
@@ -6038,15 +5112,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getPermissionSchemesResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getPermissionSchemesResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getPermissionSchemesResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemotePermissionScheme[] getPermissionSchemesReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemotePermissionScheme[] getPermissionSchemesReturn;
 
         public getPermissionSchemesResponse()
         {
@@ -6058,15 +5131,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getAllPermissions", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getAllPermissions", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getAllPermissionsRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getAllPermissionsRequest()
         {
@@ -6078,15 +5150,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getAllPermissionsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getAllPermissionsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getAllPermissionsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemotePermission[] getAllPermissionsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemotePermission[] getAllPermissionsReturn;
 
         public getAllPermissionsResponse()
         {
@@ -6098,21 +5169,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createPermissionScheme", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createPermissionScheme", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class createPermissionSchemeRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
         public createPermissionSchemeRequest()
         {
@@ -6126,15 +5194,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createPermissionSchemeResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createPermissionSchemeResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class createPermissionSchemeResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemotePermissionScheme createPermissionSchemeReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemotePermissionScheme createPermissionSchemeReturn;
 
         public createPermissionSchemeResponse()
         {
@@ -6146,24 +5213,20 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addPermissionTo", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addPermissionTo", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class addPermissionToRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemotePermissionScheme in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemotePermissionScheme in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemotePermission in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemotePermission in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public RemoteEntity in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public RemoteEntity in3;
 
         public addPermissionToRequest()
         {
@@ -6178,15 +5241,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addPermissionToResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addPermissionToResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class addPermissionToResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemotePermissionScheme addPermissionToReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemotePermissionScheme addPermissionToReturn;
 
         public addPermissionToResponse()
         {
@@ -6198,30 +5260,27 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deletePermissionFrom", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deletePermissionFrom", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class deletePermissionFromRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemotePermissionScheme in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemotePermissionScheme in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemotePermission in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemotePermission in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public RemoteEntity in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public RemoteEntity in3;
 
         public deletePermissionFromRequest()
         {
         }
 
-        public deletePermissionFromRequest(string in0, RemotePermissionScheme in1, RemotePermission in2, RemoteEntity in3)
+        public deletePermissionFromRequest(string in0, RemotePermissionScheme in1, RemotePermission in2,
+            RemoteEntity in3)
         {
             this.in0 = in0;
             this.in1 = in1;
@@ -6230,15 +5289,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deletePermissionFromResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deletePermissionFromResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class deletePermissionFromResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemotePermissionScheme deletePermissionFromReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemotePermissionScheme deletePermissionFromReturn;
 
         public deletePermissionFromResponse()
         {
@@ -6250,18 +5308,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deletePermissionScheme", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deletePermissionScheme", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class deletePermissionSchemeRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public deletePermissionSchemeRequest()
         {
@@ -6274,33 +5330,30 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deletePermissionSchemeResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deletePermissionSchemeResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class deletePermissionSchemeResponse
     {
-
         public deletePermissionSchemeResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createIssueWithSecurityLevel", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createIssueWithSecurityLevel",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class createIssueWithSecurityLevelRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteIssue in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteIssue in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public long in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public long in2;
 
         public createIssueWithSecurityLevelRequest()
         {
@@ -6314,15 +5367,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createIssueWithSecurityLevelResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createIssueWithSecurityLevelResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class createIssueWithSecurityLevelResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue createIssueWithSecurityLevelReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue createIssueWithSecurityLevelReturn;
 
         public createIssueWithSecurityLevelResponse()
         {
@@ -6334,24 +5386,20 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addAttachmentsToIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addAttachmentsToIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class addAttachmentsToIssueRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string[] in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string[] in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public sbyte[] in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public sbyte[] in3;
 
         public addAttachmentsToIssueRequest()
         {
@@ -6366,15 +5414,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addAttachmentsToIssueResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addAttachmentsToIssueResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class addAttachmentsToIssueResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public bool addAttachmentsToIssueReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public bool addAttachmentsToIssueReturn;
 
         public addAttachmentsToIssueResponse()
         {
@@ -6386,18 +5433,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getAttachmentsFromIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getAttachmentsFromIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getAttachmentsFromIssueRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getAttachmentsFromIssueRequest()
         {
@@ -6410,15 +5455,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getAttachmentsFromIssueResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getAttachmentsFromIssueResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getAttachmentsFromIssueResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteAttachment[] getAttachmentsFromIssueReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteAttachment[] getAttachmentsFromIssueReturn;
 
         public getAttachmentsFromIssueResponse()
         {
@@ -6430,18 +5474,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class deleteIssueRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public deleteIssueRequest()
         {
@@ -6454,30 +5496,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteIssueResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteIssueResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class deleteIssueResponse
     {
-
         public deleteIssueResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "hasPermissionToEditComment", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "hasPermissionToEditComment", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class hasPermissionToEditCommentRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteComment in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteComment in1;
 
         public hasPermissionToEditCommentRequest()
         {
@@ -6490,15 +5530,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "hasPermissionToEditCommentResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "hasPermissionToEditCommentResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class hasPermissionToEditCommentResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public bool hasPermissionToEditCommentReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public bool hasPermissionToEditCommentReturn;
 
         public hasPermissionToEditCommentResponse()
         {
@@ -6510,18 +5549,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "editComment", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "editComment", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class editCommentRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteComment in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteComment in1;
 
         public editCommentRequest()
         {
@@ -6534,15 +5571,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "editCommentResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "editCommentResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class editCommentResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteComment editCommentReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteComment editCommentReturn;
 
         public editCommentResponse()
         {
@@ -6554,21 +5590,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getFieldsForAction", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getFieldsForAction", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getFieldsForActionRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
         public getFieldsForActionRequest()
         {
@@ -6582,15 +5615,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getFieldsForActionResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getFieldsForActionResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getFieldsForActionResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteField[] getFieldsForActionReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteField[] getFieldsForActionReturn;
 
         public getFieldsForActionResponse()
         {
@@ -6602,24 +5634,20 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "progressWorkflowAction", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "progressWorkflowAction", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class progressWorkflowActionRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public RemoteFieldValue[] in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public RemoteFieldValue[] in3;
 
         public progressWorkflowActionRequest()
         {
@@ -6634,15 +5662,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "progressWorkflowActionResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "progressWorkflowActionResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class progressWorkflowActionResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue progressWorkflowActionReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue progressWorkflowActionReturn;
 
         public progressWorkflowActionResponse()
         {
@@ -6654,18 +5681,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssueById", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssueById", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getIssueByIdRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getIssueByIdRequest()
         {
@@ -6678,15 +5703,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssueByIdResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssueByIdResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getIssueByIdResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue getIssueByIdReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue getIssueByIdReturn;
 
         public getIssueByIdResponse()
         {
@@ -6698,24 +5722,20 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "adZxcWorkLogWithNewRemainingEstimate", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "adZxcWorkLogWithNewRemainingEstimate",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class adZxcWorkLogWithNewRemainingEstimateRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteWorklog in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteWorklog in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public string in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public string in3;
 
         public adZxcWorkLogWithNewRemainingEstimateRequest()
         {
@@ -6730,15 +5750,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "adZxcWorkLogWithNewRemainingEstimateResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "adZxcWorkLogWithNewRemainingEstimateResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class adZxcWorkLogWithNewRemainingEstimateResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteWorklog adZxcWorkLogWithNewRemainingEstimateReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteWorklog adZxcWorkLogWithNewRemainingEstimateReturn;
 
         public adZxcWorkLogWithNewRemainingEstimateResponse()
         {
@@ -6750,21 +5769,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "adZxcWorkLogAndAutoAdjustRemainingEstimate", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "adZxcWorkLogAndAutoAdjustRemainingEstimate",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class adZxcWorkLogAndAutoAdjustRemainingEstimateRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteWorklog in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteWorklog in2;
 
         public adZxcWorkLogAndAutoAdjustRemainingEstimateRequest()
         {
@@ -6778,41 +5794,39 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "adZxcWorkLogAndAutoAdjustRemainingEstimateResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "adZxcWorkLogAndAutoAdjustRemainingEstimateResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class adZxcWorkLogAndAutoAdjustRemainingEstimateResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteWorklog adZxcWorkLogAndAutoAdjustRemainingEstimateReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteWorklog
+            adZxcWorkLogAndAutoAdjustRemainingEstimateReturn;
 
         public adZxcWorkLogAndAutoAdjustRemainingEstimateResponse()
         {
         }
 
-        public adZxcWorkLogAndAutoAdjustRemainingEstimateResponse(RemoteWorklog adZxcWorkLogAndAutoAdjustRemainingEstimateReturn)
+        public adZxcWorkLogAndAutoAdjustRemainingEstimateResponse(
+            RemoteWorklog adZxcWorkLogAndAutoAdjustRemainingEstimateReturn)
         {
             this.adZxcWorkLogAndAutoAdjustRemainingEstimateReturn = adZxcWorkLogAndAutoAdjustRemainingEstimateReturn;
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "adZxcWorkLogAndRetainRemainingEstimate", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "adZxcWorkLogAndRetainRemainingEstimate",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class adZxcWorkLogAndRetainRemainingEstimateRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteWorklog in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteWorklog in2;
 
         public adZxcWorkLogAndRetainRemainingEstimateRequest()
         {
@@ -6826,15 +5840,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "adZxcWorkLogAndRetainRemainingEstimateResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "adZxcWorkLogAndRetainRemainingEstimateResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class adZxcWorkLogAndRetainRemainingEstimateResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteWorklog adZxcWorkLogAndRetainRemainingEstimateReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteWorklog adZxcWorkLogAndRetainRemainingEstimateReturn;
 
         public adZxcWorkLogAndRetainRemainingEstimateResponse()
         {
@@ -6846,21 +5859,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteWorklogWithNewRemainingEstimate", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteWorklogWithNewRemainingEstimate",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class deleteWorklogWithNewRemainingEstimateRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
         public deleteWorklogWithNewRemainingEstimateRequest()
         {
@@ -6874,30 +5884,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteWorklogWithNewRemainingEstimateResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteWorklogWithNewRemainingEstimateResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class deleteWorklogWithNewRemainingEstimateResponse
     {
-
         public deleteWorklogWithNewRemainingEstimateResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteWorklogAndAutoAdjustRemainingEstimate", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteWorklogAndAutoAdjustRemainingEstimate",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class deleteWorklogAndAutoAdjustRemainingEstimateRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public deleteWorklogAndAutoAdjustRemainingEstimateRequest()
         {
@@ -6910,30 +5918,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteWorklogAndAutoAdjustRemainingEstimateResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteWorklogAndAutoAdjustRemainingEstimateResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class deleteWorklogAndAutoAdjustRemainingEstimateResponse
     {
-
         public deleteWorklogAndAutoAdjustRemainingEstimateResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteWorklogAndRetainRemainingEstimate", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteWorklogAndRetainRemainingEstimate",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class deleteWorklogAndRetainRemainingEstimateRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public deleteWorklogAndRetainRemainingEstimateRequest()
         {
@@ -6946,33 +5952,30 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteWorklogAndRetainRemainingEstimateResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteWorklogAndRetainRemainingEstimateResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class deleteWorklogAndRetainRemainingEstimateResponse
     {
-
         public deleteWorklogAndRetainRemainingEstimateResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateWorklogWithNewRemainingEstimate", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateWorklogWithNewRemainingEstimate",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class updateWorklogWithNewRemainingEstimateRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteWorklog in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteWorklog in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
         public updateWorklogWithNewRemainingEstimateRequest()
         {
@@ -6986,30 +5989,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateWorklogWithNewRemainingEstimateResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateWorklogWithNewRemainingEstimateResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class updateWorklogWithNewRemainingEstimateResponse
     {
-
         public updateWorklogWithNewRemainingEstimateResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateWorklogAndAutoAdjustRemainingEstimate", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateWorklogAndAutoAdjustRemainingEstimate",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class updateWorklogAndAutoAdjustRemainingEstimateRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteWorklog in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteWorklog in1;
 
         public updateWorklogAndAutoAdjustRemainingEstimateRequest()
         {
@@ -7022,30 +6023,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateWorklogAndAutoAdjustRemainingEstimateResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateWorklogAndAutoAdjustRemainingEstimateResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class updateWorklogAndAutoAdjustRemainingEstimateResponse
     {
-
         public updateWorklogAndAutoAdjustRemainingEstimateResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateWorklogAndRetainRemainingEstimate", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateWorklogAndRetainRemainingEstimate",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class updateWorklogAndRetainRemainingEstimateRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteWorklog in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteWorklog in1;
 
         public updateWorklogAndRetainRemainingEstimateRequest()
         {
@@ -7058,30 +6057,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateWorklogAndRetainRemainingEstimateResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateWorklogAndRetainRemainingEstimateResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class updateWorklogAndRetainRemainingEstimateResponse
     {
-
         public updateWorklogAndRetainRemainingEstimateResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getWorklogs", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getWorklogs", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getWorklogsRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getWorklogsRequest()
         {
@@ -7094,15 +6091,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getWorklogsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getWorklogsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getWorklogsResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteWorklog[] getWorklogsReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteWorklog[] getWorklogsReturn;
 
         public getWorklogsResponse()
         {
@@ -7114,18 +6110,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "hasPermissionToCreateWorklog", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "hasPermissionToCreateWorklog",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class hasPermissionToCreateWorklogRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public hasPermissionToCreateWorklogRequest()
         {
@@ -7138,15 +6132,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "hasPermissionToCreateWorklogResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "hasPermissionToCreateWorklogResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class hasPermissionToCreateWorklogResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public bool hasPermissionToCreateWorklogReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public bool hasPermissionToCreateWorklogReturn;
 
         public hasPermissionToCreateWorklogResponse()
         {
@@ -7158,18 +6151,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "hasPermissionToDeleteWorklog", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "hasPermissionToDeleteWorklog",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class hasPermissionToDeleteWorklogRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public hasPermissionToDeleteWorklogRequest()
         {
@@ -7182,15 +6173,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "hasPermissionToDeleteWorklogResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "hasPermissionToDeleteWorklogResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class hasPermissionToDeleteWorklogResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public bool hasPermissionToDeleteWorklogReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public bool hasPermissionToDeleteWorklogReturn;
 
         public hasPermissionToDeleteWorklogResponse()
         {
@@ -7202,18 +6192,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "hasPermissionToUpdateWorklog", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "hasPermissionToUpdateWorklog",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class hasPermissionToUpdateWorklogRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public hasPermissionToUpdateWorklogRequest()
         {
@@ -7226,15 +6214,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "hasPermissionToUpdateWorklogResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "hasPermissionToUpdateWorklogResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class hasPermissionToUpdateWorklogResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public bool hasPermissionToUpdateWorklogReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public bool hasPermissionToUpdateWorklogReturn;
 
         public hasPermissionToUpdateWorklogResponse()
         {
@@ -7246,18 +6233,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getResolutionDateByKey", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getResolutionDateByKey", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getResolutionDateByKeyRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getResolutionDateByKeyRequest()
         {
@@ -7270,38 +6255,35 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getResolutionDateByKeyResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getResolutionDateByKeyResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getResolutionDateByKeyResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public System.DateTime getResolutionDateByKeyReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public DateTime getResolutionDateByKeyReturn;
 
         public getResolutionDateByKeyResponse()
         {
         }
 
-        public getResolutionDateByKeyResponse(System.DateTime getResolutionDateByKeyReturn)
+        public getResolutionDateByKeyResponse(DateTime getResolutionDateByKeyReturn)
         {
             this.getResolutionDateByKeyReturn = getResolutionDateByKeyReturn;
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getResolutionDateById", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getResolutionDateById", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getResolutionDateByIdRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public long in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public long in1;
 
         public getResolutionDateByIdRequest()
         {
@@ -7314,38 +6296,35 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getResolutionDateByIdResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getResolutionDateByIdResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getResolutionDateByIdResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public System.DateTime getResolutionDateByIdReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public DateTime getResolutionDateByIdReturn;
 
         public getResolutionDateByIdResponse()
         {
         }
 
-        public getResolutionDateByIdResponse(System.DateTime getResolutionDateByIdReturn)
+        public getResolutionDateByIdResponse(DateTime getResolutionDateByIdReturn)
         {
             this.getResolutionDateByIdReturn = getResolutionDateByIdReturn;
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssueCountForFilter", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssueCountForFilter", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getIssueCountForFilterRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getIssueCountForFilterRequest()
         {
@@ -7358,15 +6337,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssueCountForFilterResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssueCountForFilterResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getIssueCountForFilterResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public long getIssueCountForFilterReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public long getIssueCountForFilterReturn;
 
         public getIssueCountForFilterResponse()
         {
@@ -7378,18 +6356,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromTextSearch", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromTextSearch", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getIssuesFromTextSearchRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getIssuesFromTextSearchRequest()
         {
@@ -7402,15 +6378,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromTextSearchResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromTextSearchResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getIssuesFromTextSearchResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue[] getIssuesFromTextSearchReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue[] getIssuesFromTextSearchReturn;
 
         public getIssuesFromTextSearchResponse()
         {
@@ -7422,24 +6397,20 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromTextSearchWithProject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromTextSearchWithProject",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class getIssuesFromTextSearchWithProjectRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string[] in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string[] in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public int in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public int in3;
 
         public getIssuesFromTextSearchWithProjectRequest()
         {
@@ -7454,15 +6425,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromTextSearchWithProjectResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromTextSearchWithProjectResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getIssuesFromTextSearchWithProjectResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue[] getIssuesFromTextSearchWithProjectReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue[] getIssuesFromTextSearchWithProjectReturn;
 
         public getIssuesFromTextSearchWithProjectResponse()
         {
@@ -7474,21 +6444,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromJqlSearch", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromJqlSearch", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getIssuesFromJqlSearchRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public int in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public int in2;
 
         public getIssuesFromJqlSearchRequest()
         {
@@ -7502,15 +6469,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromJqlSearchResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromJqlSearchResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getIssuesFromJqlSearchResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue[] getIssuesFromJqlSearchReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue[] getIssuesFromJqlSearchReturn;
 
         public getIssuesFromJqlSearchResponse()
         {
@@ -7522,18 +6488,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteUser", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteUser", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class deleteUserRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public deleteUserRequest()
         {
@@ -7546,30 +6510,28 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteUserResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteUserResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class deleteUserResponse
     {
-
         public deleteUserResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class updateGroupRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteGroup in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteGroup in1;
 
         public updateGroupRequest()
         {
@@ -7582,15 +6544,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "updateGroupResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "updateGroupResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class updateGroupResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteGroup updateGroupReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteGroup updateGroupReturn;
 
         public updateGroupResponse()
         {
@@ -7602,21 +6563,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteGroup", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class deleteGroupRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
         public deleteGroupRequest()
         {
@@ -7630,27 +6588,26 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "deleteGroupResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "deleteGroupResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class deleteGroupResponse
     {
-
         public deleteGroupResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "refreshCustomFields", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "refreshCustomFields", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class refreshCustomFieldsRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public refreshCustomFieldsRequest()
         {
@@ -7662,27 +6619,26 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "refreshCustomFieldsResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "refreshCustomFieldsResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class refreshCustomFieldsResponse
     {
-
         public refreshCustomFieldsResponse()
         {
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSavedFilters", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSavedFilters", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getSavedFiltersRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getSavedFiltersRequest()
         {
@@ -7694,15 +6650,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSavedFiltersResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSavedFiltersResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getSavedFiltersResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteFilter[] getSavedFiltersReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteFilter[] getSavedFiltersReturn;
 
         public getSavedFiltersResponse()
         {
@@ -7714,24 +6669,20 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addBase64EncodedAttachmentsToIssue", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addBase64EncodedAttachmentsToIssue",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class addBase64EncodedAttachmentsToIssueRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string[] in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string[] in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public string[] in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public string[] in3;
 
         public addBase64EncodedAttachmentsToIssueRequest()
         {
@@ -7746,15 +6697,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addBase64EncodedAttachmentsToIssueResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addBase64EncodedAttachmentsToIssueResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class addBase64EncodedAttachmentsToIssueResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public bool addBase64EncodedAttachmentsToIssueReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public bool addBase64EncodedAttachmentsToIssueReturn;
 
         public addBase64EncodedAttachmentsToIssueResponse()
         {
@@ -7766,18 +6716,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createProjectFromObject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createProjectFromObject", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class createProjectFromObjectRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public RemoteProject in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public RemoteProject in1;
 
         public createProjectFromObjectRequest()
         {
@@ -7790,15 +6738,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "createProjectFromObjectResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "createProjectFromObjectResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class createProjectFromObjectResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteProject createProjectFromObjectReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteProject createProjectFromObjectReturn;
 
         public createProjectFromObjectResponse()
         {
@@ -7810,15 +6757,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSecuritySchemes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSecuritySchemes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getSecuritySchemesRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getSecuritySchemesRequest()
         {
@@ -7830,15 +6776,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getSecuritySchemesResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getSecuritySchemesResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getSecuritySchemesResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteScheme[] getSecuritySchemesReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteScheme[] getSecuritySchemesReturn;
 
         public getSecuritySchemesResponse()
         {
@@ -7850,21 +6795,18 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addVersion", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addVersion", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class addVersionRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public RemoteVersion in2;
+        [MessageBodyMember(Namespace = "", Order = 2)] public RemoteVersion in2;
 
         public addVersionRequest()
         {
@@ -7878,15 +6820,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "addVersionResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "addVersionResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class addVersionResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteVersion addVersionReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteVersion addVersionReturn;
 
         public addVersionResponse()
         {
@@ -7898,18 +6839,16 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromFilter", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromFilter", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getIssuesFromFilterRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
         public getIssuesFromFilterRequest()
         {
@@ -7922,15 +6861,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromFilterResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromFilterResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getIssuesFromFilterResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue[] getIssuesFromFilterReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue[] getIssuesFromFilterReturn;
 
         public getIssuesFromFilterResponse()
         {
@@ -7942,24 +6880,20 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromFilterWithLimit", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromFilterWithLimit",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class getIssuesFromFilterWithLimitRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public int in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public int in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public int in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public int in3;
 
         public getIssuesFromFilterWithLimitRequest()
         {
@@ -7974,15 +6908,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromFilterWithLimitResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromFilterWithLimitResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getIssuesFromFilterWithLimitResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue[] getIssuesFromFilterWithLimitReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue[] getIssuesFromFilterWithLimitReturn;
 
         public getIssuesFromFilterWithLimitResponse()
         {
@@ -7994,24 +6927,20 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromTextSearchWithLimit", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromTextSearchWithLimit",
+        WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
     public partial class getIssuesFromTextSearchWithLimitRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public int in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public int in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public int in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public int in3;
 
         public getIssuesFromTextSearchWithLimitRequest()
         {
@@ -8026,15 +6955,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getIssuesFromTextSearchWithLimitResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getIssuesFromTextSearchWithLimitResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getIssuesFromTextSearchWithLimitResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteIssue[] getIssuesFromTextSearchWithLimitReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteIssue[] getIssuesFromTextSearchWithLimitReturn;
 
         public getIssuesFromTextSearchWithLimitResponse()
         {
@@ -8046,15 +6974,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectsNoSchemes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectsNoSchemes", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class getProjectsNoSchemesRequest
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
         public getProjectsNoSchemesRequest()
         {
@@ -8066,15 +6993,14 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "getProjectsNoSchemesResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "getProjectsNoSchemesResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class getProjectsNoSchemesResponse
     {
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public RemoteProject[] getProjectsNoSchemesReturn;
+        [MessageBodyMember(Namespace = "", Order = 0)] public RemoteProject[] getProjectsNoSchemesReturn;
 
         public getProjectsNoSchemesResponse()
         {
@@ -8086,24 +7012,20 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "setNewProjectAvatar", WrapperNamespace = "http://soap.rpc.jira.atlassian.com", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "setNewProjectAvatar", WrapperNamespace = "http://soap.rpc.jira.atlassian.com",
+        IsWrapped = true)]
     public partial class setNewProjectAvatarRequest
     {
+        [MessageBodyMember(Namespace = "", Order = 0)] public string in0;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 0)]
-        public string in0;
+        [MessageBodyMember(Namespace = "", Order = 1)] public string in1;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 1)]
-        public string in1;
+        [MessageBodyMember(Namespace = "", Order = 2)] public string in2;
 
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 2)]
-        public string in2;
-
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "", Order = 3)]
-        public string in3;
+        [MessageBodyMember(Namespace = "", Order = 3)] public string in3;
 
         public setNewProjectAvatarRequest()
         {
@@ -8118,28 +7040,27 @@ namespace ZxcWorkLog.Jira
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName = "setNewProjectAvatarResponse", WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    [EditorBrowsable(EditorBrowsableState.Advanced)]
+    [MessageContract(WrapperName = "setNewProjectAvatarResponse",
+        WrapperNamespace = "http://dev.prognett.no/rpc/soap/jirasoapservice-v2", IsWrapped = true)]
     public partial class setNewProjectAvatarResponse
     {
-
         public setNewProjectAvatarResponse()
         {
         }
     }
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface JiraSoapServiceChannel : JiraSoapService, System.ServiceModel.IClientChannel
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    public interface JiraSoapServiceChannel : JiraSoapService, IClientChannel
     {
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class JiraSoapServiceClient : System.ServiceModel.ClientBase<JiraSoapService>, JiraSoapService
+    [DebuggerStepThrough()]
+    [GeneratedCode("System.ServiceModel", "4.0.0.0")]
+    public partial class JiraSoapServiceClient : ClientBase<JiraSoapService>, JiraSoapService
     {
-
         public JiraSoapServiceClient()
         {
         }
@@ -8154,17 +7075,17 @@ namespace ZxcWorkLog.Jira
         {
         }
 
-        public JiraSoapServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
+        public JiraSoapServiceClient(string endpointConfigurationName, EndpointAddress remoteAddress) :
             base(endpointConfigurationName, remoteAddress)
         {
         }
 
-        public JiraSoapServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
+        public JiraSoapServiceClient(Binding binding, EndpointAddress remoteAddress) :
             base(binding, remoteAddress)
         {
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getCommentResponse JiraSoapService.getComment(getCommentRequest request)
         {
             return base.Channel.getComment(request);
@@ -8175,11 +7096,11 @@ namespace ZxcWorkLog.Jira
             getCommentRequest inValue = new getCommentRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getCommentResponse retVal = ((JiraSoapService)(this)).getComment(inValue);
+            getCommentResponse retVal = ((JiraSoapService) (this)).getComment(inValue);
             return retVal.getCommentReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         createGroupResponse JiraSoapService.createGroup(createGroupRequest request)
         {
             return base.Channel.createGroup(request);
@@ -8191,11 +7112,11 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            createGroupResponse retVal = ((JiraSoapService)(this)).createGroup(inValue);
+            createGroupResponse retVal = ((JiraSoapService) (this)).createGroup(inValue);
             return retVal.createGroupReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getServerInfoResponse JiraSoapService.getServerInfo(getServerInfoRequest request)
         {
             return base.Channel.getServerInfo(request);
@@ -8205,11 +7126,11 @@ namespace ZxcWorkLog.Jira
         {
             getServerInfoRequest inValue = new getServerInfoRequest();
             inValue.in0 = in0;
-            getServerInfoResponse retVal = ((JiraSoapService)(this)).getServerInfo(inValue);
+            getServerInfoResponse retVal = ((JiraSoapService) (this)).getServerInfo(inValue);
             return retVal.getServerInfoReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getGroupResponse JiraSoapService.getGroup(getGroupRequest request)
         {
             return base.Channel.getGroup(request);
@@ -8220,11 +7141,11 @@ namespace ZxcWorkLog.Jira
             getGroupRequest inValue = new getGroupRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getGroupResponse retVal = ((JiraSoapService)(this)).getGroup(inValue);
+            getGroupResponse retVal = ((JiraSoapService) (this)).getGroup(inValue);
             return retVal.getGroupReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         loginResponse JiraSoapService.login(loginRequest request)
         {
             return base.Channel.login(request);
@@ -8235,11 +7156,11 @@ namespace ZxcWorkLog.Jira
             loginRequest inValue = new loginRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            loginResponse retVal = ((JiraSoapService)(this)).login(inValue);
+            loginResponse retVal = ((JiraSoapService) (this)).login(inValue);
             return retVal.loginReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getUserResponse JiraSoapService.getUser(getUserRequest request)
         {
             return base.Channel.getUser(request);
@@ -8250,11 +7171,11 @@ namespace ZxcWorkLog.Jira
             getUserRequest inValue = new getUserRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getUserResponse retVal = ((JiraSoapService)(this)).getUser(inValue);
+            getUserResponse retVal = ((JiraSoapService) (this)).getUser(inValue);
             return retVal.getUserReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getComponentsResponse JiraSoapService.getComponents(getComponentsRequest request)
         {
             return base.Channel.getComponents(request);
@@ -8265,11 +7186,11 @@ namespace ZxcWorkLog.Jira
             getComponentsRequest inValue = new getComponentsRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getComponentsResponse retVal = ((JiraSoapService)(this)).getComponents(inValue);
+            getComponentsResponse retVal = ((JiraSoapService) (this)).getComponents(inValue);
             return retVal.getComponentsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         createUserResponse JiraSoapService.createUser(createUserRequest request)
         {
             return base.Channel.createUser(request);
@@ -8283,11 +7204,11 @@ namespace ZxcWorkLog.Jira
             inValue.in2 = in2;
             inValue.in3 = in3;
             inValue.in4 = in4;
-            createUserResponse retVal = ((JiraSoapService)(this)).createUser(inValue);
+            createUserResponse retVal = ((JiraSoapService) (this)).createUser(inValue);
             return retVal.createUserReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getIssueResponse JiraSoapService.getIssue(getIssueRequest request)
         {
             return base.Channel.getIssue(request);
@@ -8298,11 +7219,11 @@ namespace ZxcWorkLog.Jira
             getIssueRequest inValue = new getIssueRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getIssueResponse retVal = ((JiraSoapService)(this)).getIssue(inValue);
+            getIssueResponse retVal = ((JiraSoapService) (this)).getIssue(inValue);
             return retVal.getIssueReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         createIssueResponse JiraSoapService.createIssue(createIssueRequest request)
         {
             return base.Channel.createIssue(request);
@@ -8313,11 +7234,11 @@ namespace ZxcWorkLog.Jira
             createIssueRequest inValue = new createIssueRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            createIssueResponse retVal = ((JiraSoapService)(this)).createIssue(inValue);
+            createIssueResponse retVal = ((JiraSoapService) (this)).createIssue(inValue);
             return retVal.createIssueReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getAvailableActionsResponse JiraSoapService.getAvailableActions(getAvailableActionsRequest request)
         {
             return base.Channel.getAvailableActions(request);
@@ -8328,11 +7249,11 @@ namespace ZxcWorkLog.Jira
             getAvailableActionsRequest inValue = new getAvailableActionsRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getAvailableActionsResponse retVal = ((JiraSoapService)(this)).getAvailableActions(inValue);
+            getAvailableActionsResponse retVal = ((JiraSoapService) (this)).getAvailableActions(inValue);
             return retVal.getAvailableActionsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getSubTaskIssueTypesResponse JiraSoapService.getSubTaskIssueTypes(getSubTaskIssueTypesRequest request)
         {
             return base.Channel.getSubTaskIssueTypes(request);
@@ -8342,11 +7263,11 @@ namespace ZxcWorkLog.Jira
         {
             getSubTaskIssueTypesRequest inValue = new getSubTaskIssueTypesRequest();
             inValue.in0 = in0;
-            getSubTaskIssueTypesResponse retVal = ((JiraSoapService)(this)).getSubTaskIssueTypes(inValue);
+            getSubTaskIssueTypesResponse retVal = ((JiraSoapService) (this)).getSubTaskIssueTypes(inValue);
             return retVal.getSubTaskIssueTypesReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getConfigurationResponse JiraSoapService.getConfiguration(getConfigurationRequest request)
         {
             return base.Channel.getConfiguration(request);
@@ -8356,17 +7277,18 @@ namespace ZxcWorkLog.Jira
         {
             getConfigurationRequest inValue = new getConfigurationRequest();
             inValue.in0 = in0;
-            getConfigurationResponse retVal = ((JiraSoapService)(this)).getConfiguration(inValue);
+            getConfigurationResponse retVal = ((JiraSoapService) (this)).getConfiguration(inValue);
             return retVal.getConfigurationReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         createProjectResponse JiraSoapService.createProject(createProjectRequest request)
         {
             return base.Channel.createProject(request);
         }
 
-        public RemoteProject createProject(string in0, string in1, string in2, string in3, string in4, string in5, RemotePermissionScheme in6, RemoteScheme in7, RemoteScheme in8)
+        public RemoteProject createProject(string in0, string in1, string in2, string in3, string in4, string in5,
+            RemotePermissionScheme in6, RemoteScheme in7, RemoteScheme in8)
         {
             createProjectRequest inValue = new createProjectRequest();
             inValue.in0 = in0;
@@ -8378,11 +7300,11 @@ namespace ZxcWorkLog.Jira
             inValue.in6 = in6;
             inValue.in7 = in7;
             inValue.in8 = in8;
-            createProjectResponse retVal = ((JiraSoapService)(this)).createProject(inValue);
+            createProjectResponse retVal = ((JiraSoapService) (this)).createProject(inValue);
             return retVal.createProjectReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         updateProjectResponse JiraSoapService.updateProject(updateProjectRequest request)
         {
             return base.Channel.updateProject(request);
@@ -8393,11 +7315,11 @@ namespace ZxcWorkLog.Jira
             updateProjectRequest inValue = new updateProjectRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            updateProjectResponse retVal = ((JiraSoapService)(this)).updateProject(inValue);
+            updateProjectResponse retVal = ((JiraSoapService) (this)).updateProject(inValue);
             return retVal.updateProjectReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getProjectByKeyResponse JiraSoapService.getProjectByKey(getProjectByKeyRequest request)
         {
             return base.Channel.getProjectByKey(request);
@@ -8408,12 +7330,13 @@ namespace ZxcWorkLog.Jira
             getProjectByKeyRequest inValue = new getProjectByKeyRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getProjectByKeyResponse retVal = ((JiraSoapService)(this)).getProjectByKey(inValue);
+            getProjectByKeyResponse retVal = ((JiraSoapService) (this)).getProjectByKey(inValue);
             return retVal.getProjectByKeyReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        removeAllRoleActorsByProjectResponse JiraSoapService.removeAllRoleActorsByProject(removeAllRoleActorsByProjectRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        removeAllRoleActorsByProjectResponse JiraSoapService.removeAllRoleActorsByProject(
+            removeAllRoleActorsByProjectRequest request)
         {
             return base.Channel.removeAllRoleActorsByProject(request);
         }
@@ -8423,10 +7346,11 @@ namespace ZxcWorkLog.Jira
             removeAllRoleActorsByProjectRequest inValue = new removeAllRoleActorsByProjectRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            removeAllRoleActorsByProjectResponse retVal = ((JiraSoapService)(this)).removeAllRoleActorsByProject(inValue);
+            removeAllRoleActorsByProjectResponse retVal =
+                ((JiraSoapService) (this)).removeAllRoleActorsByProject(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getPrioritiesResponse JiraSoapService.getPriorities(getPrioritiesRequest request)
         {
             return base.Channel.getPriorities(request);
@@ -8436,11 +7360,11 @@ namespace ZxcWorkLog.Jira
         {
             getPrioritiesRequest inValue = new getPrioritiesRequest();
             inValue.in0 = in0;
-            getPrioritiesResponse retVal = ((JiraSoapService)(this)).getPriorities(inValue);
+            getPrioritiesResponse retVal = ((JiraSoapService) (this)).getPriorities(inValue);
             return retVal.getPrioritiesReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getResolutionsResponse JiraSoapService.getResolutions(getResolutionsRequest request)
         {
             return base.Channel.getResolutions(request);
@@ -8450,11 +7374,11 @@ namespace ZxcWorkLog.Jira
         {
             getResolutionsRequest inValue = new getResolutionsRequest();
             inValue.in0 = in0;
-            getResolutionsResponse retVal = ((JiraSoapService)(this)).getResolutions(inValue);
+            getResolutionsResponse retVal = ((JiraSoapService) (this)).getResolutions(inValue);
             return retVal.getResolutionsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getIssueTypesResponse JiraSoapService.getIssueTypes(getIssueTypesRequest request)
         {
             return base.Channel.getIssueTypes(request);
@@ -8464,11 +7388,11 @@ namespace ZxcWorkLog.Jira
         {
             getIssueTypesRequest inValue = new getIssueTypesRequest();
             inValue.in0 = in0;
-            getIssueTypesResponse retVal = ((JiraSoapService)(this)).getIssueTypes(inValue);
+            getIssueTypesResponse retVal = ((JiraSoapService) (this)).getIssueTypes(inValue);
             return retVal.getIssueTypesReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getStatusesResponse JiraSoapService.getStatuses(getStatusesRequest request)
         {
             return base.Channel.getStatuses(request);
@@ -8478,11 +7402,11 @@ namespace ZxcWorkLog.Jira
         {
             getStatusesRequest inValue = new getStatusesRequest();
             inValue.in0 = in0;
-            getStatusesResponse retVal = ((JiraSoapService)(this)).getStatuses(inValue);
+            getStatusesResponse retVal = ((JiraSoapService) (this)).getStatuses(inValue);
             return retVal.getStatusesReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getProjectRolesResponse JiraSoapService.getProjectRoles(getProjectRolesRequest request)
         {
             return base.Channel.getProjectRoles(request);
@@ -8492,11 +7416,11 @@ namespace ZxcWorkLog.Jira
         {
             getProjectRolesRequest inValue = new getProjectRolesRequest();
             inValue.in0 = in0;
-            getProjectRolesResponse retVal = ((JiraSoapService)(this)).getProjectRoles(inValue);
+            getProjectRolesResponse retVal = ((JiraSoapService) (this)).getProjectRoles(inValue);
             return retVal.getProjectRolesReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getProjectRoleResponse JiraSoapService.getProjectRole(getProjectRoleRequest request)
         {
             return base.Channel.getProjectRole(request);
@@ -8507,11 +7431,11 @@ namespace ZxcWorkLog.Jira
             getProjectRoleRequest inValue = new getProjectRoleRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getProjectRoleResponse retVal = ((JiraSoapService)(this)).getProjectRole(inValue);
+            getProjectRoleResponse retVal = ((JiraSoapService) (this)).getProjectRole(inValue);
             return retVal.getProjectRoleReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getProjectRoleActorsResponse JiraSoapService.getProjectRoleActors(getProjectRoleActorsRequest request)
         {
             return base.Channel.getProjectRoleActors(request);
@@ -8523,11 +7447,11 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            getProjectRoleActorsResponse retVal = ((JiraSoapService)(this)).getProjectRoleActors(inValue);
+            getProjectRoleActorsResponse retVal = ((JiraSoapService) (this)).getProjectRoleActors(inValue);
             return retVal.getProjectRoleActorsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getDefaultRoleActorsResponse JiraSoapService.getDefaultRoleActors(getDefaultRoleActorsRequest request)
         {
             return base.Channel.getDefaultRoleActors(request);
@@ -8538,12 +7462,13 @@ namespace ZxcWorkLog.Jira
             getDefaultRoleActorsRequest inValue = new getDefaultRoleActorsRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getDefaultRoleActorsResponse retVal = ((JiraSoapService)(this)).getDefaultRoleActors(inValue);
+            getDefaultRoleActorsResponse retVal = ((JiraSoapService) (this)).getDefaultRoleActors(inValue);
             return retVal.getDefaultRoleActorsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        removeAllRoleActorsByNameAndTypeResponse JiraSoapService.removeAllRoleActorsByNameAndType(removeAllRoleActorsByNameAndTypeRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        removeAllRoleActorsByNameAndTypeResponse JiraSoapService.removeAllRoleActorsByNameAndType(
+            removeAllRoleActorsByNameAndTypeRequest request)
         {
             return base.Channel.removeAllRoleActorsByNameAndType(request);
         }
@@ -8554,10 +7479,11 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            removeAllRoleActorsByNameAndTypeResponse retVal = ((JiraSoapService)(this)).removeAllRoleActorsByNameAndType(inValue);
+            removeAllRoleActorsByNameAndTypeResponse retVal =
+                ((JiraSoapService) (this)).removeAllRoleActorsByNameAndType(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         deleteProjectRoleResponse JiraSoapService.deleteProjectRole(deleteProjectRoleRequest request)
         {
             return base.Channel.deleteProjectRole(request);
@@ -8569,10 +7495,10 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            deleteProjectRoleResponse retVal = ((JiraSoapService)(this)).deleteProjectRole(inValue);
+            deleteProjectRoleResponse retVal = ((JiraSoapService) (this)).deleteProjectRole(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         updateProjectRoleResponse JiraSoapService.updateProjectRole(updateProjectRoleRequest request)
         {
             return base.Channel.updateProjectRole(request);
@@ -8583,10 +7509,10 @@ namespace ZxcWorkLog.Jira
             updateProjectRoleRequest inValue = new updateProjectRoleRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            updateProjectRoleResponse retVal = ((JiraSoapService)(this)).updateProjectRole(inValue);
+            updateProjectRoleResponse retVal = ((JiraSoapService) (this)).updateProjectRole(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         createProjectRoleResponse JiraSoapService.createProjectRole(createProjectRoleRequest request)
         {
             return base.Channel.createProjectRole(request);
@@ -8597,11 +7523,11 @@ namespace ZxcWorkLog.Jira
             createProjectRoleRequest inValue = new createProjectRoleRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            createProjectRoleResponse retVal = ((JiraSoapService)(this)).createProjectRole(inValue);
+            createProjectRoleResponse retVal = ((JiraSoapService) (this)).createProjectRole(inValue);
             return retVal.createProjectRoleReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         isProjectRoleNameUniqueResponse JiraSoapService.isProjectRoleNameUnique(isProjectRoleNameUniqueRequest request)
         {
             return base.Channel.isProjectRoleNameUnique(request);
@@ -8612,17 +7538,18 @@ namespace ZxcWorkLog.Jira
             isProjectRoleNameUniqueRequest inValue = new isProjectRoleNameUniqueRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            isProjectRoleNameUniqueResponse retVal = ((JiraSoapService)(this)).isProjectRoleNameUnique(inValue);
+            isProjectRoleNameUniqueResponse retVal = ((JiraSoapService) (this)).isProjectRoleNameUnique(inValue);
             return retVal.isProjectRoleNameUniqueReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         addActorsToProjectRoleResponse JiraSoapService.addActorsToProjectRole(addActorsToProjectRoleRequest request)
         {
             return base.Channel.addActorsToProjectRole(request);
         }
 
-        public void addActorsToProjectRole(string in0, string[] in1, RemoteProjectRole in2, RemoteProject in3, string in4)
+        public void addActorsToProjectRole(string in0, string[] in1, RemoteProjectRole in2, RemoteProject in3,
+            string in4)
         {
             addActorsToProjectRoleRequest inValue = new addActorsToProjectRoleRequest();
             inValue.in0 = in0;
@@ -8630,16 +7557,18 @@ namespace ZxcWorkLog.Jira
             inValue.in2 = in2;
             inValue.in3 = in3;
             inValue.in4 = in4;
-            addActorsToProjectRoleResponse retVal = ((JiraSoapService)(this)).addActorsToProjectRole(inValue);
+            addActorsToProjectRoleResponse retVal = ((JiraSoapService) (this)).addActorsToProjectRole(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        removeActorsFromProjectRoleResponse JiraSoapService.removeActorsFromProjectRole(removeActorsFromProjectRoleRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        removeActorsFromProjectRoleResponse JiraSoapService.removeActorsFromProjectRole(
+            removeActorsFromProjectRoleRequest request)
         {
             return base.Channel.removeActorsFromProjectRole(request);
         }
 
-        public void removeActorsFromProjectRole(string in0, string[] in1, RemoteProjectRole in2, RemoteProject in3, string in4)
+        public void removeActorsFromProjectRole(string in0, string[] in1, RemoteProjectRole in2, RemoteProject in3,
+            string in4)
         {
             removeActorsFromProjectRoleRequest inValue = new removeActorsFromProjectRoleRequest();
             inValue.in0 = in0;
@@ -8647,11 +7576,12 @@ namespace ZxcWorkLog.Jira
             inValue.in2 = in2;
             inValue.in3 = in3;
             inValue.in4 = in4;
-            removeActorsFromProjectRoleResponse retVal = ((JiraSoapService)(this)).removeActorsFromProjectRole(inValue);
+            removeActorsFromProjectRoleResponse retVal = ((JiraSoapService) (this)).removeActorsFromProjectRole(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        addDefaultActorsToProjectRoleResponse JiraSoapService.addDefaultActorsToProjectRole(addDefaultActorsToProjectRoleRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        addDefaultActorsToProjectRoleResponse JiraSoapService.addDefaultActorsToProjectRole(
+            addDefaultActorsToProjectRoleRequest request)
         {
             return base.Channel.addDefaultActorsToProjectRole(request);
         }
@@ -8663,11 +7593,13 @@ namespace ZxcWorkLog.Jira
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            addDefaultActorsToProjectRoleResponse retVal = ((JiraSoapService)(this)).addDefaultActorsToProjectRole(inValue);
+            addDefaultActorsToProjectRoleResponse retVal =
+                ((JiraSoapService) (this)).addDefaultActorsToProjectRole(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        removeDefaultActorsFromProjectRoleResponse JiraSoapService.removeDefaultActorsFromProjectRole(removeDefaultActorsFromProjectRoleRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        removeDefaultActorsFromProjectRoleResponse JiraSoapService.removeDefaultActorsFromProjectRole(
+            removeDefaultActorsFromProjectRoleRequest request)
         {
             return base.Channel.removeDefaultActorsFromProjectRole(request);
         }
@@ -8679,11 +7611,13 @@ namespace ZxcWorkLog.Jira
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            removeDefaultActorsFromProjectRoleResponse retVal = ((JiraSoapService)(this)).removeDefaultActorsFromProjectRole(inValue);
+            removeDefaultActorsFromProjectRoleResponse retVal =
+                ((JiraSoapService) (this)).removeDefaultActorsFromProjectRole(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        getAssociatedNotificationSchemesResponse JiraSoapService.getAssociatedNotificationSchemes(getAssociatedNotificationSchemesRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        getAssociatedNotificationSchemesResponse JiraSoapService.getAssociatedNotificationSchemes(
+            getAssociatedNotificationSchemesRequest request)
         {
             return base.Channel.getAssociatedNotificationSchemes(request);
         }
@@ -8693,12 +7627,14 @@ namespace ZxcWorkLog.Jira
             getAssociatedNotificationSchemesRequest inValue = new getAssociatedNotificationSchemesRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getAssociatedNotificationSchemesResponse retVal = ((JiraSoapService)(this)).getAssociatedNotificationSchemes(inValue);
+            getAssociatedNotificationSchemesResponse retVal =
+                ((JiraSoapService) (this)).getAssociatedNotificationSchemes(inValue);
             return retVal.getAssociatedNotificationSchemesReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        getAssociatedPermissionSchemesResponse JiraSoapService.getAssociatedPermissionSchemes(getAssociatedPermissionSchemesRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        getAssociatedPermissionSchemesResponse JiraSoapService.getAssociatedPermissionSchemes(
+            getAssociatedPermissionSchemesRequest request)
         {
             return base.Channel.getAssociatedPermissionSchemes(request);
         }
@@ -8708,11 +7644,12 @@ namespace ZxcWorkLog.Jira
             getAssociatedPermissionSchemesRequest inValue = new getAssociatedPermissionSchemesRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getAssociatedPermissionSchemesResponse retVal = ((JiraSoapService)(this)).getAssociatedPermissionSchemes(inValue);
+            getAssociatedPermissionSchemesResponse retVal =
+                ((JiraSoapService) (this)).getAssociatedPermissionSchemes(inValue);
             return retVal.getAssociatedPermissionSchemesReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         deleteProjectResponse JiraSoapService.deleteProject(deleteProjectRequest request)
         {
             return base.Channel.deleteProject(request);
@@ -8723,10 +7660,10 @@ namespace ZxcWorkLog.Jira
             deleteProjectRequest inValue = new deleteProjectRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            deleteProjectResponse retVal = ((JiraSoapService)(this)).deleteProject(inValue);
+            deleteProjectResponse retVal = ((JiraSoapService) (this)).deleteProject(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getProjectByIdResponse JiraSoapService.getProjectById(getProjectByIdRequest request)
         {
             return base.Channel.getProjectById(request);
@@ -8737,11 +7674,11 @@ namespace ZxcWorkLog.Jira
             getProjectByIdRequest inValue = new getProjectByIdRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getProjectByIdResponse retVal = ((JiraSoapService)(this)).getProjectById(inValue);
+            getProjectByIdResponse retVal = ((JiraSoapService) (this)).getProjectById(inValue);
             return retVal.getProjectByIdReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getVersionsResponse JiraSoapService.getVersions(getVersionsRequest request)
         {
             return base.Channel.getVersions(request);
@@ -8752,11 +7689,11 @@ namespace ZxcWorkLog.Jira
             getVersionsRequest inValue = new getVersionsRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getVersionsResponse retVal = ((JiraSoapService)(this)).getVersions(inValue);
+            getVersionsResponse retVal = ((JiraSoapService) (this)).getVersions(inValue);
             return retVal.getVersionsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getCustomFieldsResponse JiraSoapService.getCustomFields(getCustomFieldsRequest request)
         {
             return base.Channel.getCustomFields(request);
@@ -8766,11 +7703,11 @@ namespace ZxcWorkLog.Jira
         {
             getCustomFieldsRequest inValue = new getCustomFieldsRequest();
             inValue.in0 = in0;
-            getCustomFieldsResponse retVal = ((JiraSoapService)(this)).getCustomFields(inValue);
+            getCustomFieldsResponse retVal = ((JiraSoapService) (this)).getCustomFields(inValue);
             return retVal.getCustomFieldsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getCommentsResponse JiraSoapService.getComments(getCommentsRequest request)
         {
             return base.Channel.getComments(request);
@@ -8781,11 +7718,11 @@ namespace ZxcWorkLog.Jira
             getCommentsRequest inValue = new getCommentsRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getCommentsResponse retVal = ((JiraSoapService)(this)).getComments(inValue);
+            getCommentsResponse retVal = ((JiraSoapService) (this)).getComments(inValue);
             return retVal.getCommentsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getFavouriteFiltersResponse JiraSoapService.getFavouriteFilters(getFavouriteFiltersRequest request)
         {
             return base.Channel.getFavouriteFilters(request);
@@ -8795,11 +7732,11 @@ namespace ZxcWorkLog.Jira
         {
             getFavouriteFiltersRequest inValue = new getFavouriteFiltersRequest();
             inValue.in0 = in0;
-            getFavouriteFiltersResponse retVal = ((JiraSoapService)(this)).getFavouriteFilters(inValue);
+            getFavouriteFiltersResponse retVal = ((JiraSoapService) (this)).getFavouriteFilters(inValue);
             return retVal.getFavouriteFiltersReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         releaseVersionResponse JiraSoapService.releaseVersion(releaseVersionRequest request)
         {
             return base.Channel.releaseVersion(request);
@@ -8811,10 +7748,10 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            releaseVersionResponse retVal = ((JiraSoapService)(this)).releaseVersion(inValue);
+            releaseVersionResponse retVal = ((JiraSoapService) (this)).releaseVersion(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         archiveVersionResponse JiraSoapService.archiveVersion(archiveVersionRequest request)
         {
             return base.Channel.archiveVersion(request);
@@ -8827,10 +7764,10 @@ namespace ZxcWorkLog.Jira
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            archiveVersionResponse retVal = ((JiraSoapService)(this)).archiveVersion(inValue);
+            archiveVersionResponse retVal = ((JiraSoapService) (this)).archiveVersion(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         updateIssueResponse JiraSoapService.updateIssue(updateIssueRequest request)
         {
             return base.Channel.updateIssue(request);
@@ -8842,11 +7779,11 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            updateIssueResponse retVal = ((JiraSoapService)(this)).updateIssue(inValue);
+            updateIssueResponse retVal = ((JiraSoapService) (this)).updateIssue(inValue);
             return retVal.updateIssueReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getFieldsForEditResponse JiraSoapService.getFieldsForEdit(getFieldsForEditRequest request)
         {
             return base.Channel.getFieldsForEdit(request);
@@ -8857,11 +7794,11 @@ namespace ZxcWorkLog.Jira
             getFieldsForEditRequest inValue = new getFieldsForEditRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getFieldsForEditResponse retVal = ((JiraSoapService)(this)).getFieldsForEdit(inValue);
+            getFieldsForEditResponse retVal = ((JiraSoapService) (this)).getFieldsForEdit(inValue);
             return retVal.getFieldsForEditReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getIssueTypesForProjectResponse JiraSoapService.getIssueTypesForProject(getIssueTypesForProjectRequest request)
         {
             return base.Channel.getIssueTypesForProject(request);
@@ -8872,12 +7809,13 @@ namespace ZxcWorkLog.Jira
             getIssueTypesForProjectRequest inValue = new getIssueTypesForProjectRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getIssueTypesForProjectResponse retVal = ((JiraSoapService)(this)).getIssueTypesForProject(inValue);
+            getIssueTypesForProjectResponse retVal = ((JiraSoapService) (this)).getIssueTypesForProject(inValue);
             return retVal.getIssueTypesForProjectReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        getSubTaskIssueTypesForProjectResponse JiraSoapService.getSubTaskIssueTypesForProject(getSubTaskIssueTypesForProjectRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        getSubTaskIssueTypesForProjectResponse JiraSoapService.getSubTaskIssueTypesForProject(
+            getSubTaskIssueTypesForProjectRequest request)
         {
             return base.Channel.getSubTaskIssueTypesForProject(request);
         }
@@ -8887,11 +7825,12 @@ namespace ZxcWorkLog.Jira
             getSubTaskIssueTypesForProjectRequest inValue = new getSubTaskIssueTypesForProjectRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getSubTaskIssueTypesForProjectResponse retVal = ((JiraSoapService)(this)).getSubTaskIssueTypesForProject(inValue);
+            getSubTaskIssueTypesForProjectResponse retVal =
+                ((JiraSoapService) (this)).getSubTaskIssueTypesForProject(inValue);
             return retVal.getSubTaskIssueTypesForProjectReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         addUserToGroupResponse JiraSoapService.addUserToGroup(addUserToGroupRequest request)
         {
             return base.Channel.addUserToGroup(request);
@@ -8903,10 +7842,10 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            addUserToGroupResponse retVal = ((JiraSoapService)(this)).addUserToGroup(inValue);
+            addUserToGroupResponse retVal = ((JiraSoapService) (this)).addUserToGroup(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         removeUserFromGroupResponse JiraSoapService.removeUserFromGroup(removeUserFromGroupRequest request)
         {
             return base.Channel.removeUserFromGroup(request);
@@ -8918,10 +7857,10 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            removeUserFromGroupResponse retVal = ((JiraSoapService)(this)).removeUserFromGroup(inValue);
+            removeUserFromGroupResponse retVal = ((JiraSoapService) (this)).removeUserFromGroup(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getSecurityLevelResponse JiraSoapService.getSecurityLevel(getSecurityLevelRequest request)
         {
             return base.Channel.getSecurityLevel(request);
@@ -8932,11 +7871,11 @@ namespace ZxcWorkLog.Jira
             getSecurityLevelRequest inValue = new getSecurityLevelRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getSecurityLevelResponse retVal = ((JiraSoapService)(this)).getSecurityLevel(inValue);
+            getSecurityLevelResponse retVal = ((JiraSoapService) (this)).getSecurityLevel(inValue);
             return retVal.getSecurityLevelReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         addCommentResponse JiraSoapService.addComment(addCommentRequest request)
         {
             return base.Channel.addComment(request);
@@ -8948,10 +7887,10 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            addCommentResponse retVal = ((JiraSoapService)(this)).addComment(inValue);
+            addCommentResponse retVal = ((JiraSoapService) (this)).addComment(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         logoutResponse JiraSoapService.logout(logoutRequest request)
         {
             return base.Channel.logout(request);
@@ -8961,12 +7900,13 @@ namespace ZxcWorkLog.Jira
         {
             logoutRequest inValue = new logoutRequest();
             inValue.in0 = in0;
-            logoutResponse retVal = ((JiraSoapService)(this)).logout(inValue);
+            logoutResponse retVal = ((JiraSoapService) (this)).logout(inValue);
             return retVal.logoutReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        getProjectWithSchemesByIdResponse JiraSoapService.getProjectWithSchemesById(getProjectWithSchemesByIdRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        getProjectWithSchemesByIdResponse JiraSoapService.getProjectWithSchemesById(
+            getProjectWithSchemesByIdRequest request)
         {
             return base.Channel.getProjectWithSchemesById(request);
         }
@@ -8976,11 +7916,11 @@ namespace ZxcWorkLog.Jira
             getProjectWithSchemesByIdRequest inValue = new getProjectWithSchemesByIdRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getProjectWithSchemesByIdResponse retVal = ((JiraSoapService)(this)).getProjectWithSchemesById(inValue);
+            getProjectWithSchemesByIdResponse retVal = ((JiraSoapService) (this)).getProjectWithSchemesById(inValue);
             return retVal.getProjectWithSchemesByIdReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getSecurityLevelsResponse JiraSoapService.getSecurityLevels(getSecurityLevelsRequest request)
         {
             return base.Channel.getSecurityLevels(request);
@@ -8991,11 +7931,11 @@ namespace ZxcWorkLog.Jira
             getSecurityLevelsRequest inValue = new getSecurityLevelsRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getSecurityLevelsResponse retVal = ((JiraSoapService)(this)).getSecurityLevels(inValue);
+            getSecurityLevelsResponse retVal = ((JiraSoapService) (this)).getSecurityLevels(inValue);
             return retVal.getSecurityLevelsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getProjectAvatarsResponse JiraSoapService.getProjectAvatars(getProjectAvatarsRequest request)
         {
             return base.Channel.getProjectAvatars(request);
@@ -9007,11 +7947,11 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            getProjectAvatarsResponse retVal = ((JiraSoapService)(this)).getProjectAvatars(inValue);
+            getProjectAvatarsResponse retVal = ((JiraSoapService) (this)).getProjectAvatars(inValue);
             return retVal.getProjectAvatarsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         setProjectAvatarResponse JiraSoapService.setProjectAvatar(setProjectAvatarRequest request)
         {
             return base.Channel.setProjectAvatar(request);
@@ -9023,10 +7963,10 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            setProjectAvatarResponse retVal = ((JiraSoapService)(this)).setProjectAvatar(inValue);
+            setProjectAvatarResponse retVal = ((JiraSoapService) (this)).setProjectAvatar(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getProjectAvatarResponse JiraSoapService.getProjectAvatar(getProjectAvatarRequest request)
         {
             return base.Channel.getProjectAvatar(request);
@@ -9037,11 +7977,11 @@ namespace ZxcWorkLog.Jira
             getProjectAvatarRequest inValue = new getProjectAvatarRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getProjectAvatarResponse retVal = ((JiraSoapService)(this)).getProjectAvatar(inValue);
+            getProjectAvatarResponse retVal = ((JiraSoapService) (this)).getProjectAvatar(inValue);
             return retVal.getProjectAvatarReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         deleteProjectAvatarResponse JiraSoapService.deleteProjectAvatar(deleteProjectAvatarRequest request)
         {
             return base.Channel.deleteProjectAvatar(request);
@@ -9052,10 +7992,10 @@ namespace ZxcWorkLog.Jira
             deleteProjectAvatarRequest inValue = new deleteProjectAvatarRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            deleteProjectAvatarResponse retVal = ((JiraSoapService)(this)).deleteProjectAvatar(inValue);
+            deleteProjectAvatarResponse retVal = ((JiraSoapService) (this)).deleteProjectAvatar(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getNotificationSchemesResponse JiraSoapService.getNotificationSchemes(getNotificationSchemesRequest request)
         {
             return base.Channel.getNotificationSchemes(request);
@@ -9065,11 +8005,11 @@ namespace ZxcWorkLog.Jira
         {
             getNotificationSchemesRequest inValue = new getNotificationSchemesRequest();
             inValue.in0 = in0;
-            getNotificationSchemesResponse retVal = ((JiraSoapService)(this)).getNotificationSchemes(inValue);
+            getNotificationSchemesResponse retVal = ((JiraSoapService) (this)).getNotificationSchemes(inValue);
             return retVal.getNotificationSchemesReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getPermissionSchemesResponse JiraSoapService.getPermissionSchemes(getPermissionSchemesRequest request)
         {
             return base.Channel.getPermissionSchemes(request);
@@ -9079,11 +8019,11 @@ namespace ZxcWorkLog.Jira
         {
             getPermissionSchemesRequest inValue = new getPermissionSchemesRequest();
             inValue.in0 = in0;
-            getPermissionSchemesResponse retVal = ((JiraSoapService)(this)).getPermissionSchemes(inValue);
+            getPermissionSchemesResponse retVal = ((JiraSoapService) (this)).getPermissionSchemes(inValue);
             return retVal.getPermissionSchemesReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getAllPermissionsResponse JiraSoapService.getAllPermissions(getAllPermissionsRequest request)
         {
             return base.Channel.getAllPermissions(request);
@@ -9093,11 +8033,11 @@ namespace ZxcWorkLog.Jira
         {
             getAllPermissionsRequest inValue = new getAllPermissionsRequest();
             inValue.in0 = in0;
-            getAllPermissionsResponse retVal = ((JiraSoapService)(this)).getAllPermissions(inValue);
+            getAllPermissionsResponse retVal = ((JiraSoapService) (this)).getAllPermissions(inValue);
             return retVal.getAllPermissionsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         createPermissionSchemeResponse JiraSoapService.createPermissionScheme(createPermissionSchemeRequest request)
         {
             return base.Channel.createPermissionScheme(request);
@@ -9109,45 +8049,47 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            createPermissionSchemeResponse retVal = ((JiraSoapService)(this)).createPermissionScheme(inValue);
+            createPermissionSchemeResponse retVal = ((JiraSoapService) (this)).createPermissionScheme(inValue);
             return retVal.createPermissionSchemeReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         addPermissionToResponse JiraSoapService.addPermissionTo(addPermissionToRequest request)
         {
             return base.Channel.addPermissionTo(request);
         }
 
-        public RemotePermissionScheme addPermissionTo(string in0, RemotePermissionScheme in1, RemotePermission in2, RemoteEntity in3)
+        public RemotePermissionScheme addPermissionTo(string in0, RemotePermissionScheme in1, RemotePermission in2,
+            RemoteEntity in3)
         {
             addPermissionToRequest inValue = new addPermissionToRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            addPermissionToResponse retVal = ((JiraSoapService)(this)).addPermissionTo(inValue);
+            addPermissionToResponse retVal = ((JiraSoapService) (this)).addPermissionTo(inValue);
             return retVal.addPermissionToReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         deletePermissionFromResponse JiraSoapService.deletePermissionFrom(deletePermissionFromRequest request)
         {
             return base.Channel.deletePermissionFrom(request);
         }
 
-        public RemotePermissionScheme deletePermissionFrom(string in0, RemotePermissionScheme in1, RemotePermission in2, RemoteEntity in3)
+        public RemotePermissionScheme deletePermissionFrom(string in0, RemotePermissionScheme in1, RemotePermission in2,
+            RemoteEntity in3)
         {
             deletePermissionFromRequest inValue = new deletePermissionFromRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            deletePermissionFromResponse retVal = ((JiraSoapService)(this)).deletePermissionFrom(inValue);
+            deletePermissionFromResponse retVal = ((JiraSoapService) (this)).deletePermissionFrom(inValue);
             return retVal.deletePermissionFromReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         deletePermissionSchemeResponse JiraSoapService.deletePermissionScheme(deletePermissionSchemeRequest request)
         {
             return base.Channel.deletePermissionScheme(request);
@@ -9158,11 +8100,12 @@ namespace ZxcWorkLog.Jira
             deletePermissionSchemeRequest inValue = new deletePermissionSchemeRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            deletePermissionSchemeResponse retVal = ((JiraSoapService)(this)).deletePermissionScheme(inValue);
+            deletePermissionSchemeResponse retVal = ((JiraSoapService) (this)).deletePermissionScheme(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        createIssueWithSecurityLevelResponse JiraSoapService.createIssueWithSecurityLevel(createIssueWithSecurityLevelRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        createIssueWithSecurityLevelResponse JiraSoapService.createIssueWithSecurityLevel(
+            createIssueWithSecurityLevelRequest request)
         {
             return base.Channel.createIssueWithSecurityLevel(request);
         }
@@ -9173,11 +8116,12 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            createIssueWithSecurityLevelResponse retVal = ((JiraSoapService)(this)).createIssueWithSecurityLevel(inValue);
+            createIssueWithSecurityLevelResponse retVal =
+                ((JiraSoapService) (this)).createIssueWithSecurityLevel(inValue);
             return retVal.createIssueWithSecurityLevelReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         addAttachmentsToIssueResponse JiraSoapService.addAttachmentsToIssue(addAttachmentsToIssueRequest request)
         {
             return base.Channel.addAttachmentsToIssue(request);
@@ -9190,11 +8134,11 @@ namespace ZxcWorkLog.Jira
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            addAttachmentsToIssueResponse retVal = ((JiraSoapService)(this)).addAttachmentsToIssue(inValue);
+            addAttachmentsToIssueResponse retVal = ((JiraSoapService) (this)).addAttachmentsToIssue(inValue);
             return retVal.addAttachmentsToIssueReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getAttachmentsFromIssueResponse JiraSoapService.getAttachmentsFromIssue(getAttachmentsFromIssueRequest request)
         {
             return base.Channel.getAttachmentsFromIssue(request);
@@ -9205,11 +8149,11 @@ namespace ZxcWorkLog.Jira
             getAttachmentsFromIssueRequest inValue = new getAttachmentsFromIssueRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getAttachmentsFromIssueResponse retVal = ((JiraSoapService)(this)).getAttachmentsFromIssue(inValue);
+            getAttachmentsFromIssueResponse retVal = ((JiraSoapService) (this)).getAttachmentsFromIssue(inValue);
             return retVal.getAttachmentsFromIssueReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         deleteIssueResponse JiraSoapService.deleteIssue(deleteIssueRequest request)
         {
             return base.Channel.deleteIssue(request);
@@ -9220,11 +8164,12 @@ namespace ZxcWorkLog.Jira
             deleteIssueRequest inValue = new deleteIssueRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            deleteIssueResponse retVal = ((JiraSoapService)(this)).deleteIssue(inValue);
+            deleteIssueResponse retVal = ((JiraSoapService) (this)).deleteIssue(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        hasPermissionToEditCommentResponse JiraSoapService.hasPermissionToEditComment(hasPermissionToEditCommentRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        hasPermissionToEditCommentResponse JiraSoapService.hasPermissionToEditComment(
+            hasPermissionToEditCommentRequest request)
         {
             return base.Channel.hasPermissionToEditComment(request);
         }
@@ -9234,11 +8179,11 @@ namespace ZxcWorkLog.Jira
             hasPermissionToEditCommentRequest inValue = new hasPermissionToEditCommentRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            hasPermissionToEditCommentResponse retVal = ((JiraSoapService)(this)).hasPermissionToEditComment(inValue);
+            hasPermissionToEditCommentResponse retVal = ((JiraSoapService) (this)).hasPermissionToEditComment(inValue);
             return retVal.hasPermissionToEditCommentReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         editCommentResponse JiraSoapService.editComment(editCommentRequest request)
         {
             return base.Channel.editComment(request);
@@ -9249,11 +8194,11 @@ namespace ZxcWorkLog.Jira
             editCommentRequest inValue = new editCommentRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            editCommentResponse retVal = ((JiraSoapService)(this)).editComment(inValue);
+            editCommentResponse retVal = ((JiraSoapService) (this)).editComment(inValue);
             return retVal.editCommentReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getFieldsForActionResponse JiraSoapService.getFieldsForAction(getFieldsForActionRequest request)
         {
             return base.Channel.getFieldsForAction(request);
@@ -9265,11 +8210,11 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            getFieldsForActionResponse retVal = ((JiraSoapService)(this)).getFieldsForAction(inValue);
+            getFieldsForActionResponse retVal = ((JiraSoapService) (this)).getFieldsForAction(inValue);
             return retVal.getFieldsForActionReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         progressWorkflowActionResponse JiraSoapService.progressWorkflowAction(progressWorkflowActionRequest request)
         {
             return base.Channel.progressWorkflowAction(request);
@@ -9282,11 +8227,11 @@ namespace ZxcWorkLog.Jira
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            progressWorkflowActionResponse retVal = ((JiraSoapService)(this)).progressWorkflowAction(inValue);
+            progressWorkflowActionResponse retVal = ((JiraSoapService) (this)).progressWorkflowAction(inValue);
             return retVal.progressWorkflowActionReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getIssueByIdResponse JiraSoapService.getIssueById(getIssueByIdRequest request)
         {
             return base.Channel.getIssueById(request);
@@ -9297,12 +8242,13 @@ namespace ZxcWorkLog.Jira
             getIssueByIdRequest inValue = new getIssueByIdRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getIssueByIdResponse retVal = ((JiraSoapService)(this)).getIssueById(inValue);
+            getIssueByIdResponse retVal = ((JiraSoapService) (this)).getIssueById(inValue);
             return retVal.getIssueByIdReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        adZxcWorkLogWithNewRemainingEstimateResponse JiraSoapService.adZxcWorkLogWithNewRemainingEstimate(adZxcWorkLogWithNewRemainingEstimateRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        adZxcWorkLogWithNewRemainingEstimateResponse JiraSoapService.adZxcWorkLogWithNewRemainingEstimate(
+            adZxcWorkLogWithNewRemainingEstimateRequest request)
         {
             return base.Channel.adZxcWorkLogWithNewRemainingEstimate(request);
         }
@@ -9314,28 +8260,33 @@ namespace ZxcWorkLog.Jira
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            adZxcWorkLogWithNewRemainingEstimateResponse retVal = ((JiraSoapService)(this)).adZxcWorkLogWithNewRemainingEstimate(inValue);
+            adZxcWorkLogWithNewRemainingEstimateResponse retVal =
+                ((JiraSoapService) (this)).adZxcWorkLogWithNewRemainingEstimate(inValue);
             return retVal.adZxcWorkLogWithNewRemainingEstimateReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        adZxcWorkLogAndAutoAdjustRemainingEstimateResponse JiraSoapService.adZxcWorkLogAndAutoAdjustRemainingEstimate(adZxcWorkLogAndAutoAdjustRemainingEstimateRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        adZxcWorkLogAndAutoAdjustRemainingEstimateResponse JiraSoapService.adZxcWorkLogAndAutoAdjustRemainingEstimate(
+            adZxcWorkLogAndAutoAdjustRemainingEstimateRequest request)
         {
             return base.Channel.adZxcWorkLogAndAutoAdjustRemainingEstimate(request);
         }
 
         public RemoteWorklog adZxcWorkLogAndAutoAdjustRemainingEstimate(string in0, string in1, RemoteWorklog in2)
         {
-            adZxcWorkLogAndAutoAdjustRemainingEstimateRequest inValue = new adZxcWorkLogAndAutoAdjustRemainingEstimateRequest();
+            adZxcWorkLogAndAutoAdjustRemainingEstimateRequest inValue =
+                new adZxcWorkLogAndAutoAdjustRemainingEstimateRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            adZxcWorkLogAndAutoAdjustRemainingEstimateResponse retVal = ((JiraSoapService)(this)).adZxcWorkLogAndAutoAdjustRemainingEstimate(inValue);
+            adZxcWorkLogAndAutoAdjustRemainingEstimateResponse retVal =
+                ((JiraSoapService) (this)).adZxcWorkLogAndAutoAdjustRemainingEstimate(inValue);
             return retVal.adZxcWorkLogAndAutoAdjustRemainingEstimateReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        adZxcWorkLogAndRetainRemainingEstimateResponse JiraSoapService.adZxcWorkLogAndRetainRemainingEstimate(adZxcWorkLogAndRetainRemainingEstimateRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        adZxcWorkLogAndRetainRemainingEstimateResponse JiraSoapService.adZxcWorkLogAndRetainRemainingEstimate(
+            adZxcWorkLogAndRetainRemainingEstimateRequest request)
         {
             return base.Channel.adZxcWorkLogAndRetainRemainingEstimate(request);
         }
@@ -9346,12 +8297,14 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            adZxcWorkLogAndRetainRemainingEstimateResponse retVal = ((JiraSoapService)(this)).adZxcWorkLogAndRetainRemainingEstimate(inValue);
+            adZxcWorkLogAndRetainRemainingEstimateResponse retVal =
+                ((JiraSoapService) (this)).adZxcWorkLogAndRetainRemainingEstimate(inValue);
             return retVal.adZxcWorkLogAndRetainRemainingEstimateReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        deleteWorklogWithNewRemainingEstimateResponse JiraSoapService.deleteWorklogWithNewRemainingEstimate(deleteWorklogWithNewRemainingEstimateRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        deleteWorklogWithNewRemainingEstimateResponse JiraSoapService.deleteWorklogWithNewRemainingEstimate(
+            deleteWorklogWithNewRemainingEstimateRequest request)
         {
             return base.Channel.deleteWorklogWithNewRemainingEstimate(request);
         }
@@ -9362,39 +8315,47 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            deleteWorklogWithNewRemainingEstimateResponse retVal = ((JiraSoapService)(this)).deleteWorklogWithNewRemainingEstimate(inValue);
+            deleteWorklogWithNewRemainingEstimateResponse retVal =
+                ((JiraSoapService) (this)).deleteWorklogWithNewRemainingEstimate(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        deleteWorklogAndAutoAdjustRemainingEstimateResponse JiraSoapService.deleteWorklogAndAutoAdjustRemainingEstimate(deleteWorklogAndAutoAdjustRemainingEstimateRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        deleteWorklogAndAutoAdjustRemainingEstimateResponse JiraSoapService.deleteWorklogAndAutoAdjustRemainingEstimate(
+            deleteWorklogAndAutoAdjustRemainingEstimateRequest request)
         {
             return base.Channel.deleteWorklogAndAutoAdjustRemainingEstimate(request);
         }
 
         public void deleteWorklogAndAutoAdjustRemainingEstimate(string in0, string in1)
         {
-            deleteWorklogAndAutoAdjustRemainingEstimateRequest inValue = new deleteWorklogAndAutoAdjustRemainingEstimateRequest();
+            deleteWorklogAndAutoAdjustRemainingEstimateRequest inValue =
+                new deleteWorklogAndAutoAdjustRemainingEstimateRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            deleteWorklogAndAutoAdjustRemainingEstimateResponse retVal = ((JiraSoapService)(this)).deleteWorklogAndAutoAdjustRemainingEstimate(inValue);
+            deleteWorklogAndAutoAdjustRemainingEstimateResponse retVal =
+                ((JiraSoapService) (this)).deleteWorklogAndAutoAdjustRemainingEstimate(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        deleteWorklogAndRetainRemainingEstimateResponse JiraSoapService.deleteWorklogAndRetainRemainingEstimate(deleteWorklogAndRetainRemainingEstimateRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        deleteWorklogAndRetainRemainingEstimateResponse JiraSoapService.deleteWorklogAndRetainRemainingEstimate(
+            deleteWorklogAndRetainRemainingEstimateRequest request)
         {
             return base.Channel.deleteWorklogAndRetainRemainingEstimate(request);
         }
 
         public void deleteWorklogAndRetainRemainingEstimate(string in0, string in1)
         {
-            deleteWorklogAndRetainRemainingEstimateRequest inValue = new deleteWorklogAndRetainRemainingEstimateRequest();
+            deleteWorklogAndRetainRemainingEstimateRequest inValue =
+                new deleteWorklogAndRetainRemainingEstimateRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            deleteWorklogAndRetainRemainingEstimateResponse retVal = ((JiraSoapService)(this)).deleteWorklogAndRetainRemainingEstimate(inValue);
+            deleteWorklogAndRetainRemainingEstimateResponse retVal =
+                ((JiraSoapService) (this)).deleteWorklogAndRetainRemainingEstimate(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        updateWorklogWithNewRemainingEstimateResponse JiraSoapService.updateWorklogWithNewRemainingEstimate(updateWorklogWithNewRemainingEstimateRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        updateWorklogWithNewRemainingEstimateResponse JiraSoapService.updateWorklogWithNewRemainingEstimate(
+            updateWorklogWithNewRemainingEstimateRequest request)
         {
             return base.Channel.updateWorklogWithNewRemainingEstimate(request);
         }
@@ -9405,38 +8366,45 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            updateWorklogWithNewRemainingEstimateResponse retVal = ((JiraSoapService)(this)).updateWorklogWithNewRemainingEstimate(inValue);
+            updateWorklogWithNewRemainingEstimateResponse retVal =
+                ((JiraSoapService) (this)).updateWorklogWithNewRemainingEstimate(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        updateWorklogAndAutoAdjustRemainingEstimateResponse JiraSoapService.updateWorklogAndAutoAdjustRemainingEstimate(updateWorklogAndAutoAdjustRemainingEstimateRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        updateWorklogAndAutoAdjustRemainingEstimateResponse JiraSoapService.updateWorklogAndAutoAdjustRemainingEstimate(
+            updateWorklogAndAutoAdjustRemainingEstimateRequest request)
         {
             return base.Channel.updateWorklogAndAutoAdjustRemainingEstimate(request);
         }
 
         public void updateWorklogAndAutoAdjustRemainingEstimate(string in0, RemoteWorklog in1)
         {
-            updateWorklogAndAutoAdjustRemainingEstimateRequest inValue = new updateWorklogAndAutoAdjustRemainingEstimateRequest();
+            updateWorklogAndAutoAdjustRemainingEstimateRequest inValue =
+                new updateWorklogAndAutoAdjustRemainingEstimateRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            updateWorklogAndAutoAdjustRemainingEstimateResponse retVal = ((JiraSoapService)(this)).updateWorklogAndAutoAdjustRemainingEstimate(inValue);
+            updateWorklogAndAutoAdjustRemainingEstimateResponse retVal =
+                ((JiraSoapService) (this)).updateWorklogAndAutoAdjustRemainingEstimate(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        updateWorklogAndRetainRemainingEstimateResponse JiraSoapService.updateWorklogAndRetainRemainingEstimate(updateWorklogAndRetainRemainingEstimateRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        updateWorklogAndRetainRemainingEstimateResponse JiraSoapService.updateWorklogAndRetainRemainingEstimate(
+            updateWorklogAndRetainRemainingEstimateRequest request)
         {
             return base.Channel.updateWorklogAndRetainRemainingEstimate(request);
         }
 
         public void updateWorklogAndRetainRemainingEstimate(string in0, RemoteWorklog in1)
         {
-            updateWorklogAndRetainRemainingEstimateRequest inValue = new updateWorklogAndRetainRemainingEstimateRequest();
+            updateWorklogAndRetainRemainingEstimateRequest inValue =
+                new updateWorklogAndRetainRemainingEstimateRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            updateWorklogAndRetainRemainingEstimateResponse retVal = ((JiraSoapService)(this)).updateWorklogAndRetainRemainingEstimate(inValue);
+            updateWorklogAndRetainRemainingEstimateResponse retVal =
+                ((JiraSoapService) (this)).updateWorklogAndRetainRemainingEstimate(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getWorklogsResponse JiraSoapService.getWorklogs(getWorklogsRequest request)
         {
             return base.Channel.getWorklogs(request);
@@ -9447,12 +8415,13 @@ namespace ZxcWorkLog.Jira
             getWorklogsRequest inValue = new getWorklogsRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getWorklogsResponse retVal = ((JiraSoapService)(this)).getWorklogs(inValue);
+            getWorklogsResponse retVal = ((JiraSoapService) (this)).getWorklogs(inValue);
             return retVal.getWorklogsReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        hasPermissionToCreateWorklogResponse JiraSoapService.hasPermissionToCreateWorklog(hasPermissionToCreateWorklogRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        hasPermissionToCreateWorklogResponse JiraSoapService.hasPermissionToCreateWorklog(
+            hasPermissionToCreateWorklogRequest request)
         {
             return base.Channel.hasPermissionToCreateWorklog(request);
         }
@@ -9462,12 +8431,14 @@ namespace ZxcWorkLog.Jira
             hasPermissionToCreateWorklogRequest inValue = new hasPermissionToCreateWorklogRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            hasPermissionToCreateWorklogResponse retVal = ((JiraSoapService)(this)).hasPermissionToCreateWorklog(inValue);
+            hasPermissionToCreateWorklogResponse retVal =
+                ((JiraSoapService) (this)).hasPermissionToCreateWorklog(inValue);
             return retVal.hasPermissionToCreateWorklogReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        hasPermissionToDeleteWorklogResponse JiraSoapService.hasPermissionToDeleteWorklog(hasPermissionToDeleteWorklogRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        hasPermissionToDeleteWorklogResponse JiraSoapService.hasPermissionToDeleteWorklog(
+            hasPermissionToDeleteWorklogRequest request)
         {
             return base.Channel.hasPermissionToDeleteWorklog(request);
         }
@@ -9477,12 +8448,14 @@ namespace ZxcWorkLog.Jira
             hasPermissionToDeleteWorklogRequest inValue = new hasPermissionToDeleteWorklogRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            hasPermissionToDeleteWorklogResponse retVal = ((JiraSoapService)(this)).hasPermissionToDeleteWorklog(inValue);
+            hasPermissionToDeleteWorklogResponse retVal =
+                ((JiraSoapService) (this)).hasPermissionToDeleteWorklog(inValue);
             return retVal.hasPermissionToDeleteWorklogReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        hasPermissionToUpdateWorklogResponse JiraSoapService.hasPermissionToUpdateWorklog(hasPermissionToUpdateWorklogRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        hasPermissionToUpdateWorklogResponse JiraSoapService.hasPermissionToUpdateWorklog(
+            hasPermissionToUpdateWorklogRequest request)
         {
             return base.Channel.hasPermissionToUpdateWorklog(request);
         }
@@ -9492,41 +8465,42 @@ namespace ZxcWorkLog.Jira
             hasPermissionToUpdateWorklogRequest inValue = new hasPermissionToUpdateWorklogRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            hasPermissionToUpdateWorklogResponse retVal = ((JiraSoapService)(this)).hasPermissionToUpdateWorklog(inValue);
+            hasPermissionToUpdateWorklogResponse retVal =
+                ((JiraSoapService) (this)).hasPermissionToUpdateWorklog(inValue);
             return retVal.hasPermissionToUpdateWorklogReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getResolutionDateByKeyResponse JiraSoapService.getResolutionDateByKey(getResolutionDateByKeyRequest request)
         {
             return base.Channel.getResolutionDateByKey(request);
         }
 
-        public System.DateTime getResolutionDateByKey(string in0, string in1)
+        public DateTime getResolutionDateByKey(string in0, string in1)
         {
             getResolutionDateByKeyRequest inValue = new getResolutionDateByKeyRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getResolutionDateByKeyResponse retVal = ((JiraSoapService)(this)).getResolutionDateByKey(inValue);
+            getResolutionDateByKeyResponse retVal = ((JiraSoapService) (this)).getResolutionDateByKey(inValue);
             return retVal.getResolutionDateByKeyReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getResolutionDateByIdResponse JiraSoapService.getResolutionDateById(getResolutionDateByIdRequest request)
         {
             return base.Channel.getResolutionDateById(request);
         }
 
-        public System.DateTime getResolutionDateById(string in0, long in1)
+        public DateTime getResolutionDateById(string in0, long in1)
         {
             getResolutionDateByIdRequest inValue = new getResolutionDateByIdRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getResolutionDateByIdResponse retVal = ((JiraSoapService)(this)).getResolutionDateById(inValue);
+            getResolutionDateByIdResponse retVal = ((JiraSoapService) (this)).getResolutionDateById(inValue);
             return retVal.getResolutionDateByIdReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getIssueCountForFilterResponse JiraSoapService.getIssueCountForFilter(getIssueCountForFilterRequest request)
         {
             return base.Channel.getIssueCountForFilter(request);
@@ -9537,11 +8511,11 @@ namespace ZxcWorkLog.Jira
             getIssueCountForFilterRequest inValue = new getIssueCountForFilterRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getIssueCountForFilterResponse retVal = ((JiraSoapService)(this)).getIssueCountForFilter(inValue);
+            getIssueCountForFilterResponse retVal = ((JiraSoapService) (this)).getIssueCountForFilter(inValue);
             return retVal.getIssueCountForFilterReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getIssuesFromTextSearchResponse JiraSoapService.getIssuesFromTextSearch(getIssuesFromTextSearchRequest request)
         {
             return base.Channel.getIssuesFromTextSearch(request);
@@ -9552,12 +8526,13 @@ namespace ZxcWorkLog.Jira
             getIssuesFromTextSearchRequest inValue = new getIssuesFromTextSearchRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getIssuesFromTextSearchResponse retVal = ((JiraSoapService)(this)).getIssuesFromTextSearch(inValue);
+            getIssuesFromTextSearchResponse retVal = ((JiraSoapService) (this)).getIssuesFromTextSearch(inValue);
             return retVal.getIssuesFromTextSearchReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        getIssuesFromTextSearchWithProjectResponse JiraSoapService.getIssuesFromTextSearchWithProject(getIssuesFromTextSearchWithProjectRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        getIssuesFromTextSearchWithProjectResponse JiraSoapService.getIssuesFromTextSearchWithProject(
+            getIssuesFromTextSearchWithProjectRequest request)
         {
             return base.Channel.getIssuesFromTextSearchWithProject(request);
         }
@@ -9569,11 +8544,12 @@ namespace ZxcWorkLog.Jira
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            getIssuesFromTextSearchWithProjectResponse retVal = ((JiraSoapService)(this)).getIssuesFromTextSearchWithProject(inValue);
+            getIssuesFromTextSearchWithProjectResponse retVal =
+                ((JiraSoapService) (this)).getIssuesFromTextSearchWithProject(inValue);
             return retVal.getIssuesFromTextSearchWithProjectReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getIssuesFromJqlSearchResponse JiraSoapService.getIssuesFromJqlSearch(getIssuesFromJqlSearchRequest request)
         {
             return base.Channel.getIssuesFromJqlSearch(request);
@@ -9585,11 +8561,11 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            getIssuesFromJqlSearchResponse retVal = ((JiraSoapService)(this)).getIssuesFromJqlSearch(inValue);
+            getIssuesFromJqlSearchResponse retVal = ((JiraSoapService) (this)).getIssuesFromJqlSearch(inValue);
             return retVal.getIssuesFromJqlSearchReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         deleteUserResponse JiraSoapService.deleteUser(deleteUserRequest request)
         {
             return base.Channel.deleteUser(request);
@@ -9600,10 +8576,10 @@ namespace ZxcWorkLog.Jira
             deleteUserRequest inValue = new deleteUserRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            deleteUserResponse retVal = ((JiraSoapService)(this)).deleteUser(inValue);
+            deleteUserResponse retVal = ((JiraSoapService) (this)).deleteUser(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         updateGroupResponse JiraSoapService.updateGroup(updateGroupRequest request)
         {
             return base.Channel.updateGroup(request);
@@ -9614,11 +8590,11 @@ namespace ZxcWorkLog.Jira
             updateGroupRequest inValue = new updateGroupRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            updateGroupResponse retVal = ((JiraSoapService)(this)).updateGroup(inValue);
+            updateGroupResponse retVal = ((JiraSoapService) (this)).updateGroup(inValue);
             return retVal.updateGroupReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         deleteGroupResponse JiraSoapService.deleteGroup(deleteGroupRequest request)
         {
             return base.Channel.deleteGroup(request);
@@ -9630,10 +8606,10 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            deleteGroupResponse retVal = ((JiraSoapService)(this)).deleteGroup(inValue);
+            deleteGroupResponse retVal = ((JiraSoapService) (this)).deleteGroup(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         refreshCustomFieldsResponse JiraSoapService.refreshCustomFields(refreshCustomFieldsRequest request)
         {
             return base.Channel.refreshCustomFields(request);
@@ -9643,10 +8619,10 @@ namespace ZxcWorkLog.Jira
         {
             refreshCustomFieldsRequest inValue = new refreshCustomFieldsRequest();
             inValue.in0 = in0;
-            refreshCustomFieldsResponse retVal = ((JiraSoapService)(this)).refreshCustomFields(inValue);
+            refreshCustomFieldsResponse retVal = ((JiraSoapService) (this)).refreshCustomFields(inValue);
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getSavedFiltersResponse JiraSoapService.getSavedFilters(getSavedFiltersRequest request)
         {
             return base.Channel.getSavedFilters(request);
@@ -9656,12 +8632,13 @@ namespace ZxcWorkLog.Jira
         {
             getSavedFiltersRequest inValue = new getSavedFiltersRequest();
             inValue.in0 = in0;
-            getSavedFiltersResponse retVal = ((JiraSoapService)(this)).getSavedFilters(inValue);
+            getSavedFiltersResponse retVal = ((JiraSoapService) (this)).getSavedFilters(inValue);
             return retVal.getSavedFiltersReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        addBase64EncodedAttachmentsToIssueResponse JiraSoapService.addBase64EncodedAttachmentsToIssue(addBase64EncodedAttachmentsToIssueRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        addBase64EncodedAttachmentsToIssueResponse JiraSoapService.addBase64EncodedAttachmentsToIssue(
+            addBase64EncodedAttachmentsToIssueRequest request)
         {
             return base.Channel.addBase64EncodedAttachmentsToIssue(request);
         }
@@ -9673,11 +8650,12 @@ namespace ZxcWorkLog.Jira
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            addBase64EncodedAttachmentsToIssueResponse retVal = ((JiraSoapService)(this)).addBase64EncodedAttachmentsToIssue(inValue);
+            addBase64EncodedAttachmentsToIssueResponse retVal =
+                ((JiraSoapService) (this)).addBase64EncodedAttachmentsToIssue(inValue);
             return retVal.addBase64EncodedAttachmentsToIssueReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         createProjectFromObjectResponse JiraSoapService.createProjectFromObject(createProjectFromObjectRequest request)
         {
             return base.Channel.createProjectFromObject(request);
@@ -9688,11 +8666,11 @@ namespace ZxcWorkLog.Jira
             createProjectFromObjectRequest inValue = new createProjectFromObjectRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            createProjectFromObjectResponse retVal = ((JiraSoapService)(this)).createProjectFromObject(inValue);
+            createProjectFromObjectResponse retVal = ((JiraSoapService) (this)).createProjectFromObject(inValue);
             return retVal.createProjectFromObjectReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getSecuritySchemesResponse JiraSoapService.getSecuritySchemes(getSecuritySchemesRequest request)
         {
             return base.Channel.getSecuritySchemes(request);
@@ -9702,11 +8680,11 @@ namespace ZxcWorkLog.Jira
         {
             getSecuritySchemesRequest inValue = new getSecuritySchemesRequest();
             inValue.in0 = in0;
-            getSecuritySchemesResponse retVal = ((JiraSoapService)(this)).getSecuritySchemes(inValue);
+            getSecuritySchemesResponse retVal = ((JiraSoapService) (this)).getSecuritySchemes(inValue);
             return retVal.getSecuritySchemesReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         addVersionResponse JiraSoapService.addVersion(addVersionRequest request)
         {
             return base.Channel.addVersion(request);
@@ -9718,11 +8696,11 @@ namespace ZxcWorkLog.Jira
             inValue.in0 = in0;
             inValue.in1 = in1;
             inValue.in2 = in2;
-            addVersionResponse retVal = ((JiraSoapService)(this)).addVersion(inValue);
+            addVersionResponse retVal = ((JiraSoapService) (this)).addVersion(inValue);
             return retVal.addVersionReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getIssuesFromFilterResponse JiraSoapService.getIssuesFromFilter(getIssuesFromFilterRequest request)
         {
             return base.Channel.getIssuesFromFilter(request);
@@ -9733,12 +8711,13 @@ namespace ZxcWorkLog.Jira
             getIssuesFromFilterRequest inValue = new getIssuesFromFilterRequest();
             inValue.in0 = in0;
             inValue.in1 = in1;
-            getIssuesFromFilterResponse retVal = ((JiraSoapService)(this)).getIssuesFromFilter(inValue);
+            getIssuesFromFilterResponse retVal = ((JiraSoapService) (this)).getIssuesFromFilter(inValue);
             return retVal.getIssuesFromFilterReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        getIssuesFromFilterWithLimitResponse JiraSoapService.getIssuesFromFilterWithLimit(getIssuesFromFilterWithLimitRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        getIssuesFromFilterWithLimitResponse JiraSoapService.getIssuesFromFilterWithLimit(
+            getIssuesFromFilterWithLimitRequest request)
         {
             return base.Channel.getIssuesFromFilterWithLimit(request);
         }
@@ -9750,12 +8729,14 @@ namespace ZxcWorkLog.Jira
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            getIssuesFromFilterWithLimitResponse retVal = ((JiraSoapService)(this)).getIssuesFromFilterWithLimit(inValue);
+            getIssuesFromFilterWithLimitResponse retVal =
+                ((JiraSoapService) (this)).getIssuesFromFilterWithLimit(inValue);
             return retVal.getIssuesFromFilterWithLimitReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        getIssuesFromTextSearchWithLimitResponse JiraSoapService.getIssuesFromTextSearchWithLimit(getIssuesFromTextSearchWithLimitRequest request)
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        getIssuesFromTextSearchWithLimitResponse JiraSoapService.getIssuesFromTextSearchWithLimit(
+            getIssuesFromTextSearchWithLimitRequest request)
         {
             return base.Channel.getIssuesFromTextSearchWithLimit(request);
         }
@@ -9767,11 +8748,12 @@ namespace ZxcWorkLog.Jira
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            getIssuesFromTextSearchWithLimitResponse retVal = ((JiraSoapService)(this)).getIssuesFromTextSearchWithLimit(inValue);
+            getIssuesFromTextSearchWithLimitResponse retVal =
+                ((JiraSoapService) (this)).getIssuesFromTextSearchWithLimit(inValue);
             return retVal.getIssuesFromTextSearchWithLimitReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         getProjectsNoSchemesResponse JiraSoapService.getProjectsNoSchemes(getProjectsNoSchemesRequest request)
         {
             return base.Channel.getProjectsNoSchemes(request);
@@ -9781,11 +8763,11 @@ namespace ZxcWorkLog.Jira
         {
             getProjectsNoSchemesRequest inValue = new getProjectsNoSchemesRequest();
             inValue.in0 = in0;
-            getProjectsNoSchemesResponse retVal = ((JiraSoapService)(this)).getProjectsNoSchemes(inValue);
+            getProjectsNoSchemesResponse retVal = ((JiraSoapService) (this)).getProjectsNoSchemes(inValue);
             return retVal.getProjectsNoSchemesReturn;
         }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         setNewProjectAvatarResponse JiraSoapService.setNewProjectAvatar(setNewProjectAvatarRequest request)
         {
             return base.Channel.setNewProjectAvatar(request);
@@ -9798,8 +8780,7 @@ namespace ZxcWorkLog.Jira
             inValue.in1 = in1;
             inValue.in2 = in2;
             inValue.in3 = in3;
-            setNewProjectAvatarResponse retVal = ((JiraSoapService)(this)).setNewProjectAvatar(inValue);
+            setNewProjectAvatarResponse retVal = ((JiraSoapService) (this)).setNewProjectAvatar(inValue);
         }
     }
-
 }

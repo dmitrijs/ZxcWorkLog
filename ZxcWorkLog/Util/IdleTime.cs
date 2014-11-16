@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace ZxcWorkLog
+namespace ZxcWorkLog.Util
 {
     internal struct LASTINPUTINFO
     {
@@ -14,20 +14,12 @@ namespace ZxcWorkLog
         [DllImport("User32.dll")]
         private static extern bool GetLastInputInfo(ref LASTINPUTINFO plii);
 
-        public static uint GetUserIdleTime()
+        public static long GetUserIdleSeconds()
         {
             var lastInputInfo = new LASTINPUTINFO();
             lastInputInfo.cbSize = (uint) Marshal.SizeOf(lastInputInfo);
             GetLastInputInfo(ref lastInputInfo);
-   			return (uint)Environment.TickCount - lastInputInfo.dwTime;
-        }
-
-        public static long GetUserIdleSeconds()
-        {
-            var lastInputInfo = new LASTINPUTINFO();
-            lastInputInfo.cbSize = (uint)Marshal.SizeOf(lastInputInfo);
-            GetLastInputInfo(ref lastInputInfo);
-            return (Environment.TickCount - lastInputInfo.dwTime) / 1000;
+            return (Environment.TickCount - lastInputInfo.dwTime)/1000;
         }
     }
 }

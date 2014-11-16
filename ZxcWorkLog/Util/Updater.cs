@@ -6,7 +6,7 @@ using ZxcWorkLog.Properties;
 
 namespace ZxcWorkLog.Util
 {
-    abstract class Updater
+    internal abstract class Updater
     {
         private static Updater _instance;
 
@@ -26,7 +26,7 @@ namespace ZxcWorkLog.Util
             if (_instance == null)
             {
                 _instance = ApplicationDeployment.IsNetworkDeployed
-                    ? (Updater)new NetworkDeployedUpdater()
+                    ? (Updater) new NetworkDeployedUpdater()
                     : new NonUpdater();
             }
             return _instance;
@@ -40,7 +40,7 @@ namespace ZxcWorkLog.Util
         public abstract bool AppHasUpdated();
     }
 
-    class NonUpdater : Updater
+    internal class NonUpdater : Updater
     {
         public override bool IsAnyUpdateAvailable()
         {
@@ -72,7 +72,7 @@ namespace ZxcWorkLog.Util
         }
     }
 
-    class NetworkDeployedUpdater : Updater
+    internal class NetworkDeployedUpdater : Updater
     {
         private UpdateCheckInfo _updateInfo;
         private readonly Version _lastUsedVersion;
@@ -99,7 +99,8 @@ namespace ZxcWorkLog.Util
             if (_updateInfo.UpdateAvailable)
             {
                 var updateVersionWithoutRevision = new Version(_updateInfo.AvailableVersion.ToString(3));
-                var currentVersionWithoutRevision = new Version(ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString(3));
+                var currentVersionWithoutRevision =
+                    new Version(ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString(3));
 
                 if (updateVersionWithoutRevision > currentVersionWithoutRevision)
                 {
@@ -118,7 +119,8 @@ namespace ZxcWorkLog.Util
                     _updateInfo.AvailableVersion
                     );
 
-            if (MessageBox.Show(message, @"Update found", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show(message, @"Update found", MessageBoxButtons.YesNo, MessageBoxIcon.Information) ==
+                DialogResult.Yes)
             {
                 ApplicationDeployment.CurrentDeployment.Update();
                 RestartApplication();
@@ -178,7 +180,8 @@ namespace ZxcWorkLog.Util
             }
             else
             {
-                MessageBox.Show(string.Format("Changes since last installed version:\n\n{0}", changeLog), @"Update was successful");
+                MessageBox.Show(string.Format("Changes since last installed version:\n\n{0}", changeLog),
+                    @"Update was successful");
             }
         }
     }
