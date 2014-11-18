@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace ZxcWorkLog.Util
 {
-    class User32
+    static class User32
     {
         [DllImport("user32.dll")]
         public static extern

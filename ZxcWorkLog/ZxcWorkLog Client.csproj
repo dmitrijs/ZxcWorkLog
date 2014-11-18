@@ -87,6 +87,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -99,6 +100,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
+    <Compile Include="Data\Serializable\XmlWorkItem.cs" />
+    <Compile Include="Data\Serializable\XmlWorkLog.cs" />
     <Compile Include="Util\IdleTime.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>

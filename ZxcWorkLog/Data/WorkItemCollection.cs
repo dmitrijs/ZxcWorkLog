@@ -2,7 +2,7 @@
 
 namespace ZxcWorkLog.Data
 {
-    internal class WorkItemCollection : Dictionary<int, WorkItem>
+    public class WorkItemCollection : Dictionary<int, WorkItem>
     {
         public int NextFreeKey()
         {
