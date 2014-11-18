@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using ZxcWorkLog.Data;
 using ZxcWorkLog.Jira;
+using ZxcWorkLog.Util;
 
 namespace ZxcWorkLog
 {
@@ -18,7 +19,7 @@ namespace ZxcWorkLog
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            var wi = Common.addNewWorkItem(comboBox1.Text, textBox1.Text, inpGroup.Text);
+            var wi = WorkLog.addNewWorkItem(comboBox1.Text, textBox1.Text, inpGroup.Text);
 
             _formMain.LoadWorkItems();
             if (checkBox1.Checked)
@@ -39,7 +40,7 @@ namespace ZxcWorkLog
             foreach (var listViewItem in _formMain.getOrderedItems())
             {
                 var item = (WorkItem) listViewItem;
-                comboBox1.Items.Add(Common.getFirstLine(item.Title));
+                comboBox1.Items.Add(TextUtil.GetFirstLine(item.Title));
             }
 
             var workDate = DateTime.Now.Hour < 10 ? DateTime.Now.AddDays(-1) : DateTime.Now;
@@ -49,7 +50,7 @@ namespace ZxcWorkLog
             {
                 inpGroup.Items.Add(group.Name);
             }
-            Common.ShowWindowAsync(Handle, 1);
+            User32.ShowWindowAsync(Handle, 1);
         }
 
         private void WorkItemAdd_Shown(object sender, EventArgs e)

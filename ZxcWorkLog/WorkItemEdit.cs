@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ZxcWorkLog.Data;
+using ZxcWorkLog.Util;
 
 namespace ZxcWorkLog
 {
@@ -17,22 +18,22 @@ namespace ZxcWorkLog
 
             textBox1.Text = editedItem.Title;
             checkBox1.Checked = editedItem.WasWorkLogged;
-            textBox2.Text = Common.toReadableTime(editedItem.PeriodTicks);
+            textBox2.Text = TimeUtil.ToReadableTime(editedItem.PeriodTicks);
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             _editedItem.Title = textBox1.Text;
-            if (Common.toReadableTime(_editedItem.PeriodTicks) != textBox2.Text)
+            if (TimeUtil.ToReadableTime(_editedItem.PeriodTicks) != textBox2.Text)
             {
                 if (_editedItem.Title.IndexOf("*", StringComparison.Ordinal) != 0)
                 {
                     _editedItem.Title = "* " + _editedItem.Title;
                 }
             }
-            _editedItem.PeriodTicks = Common.fromReadableTime(textBox2.Text).Ticks;
+            _editedItem.PeriodTicks = TimeUtil.FromReadableTime(textBox2.Text).Ticks;
             _editedItem.WasWorkLogged = checkBox1.Checked;
-            Common.updateItem(_editedItem.Id, _editedItem);
+            WorkLog.updateItem(_editedItem.Id, _editedItem);
 
             _formMain.LoadWorkItems();
             Close();

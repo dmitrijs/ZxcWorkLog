@@ -116,7 +116,10 @@
     <Compile Include="Jira\JiraProxy.cs" />
     <Compile Include="Util\Autostarter.cs" />
     <Compile Include="Util\ListViewGroupSorter.cs" />
+    <Compile Include="Util\TextUtil.cs" />
+    <Compile Include="Util\TimeUtil.cs" />
     <Compile Include="Util\Updater.cs" />
+    <Compile Include="Util\User32.cs" />
     <Compile Include="WorkItemAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +136,7 @@
     <Compile Include="WorkItemEdit.Designer.cs">
       <DependentUpon>WorkItemEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkLog.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

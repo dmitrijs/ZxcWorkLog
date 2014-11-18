@@ -97,7 +97,7 @@ namespace ZxcWorkLog
 
                         var tipText =
                             string.Format("Work Item: {0}\n\nTime spent now: {1}\nTime spent total: {2}",
-                                itemInProgress.Title, Common.toReadableTime(timeSpent), Common.toReadableTime(timeTotal));
+                                itemInProgress.Title, TimeUtil.ToReadableTime(timeSpent), TimeUtil.ToReadableTime(timeTotal));
                         notifyIcon1.ShowBalloonTip(1, "Already In Progress", tipText, ToolTipIcon.Info);
                         return;
                     }
@@ -143,7 +143,7 @@ namespace ZxcWorkLog
                         var tipText =
                             string.Format(
                                 "Please stop current work before continuing.\nWork Item: {0}\n\nTime spent before: {1}",
-                                itemInProgress.Title, Common.toReadableTime(itemInProgress.PeriodTicks));
+                                itemInProgress.Title, TimeUtil.ToReadableTime(itemInProgress.PeriodTicks));
                         notifyIcon1.ShowBalloonTip(1, "Work is in progress", tipText, ToolTipIcon.Error);
                         return;
                     }
@@ -172,7 +172,7 @@ namespace ZxcWorkLog
                         var tipText =
                             string.Format(
                                 "Please stop current work before continuing.\nWork Item: {0}\n\nTime spent before: {1}",
-                                itemInProgress.Title, Common.toReadableTime(itemInProgress.PeriodTicks));
+                                itemInProgress.Title, TimeUtil.ToReadableTime(itemInProgress.PeriodTicks));
                         notifyIcon1.ShowBalloonTip(1, "Work is in progress", tipText, ToolTipIcon.Error);
                         return;
                     }
@@ -245,7 +245,7 @@ namespace ZxcWorkLog
             listView1.Items.Clear();
 
             var i = 0;
-            var wis = Common.getWorkItems();
+            var wis = WorkLog.getWorkItems();
             foreach (WorkItem wi in wis.GetSortedList())
             {
                 var group = GetGroupByName(wi.GroupName);
@@ -302,7 +302,7 @@ namespace ZxcWorkLog
 
                 lvsi = new ListViewItem.ListViewSubItem
                        {
-                           Text = (wi.InProgress ? "> " : "") + Common.toReadableTime(wi.PeriodTicks)
+                           Text = (wi.InProgress ? "> " : "") + TimeUtil.ToReadableTime(wi.PeriodTicks)
                        };
                 wi.SubItems.Add(lvsi);
 
@@ -320,7 +320,7 @@ namespace ZxcWorkLog
             var tipText =
                 "Work Item: " + wi.Title + "\n" +
                 "\n" +
-                "Time spent before: " + Common.toReadableTime(wi.PeriodTicks);
+                "Time spent before: " + TimeUtil.ToReadableTime(wi.PeriodTicks);
 
             notifyIcon1.Icon = Icon = getActiveIcon();
             notifyIcon1.ShowBalloonTip(3, "Work Started", tipText, ToolTipIcon.Info);
@@ -350,17 +350,17 @@ namespace ZxcWorkLog
                 itemInProgress.Title += "\r\n" + "(" + timerStart.Day + "." + timerStart.Month + " " +
                                         timerStart.ToShortTimeString() + " -> " + DateTime.Now.ToShortTimeString() +
                                         ") " +
-                                        Common.toReadableTime(timeSpent) +
+                                        TimeUtil.ToReadableTime(timeSpent) +
                                         (extraTicksToSubtract > 0
-                                            ? " (excl " + Common.toReadableTime(extraTicksToSubtract) + " idle)"
+                                            ? " (excl " + TimeUtil.ToReadableTime(extraTicksToSubtract) + " idle)"
                                             : "") + " - ";
-                Common.updateItem(itemInProgress.Id, itemInProgress);
+                WorkLog.updateItem(itemInProgress.Id, itemInProgress);
             }
 
             var tipText =
                 string.Format("Work Item: {0}\n\nTime spent now: {1}{2}\nTime spent total: {3}", itemInProgress.Title,
-                    Common.toReadableTime(timeSpent), (timeSpent <= TimeSpan.FromMinutes(2).Ticks ? " (ignored)" : ""),
-                    Common.toReadableTime(timeTotal));
+                    TimeUtil.ToReadableTime(timeSpent), (timeSpent <= TimeSpan.FromMinutes(2).Ticks ? " (ignored)" : ""),
+                    TimeUtil.ToReadableTime(timeTotal));
             notifyIcon1.ShowBalloonTip(3, "Work Stopped", tipText, ToolTipIcon.Info);
 
             itemInProgress = null;
@@ -446,7 +446,7 @@ namespace ZxcWorkLog
                     ticks += ((WorkItem) item).PeriodTicks;
                 }
             }
-            label2.Text = string.Format("Total time: {0}", Common.toReadableTime(ticks, false, false));
+            label2.Text = string.Format("Total time: {0}", TimeUtil.ToReadableTime(ticks, false, false));
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -572,7 +572,7 @@ namespace ZxcWorkLog
                 ((WorkItem) selectedItem).GroupName = group.Name;
                 // selectedItem.Group = group;
             }
-            Common.saveWorkItems();
+            WorkLog.saveWorkItems();
             LoadWorkItems();
             OriganizeGroups();
         }
@@ -594,7 +594,7 @@ namespace ZxcWorkLog
                         ticks += wi.PeriodTicks;
                     }
                     listViewGroup.Header = string.Format("{0}   -   {1}", listViewGroup.Name,
-                        Common.toReadableTime(ticks, false));
+                        TimeUtil.ToReadableTime(ticks, false));
                 }
             }
             foreach (var listViewGroup in toBeRemoved)
@@ -618,7 +618,7 @@ namespace ZxcWorkLog
             {
                 ((WorkItem) selectedItem).WasWorkLogged = true;
             }
-            Common.saveWorkItems();
+            WorkLog.saveWorkItems();
             LoadWorkItems();
         }
 
@@ -636,7 +636,7 @@ namespace ZxcWorkLog
                     DateTime.Now.ToString("yyyy.MM.dd H:mm:ss"));
                 ((WorkItem) selectedItem).PeriodTicks += TimeSpan.FromMinutes(5).Ticks;
             }
-            Common.saveWorkItems();
+            WorkLog.saveWorkItems();
             LoadWorkItems();
         }
 
@@ -677,7 +677,7 @@ namespace ZxcWorkLog
             }
             if (workedTicks <= 0) return;
 
-            var workedHours = Common.toReadableTime(workedTicks);
+            var workedHours = TimeUtil.ToReadableTime(workedTicks);
 
             var workingDayStartTime = DateTime.Now.Date;
             if (DateTime.Now.Hour < 10)
