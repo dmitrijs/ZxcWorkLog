@@ -5,7 +5,7 @@ namespace ZxcWorkLog
 {
     internal static class Program
     {
-        private static FormMain _main;
+        public static FormMain FormMain { get; private set; }
 
         /// <summary>
         /// The main entry point for the application.
@@ -16,16 +16,11 @@ namespace ZxcWorkLog
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            _main = new FormMain();
-            if (_main.Setup())
+            FormMain = new FormMain();
+            if (FormMain.Setup())
             {
-                Application.Run(_main);
+                Application.Run(FormMain);
             }
-        }
-
-        public static FormMain FormMain
-        {
-            get { return _main; }
         }
     }
 }
