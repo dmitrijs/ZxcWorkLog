@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using ZxcWorkLog.Properties;
 using ZxcWorkLog.Util;
 
 namespace ZxcWorkLog
@@ -33,7 +34,7 @@ namespace ZxcWorkLog
 
         private void FormSettings_Load(object sender, EventArgs e)
         {
-            textBox1.Text = Common.getLogPath();
+            textBox1.Text = Common.LogPath;
             textBoxHoursPerDay.Text = string.Format("{0}", Common.HoursPerDay);
             textBoxJiraUser.Text = Common.JiraUser;
             textBoxJiraPass.Text = Common.JiraPass;

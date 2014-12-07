@@ -9,7 +9,7 @@ namespace ZxcWorkLog
 {
     internal class Common
     {
-        private static string logpath;
+        private static string logPath;
         private static string jiraUser;
         private static string jiraPass;
         private static string jiraJQL;
@@ -53,11 +53,10 @@ namespace ZxcWorkLog
             get { return hoursPerDay; }
         }
 
-        public static string getLogPath()
-        {
-            return logpath;
+        public static string LogPath {
+            get { return logPath; }
         }
-
+        
         public static void settingsLoad()
         {
             if (File.Exists("settings.xml"))
@@ -71,7 +70,7 @@ namespace ZxcWorkLog
                         switch (textReader.GetAttribute("name"))
                         {
                             case "LogPath":
-                                logpath = textReader.GetAttribute("value");
+                                logPath = textReader.GetAttribute("value");
                                 break;
                             case "JiraUser":
                                 jiraUser = textReader.GetAttribute("value");
@@ -101,7 +100,7 @@ namespace ZxcWorkLog
             }
             else
             {
-                logpath = @".\worklog.xml";
+                logPath = @".\worklog.xml";
                 Console.WriteLine("settings.xml not found");
             }
             // default value in case of migration
@@ -113,7 +112,7 @@ namespace ZxcWorkLog
 
         public static void settingsUpdate(string _logpath, string _jiraUser, string _jiraPass, string _jiraJQL, bool _ssEnabled, int _ssTimeout, string _ssDir, int _hoursPerDay)
         {
-            logpath = _logpath;
+            logPath = _logpath;
             jiraUser = _jiraUser;
             jiraPass = _jiraPass;
             jiraJQL = _jiraJQL;
@@ -134,7 +133,7 @@ namespace ZxcWorkLog
             textWriter.WriteString("LogPath");
             textWriter.WriteEndAttribute();
             textWriter.WriteStartAttribute("value");
-            textWriter.WriteString(logpath);
+            textWriter.WriteString(logPath);
             textWriter.WriteEndAttribute();
             textWriter.WriteEndElement();
             textWriter.WriteStartElement("setting");

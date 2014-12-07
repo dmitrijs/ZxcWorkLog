@@ -16,7 +16,7 @@ namespace ZxcWorkLog
 
         private static string GetLogPath()
         {
-            return Common.getLogPath();
+            return Common.LogPath;
         }
 
         public static void saveWorkItems()
