@@ -71,7 +71,7 @@ namespace ZxcWorkLog
 
             var token = client.login(Common.JiraUser, Common.JiraPass);
 
-            var issues = client.getIssuesFromJqlSearch(token, Common.JiraJQL, 100);
+            var issues = client.getIssuesFromJqlSearch(token, Common.JiraJql, 100);
 
             foreach (var issue in issues)
             {

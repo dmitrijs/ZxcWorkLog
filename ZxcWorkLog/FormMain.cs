@@ -202,7 +202,6 @@ namespace ZxcWorkLog
 
             //Hide();
             notifyIcon1.Icon = Icon = getInactiveIcon();
-            Common.settingsLoad();
             LoadWorkItems();
 
             if (Common.ScreenShotsEnabled)

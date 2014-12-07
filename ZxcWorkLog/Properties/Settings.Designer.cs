@@ -46,5 +46,101 @@ namespace ZxcWorkLog.Properties {
                 this["IsFirstRun"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\worklog.xml")]
+        public string LogPath {
+            get {
+                return ((string)(this["LogPath"]));
+            }
+            set {
+                this["LogPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("8")]
+        public int HoursPerDay {
+            get {
+                return ((int)(this["HoursPerDay"]));
+            }
+            set {
+                this["HoursPerDay"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string JiraUser {
+            get {
+                return ((string)(this["JiraUser"]));
+            }
+            set {
+                this["JiraUser"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string JiraPass {
+            get {
+                return ((string)(this["JiraPass"]));
+            }
+            set {
+                this["JiraPass"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string JiraJQL {
+            get {
+                return ((string)(this["JiraJQL"]));
+            }
+            set {
+                this["JiraJQL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ScreenShotsEnabled {
+            get {
+                return ((bool)(this["ScreenShotsEnabled"]));
+            }
+            set {
+                this["ScreenShotsEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int ScreenShotsTimeout {
+            get {
+                return ((int)(this["ScreenShotsTimeout"]));
+            }
+            set {
+                this["ScreenShotsTimeout"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\Screen shots\\")]
+        public string ScreenShotsDir {
+            get {
+                return ((string)(this["ScreenShotsDir"]));
+            }
+            set {
+                this["ScreenShotsDir"] = value;
+            }
+        }
     }
 }

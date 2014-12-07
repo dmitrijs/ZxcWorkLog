@@ -14,8 +14,6 @@ namespace ZxcWorkLog
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Common.settingsUpdate(textBox1.Text, textBoxJiraUser.Text, textBoxJiraPass.Text, textBoxJiraJQL.Text,
-                inpScreenShotEnabled.Checked, Int32.Parse(inpScreenShotTimeout.Text), inpScreenShotDir.Text, Int32.Parse(textBoxHoursPerDay.Text));
             if (checkBoxAutostart.Checked)
             {
                 AutoStarter.SetAutoStart();
@@ -24,6 +22,15 @@ namespace ZxcWorkLog
             {
                 AutoStarter.UnSetAutoStart();
             }
+            Settings.Default.LogPath = textBox1.Text;
+            Settings.Default.HoursPerDay = Int32.Parse(textBoxHoursPerDay.Text);
+            Settings.Default.JiraUser = textBoxJiraUser.Text;
+            Settings.Default.JiraPass = textBoxJiraPass.Text;
+            Settings.Default.JiraJQL = textBoxJiraJQL.Text;
+            Settings.Default.ScreenShotsEnabled = inpScreenShotEnabled.Checked;
+            Settings.Default.ScreenShotsTimeout = Int32.Parse(inpScreenShotTimeout.Text);
+            Settings.Default.ScreenShotsDir = inpScreenShotDir.Text;
+            Settings.Default.Save();
             Close();
         }
 
@@ -38,7 +45,7 @@ namespace ZxcWorkLog
             textBoxHoursPerDay.Text = string.Format("{0}", Common.HoursPerDay);
             textBoxJiraUser.Text = Common.JiraUser;
             textBoxJiraPass.Text = Common.JiraPass;
-            textBoxJiraJQL.Text = Common.JiraJQL;
+            textBoxJiraJQL.Text = Common.JiraJql;
             inpScreenShotEnabled.Checked = Common.ScreenShotsEnabled;
             inpScreenShotTimeout.Text = string.Format("{0}", Common.ScreenShotsTimeout);
             inpScreenShotDir.Text = Common.ScreenShotsDir;

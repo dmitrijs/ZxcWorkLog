@@ -8,5 +8,29 @@
     <Setting Name="IsFirstRun" Type="System.String" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="LogPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.\worklog.xml</Value>
+    </Setting>
+    <Setting Name="HoursPerDay" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="JiraUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="JiraPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="JiraJQL" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ScreenShotsEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ScreenShotsTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="ScreenShotsDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.\Screen shots\</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
