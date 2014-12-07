@@ -42,11 +42,13 @@
             this.textBoxJiraUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.inpScreenShotEnabled = new System.Windows.Forms.CheckBox();
-            this.inpScreenShotTimeout = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.inpScreenShotDir = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.inpScreenShotTimeout = new System.Windows.Forms.TextBox();
+            this.inpScreenShotEnabled = new System.Windows.Forms.CheckBox();
+            this.textBoxHoursPerDay = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -55,7 +57,7 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(92, 357);
+            this.button1.Location = new System.Drawing.Point(92, 381);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 23);
             this.button1.TabIndex = 2;
@@ -66,7 +68,7 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(203, 357);
+            this.button2.Location = new System.Drawing.Point(203, 381);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(101, 23);
             this.button2.TabIndex = 3;
@@ -76,12 +78,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.textBoxHoursPerDay);
             this.groupBox1.Controls.Add(this.checkBoxAutostart);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(9, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(385, 85);
+            this.groupBox1.Size = new System.Drawing.Size(385, 109);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "General";
@@ -89,7 +93,7 @@
             // checkBoxAutostart
             // 
             this.checkBoxAutostart.AutoSize = true;
-            this.checkBoxAutostart.Location = new System.Drawing.Point(10, 61);
+            this.checkBoxAutostart.Location = new System.Drawing.Point(13, 86);
             this.checkBoxAutostart.Name = "checkBoxAutostart";
             this.checkBoxAutostart.Size = new System.Drawing.Size(68, 17);
             this.checkBoxAutostart.TabIndex = 13;
@@ -120,7 +124,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textBoxJiraUser);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 199);
+            this.groupBox2.Location = new System.Drawing.Point(12, 223);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(385, 152);
             this.groupBox2.TabIndex = 12;
@@ -144,8 +148,8 @@
             this.textBoxJiraJQL.Size = new System.Drawing.Size(368, 66);
             this.textBoxJiraJQL.TabIndex = 14;
             this.textBoxJiraJQL.Text = "status in (Open, \"In Progress\", Reopened) AND \r\n((project = \"CF\" and component in" +
-                " (\"Php Plugins\", \"CMS2\")) \r\nor project in (\"INT\", \"WEBP\")) and \r\nassignee in (\"n" +
-                "otassigned\", \"ds\")";
+    " (\"Php Plugins\", \"CMS2\")) \r\nor project in (\"INT\", \"WEBP\")) and \r\nassignee in (\"n" +
+    "otassigned\", \"ds\")";
             // 
             // textBoxJiraPass
             // 
@@ -187,12 +191,45 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.inpScreenShotTimeout);
             this.groupBox3.Controls.Add(this.inpScreenShotEnabled);
-            this.groupBox3.Location = new System.Drawing.Point(13, 103);
+            this.groupBox3.Location = new System.Drawing.Point(13, 127);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(381, 90);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Screen shots";
+            // 
+            // inpScreenShotDir
+            // 
+            this.inpScreenShotDir.Location = new System.Drawing.Point(6, 61);
+            this.inpScreenShotDir.Name = "inpScreenShotDir";
+            this.inpScreenShotDir.Size = new System.Drawing.Size(367, 20);
+            this.inpScreenShotDir.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(197, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Directory where screen shots are saved:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(201, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "seconds";
+            // 
+            // inpScreenShotTimeout
+            // 
+            this.inpScreenShotTimeout.Location = new System.Drawing.Point(153, 18);
+            this.inpScreenShotTimeout.Name = "inpScreenShotTimeout";
+            this.inpScreenShotTimeout.Size = new System.Drawing.Size(42, 20);
+            this.inpScreenShotTimeout.TabIndex = 1;
+            this.inpScreenShotTimeout.Text = "30";
             // 
             // inpScreenShotEnabled
             // 
@@ -204,38 +241,22 @@
             this.inpScreenShotEnabled.Text = "Take screen shot every";
             this.inpScreenShotEnabled.UseVisualStyleBackColor = true;
             // 
-            // inpScreenShotTimeout
+            // textBoxHoursPerDay
             // 
-            this.inpScreenShotTimeout.Location = new System.Drawing.Point(153, 18);
-            this.inpScreenShotTimeout.Name = "inpScreenShotTimeout";
-            this.inpScreenShotTimeout.Size = new System.Drawing.Size(42, 20);
-            this.inpScreenShotTimeout.TabIndex = 1;
-            this.inpScreenShotTimeout.Text = "30";
+            this.textBoxHoursPerDay.Location = new System.Drawing.Point(129, 62);
+            this.textBoxHoursPerDay.Name = "textBoxHoursPerDay";
+            this.textBoxHoursPerDay.Size = new System.Drawing.Size(42, 20);
+            this.textBoxHoursPerDay.TabIndex = 14;
+            this.textBoxHoursPerDay.Text = "8";
             // 
-            // label5
+            // label7
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(201, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "seconds";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 45);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Directory where screen shots are saved:";
-            // 
-            // inpScreenShotDir
-            // 
-            this.inpScreenShotDir.Location = new System.Drawing.Point(6, 61);
-            this.inpScreenShotDir.Name = "inpScreenShotDir";
-            this.inpScreenShotDir.Size = new System.Drawing.Size(367, 20);
-            this.inpScreenShotDir.TabIndex = 4;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Working hours per day:";
             // 
             // FormSettings
             // 
@@ -243,7 +264,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(401, 389);
+            this.ClientSize = new System.Drawing.Size(401, 413);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -285,5 +306,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox inpScreenShotTimeout;
         private System.Windows.Forms.CheckBox inpScreenShotEnabled;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxHoursPerDay;
     }
 }

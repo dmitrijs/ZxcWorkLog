@@ -16,6 +16,7 @@ namespace ZxcWorkLog
         private static string ssDir;
         private static int ssTimeout;
         private static bool ssEnabled;
+        private static int hoursPerDay;
         
         public static string JiraUser
         {
@@ -45,6 +46,11 @@ namespace ZxcWorkLog
         public static bool ScreenShotsEnabled
         {
             get { return ssEnabled; }
+        }
+
+        public static int HoursPerDay
+        {
+            get { return hoursPerDay; }
         }
 
         public static string getLogPath()
@@ -85,6 +91,9 @@ namespace ZxcWorkLog
                             case "ScreenShotsTimeout":
                                 ssTimeout = Int32.Parse(textReader.GetAttribute("value"));
                                 break;
+                            case "WorkingHoursPerDay":
+                                hoursPerDay = Int32.Parse(textReader.GetAttribute("value"));
+                                break;
                         }
                     }
                 }
@@ -95,10 +104,14 @@ namespace ZxcWorkLog
                 logpath = @".\worklog.xml";
                 Console.WriteLine("settings.xml not found");
             }
+            // default value in case of migration
+            if (hoursPerDay == 0)
+            {
+                hoursPerDay = 8;
+            }
         }
 
-        public static void settingsUpdate(string _logpath, string _jiraUser, string _jiraPass, string _jiraJQL,
-            bool _ssEnabled, int _ssTimeout, string _ssDir)
+        public static void settingsUpdate(string _logpath, string _jiraUser, string _jiraPass, string _jiraJQL, bool _ssEnabled, int _ssTimeout, string _ssDir, int _hoursPerDay)
         {
             logpath = _logpath;
             jiraUser = _jiraUser;
@@ -107,6 +120,7 @@ namespace ZxcWorkLog
             ssEnabled = _ssEnabled;
             ssTimeout = _ssTimeout;
             ssDir = _ssDir;
+            hoursPerDay = _hoursPerDay;
             settingsSave();
         }
 
@@ -169,6 +183,14 @@ namespace ZxcWorkLog
             textWriter.WriteEndAttribute();
             textWriter.WriteStartAttribute("value");
             textWriter.WriteString(ssDir);
+            textWriter.WriteEndAttribute();
+            textWriter.WriteEndElement();
+            textWriter.WriteStartElement("setting");
+            textWriter.WriteStartAttribute("name");
+            textWriter.WriteString("WorkingHoursPerDay");
+            textWriter.WriteEndAttribute();
+            textWriter.WriteStartAttribute("value");
+            textWriter.WriteString(hoursPerDay.ToString());
             textWriter.WriteEndAttribute();
             textWriter.WriteEndElement();
             textWriter.WriteEndElement();

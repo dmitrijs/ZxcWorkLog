@@ -13,8 +13,6 @@ namespace ZxcWorkLog
 {
     public partial class FormMain : Form
     {
-        private const double WORKING_HOURS = 32.0/5;
-
         private readonly KeyboardHook hook = new KeyboardHook();
         private bool canClose;
         private WorkItem itemInProgress;
@@ -687,7 +685,7 @@ namespace ZxcWorkLog
             workingDayStartTime = workingDayStartTime.AddHours(10);
 
             var elapsedTicks = DateTime.Now.Ticks - workingDayStartTime.Ticks;
-            var ticksNeedToWork = TimeSpan.FromHours(WORKING_HOURS).Ticks;
+            var ticksNeedToWork = TimeSpan.FromHours(Common.HoursPerDay).Ticks;
 
             var effectiveness = Math.Round((workedTicks*100.0)/elapsedTicks);
             var percent = Math.Round((workedTicks*100.0)/ticksNeedToWork);

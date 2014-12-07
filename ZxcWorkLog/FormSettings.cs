@@ -14,7 +14,7 @@ namespace ZxcWorkLog
         private void Button1_Click(object sender, EventArgs e)
         {
             Common.settingsUpdate(textBox1.Text, textBoxJiraUser.Text, textBoxJiraPass.Text, textBoxJiraJQL.Text,
-                inpScreenShotEnabled.Checked, Int32.Parse(inpScreenShotTimeout.Text), inpScreenShotDir.Text);
+                inpScreenShotEnabled.Checked, Int32.Parse(inpScreenShotTimeout.Text), inpScreenShotDir.Text, Int32.Parse(textBoxHoursPerDay.Text));
             if (checkBoxAutostart.Checked)
             {
                 AutoStarter.SetAutoStart();
@@ -34,6 +34,7 @@ namespace ZxcWorkLog
         private void FormSettings_Load(object sender, EventArgs e)
         {
             textBox1.Text = Common.getLogPath();
+            textBoxHoursPerDay.Text = string.Format("{0}", Common.HoursPerDay);
             textBoxJiraUser.Text = Common.JiraUser;
             textBoxJiraPass.Text = Common.JiraPass;
             textBoxJiraJQL.Text = Common.JiraJQL;
