@@ -21,7 +21,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="JiraJQL" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">assignee=currentUser()</Value>
     </Setting>
     <Setting Name="ScreenShotsEnabled" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
@@ -31,6 +31,9 @@
     </Setting>
     <Setting Name="ScreenShotsDir" Type="System.String" Scope="User">
       <Value Profile="(Default)">.\Screen shots\</Value>
+    </Setting>
+    <Setting Name="JiraUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

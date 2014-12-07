@@ -97,7 +97,7 @@ namespace ZxcWorkLog.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("assignee=currentUser()")]
         public string JiraJQL {
             get {
                 return ((string)(this["JiraJQL"]));
@@ -140,6 +140,18 @@ namespace ZxcWorkLog.Properties {
             }
             set {
                 this["ScreenShotsDir"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string JiraUrl {
+            get {
+                return ((string)(this["JiraUrl"]));
+            }
+            set {
+                this["JiraUrl"] = value;
             }
         }
     }

@@ -34,7 +34,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <ApplicationRevision>4</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -85,10 +85,15 @@
     <AssemblyOriginatorKeyFile>certificate\ZxcWorkLog.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -102,6 +107,8 @@
     <Compile Include="Common.cs" />
     <Compile Include="Data\Serializable\XmlWorkItem.cs" />
     <Compile Include="Data\Serializable\XmlWorkLog.cs" />
+    <Compile Include="Jira\JiraIssue.cs" />
+    <Compile Include="Jira\JiraRestClient.cs" />
     <Compile Include="Util\IdleTime.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -116,7 +123,6 @@
       <DependentUpon>FormSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\WorkItem.cs" />
-    <Compile Include="Jira\JiraProxy.cs" />
     <Compile Include="Util\Autostarter.cs" />
     <Compile Include="Util\ListViewGroupSorter.cs" />
     <Compile Include="Util\TextUtil.cs" />
@@ -166,6 +172,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="certificate\ZxcWorkLog.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

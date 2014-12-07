@@ -31,6 +31,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxHoursPerDay = new System.Windows.Forms.TextBox();
             this.checkBoxAutostart = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,8 +49,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.inpScreenShotTimeout = new System.Windows.Forms.TextBox();
             this.inpScreenShotEnabled = new System.Windows.Forms.CheckBox();
-            this.textBoxHoursPerDay = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxJiraUrl = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -57,7 +59,7 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(92, 381);
+            this.button1.Location = new System.Drawing.Point(91, 393);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 23);
             this.button1.TabIndex = 2;
@@ -68,7 +70,7 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(203, 381);
+            this.button2.Location = new System.Drawing.Point(202, 393);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(101, 23);
             this.button2.TabIndex = 3;
@@ -89,6 +91,23 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "General";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Working hours per day:";
+            // 
+            // textBoxHoursPerDay
+            // 
+            this.textBoxHoursPerDay.Location = new System.Drawing.Point(129, 62);
+            this.textBoxHoursPerDay.Name = "textBoxHoursPerDay";
+            this.textBoxHoursPerDay.Size = new System.Drawing.Size(42, 20);
+            this.textBoxHoursPerDay.TabIndex = 14;
+            this.textBoxHoursPerDay.Text = "8";
             // 
             // checkBoxAutostart
             // 
@@ -118,6 +137,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBoxJiraUrl);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.textBoxJiraJQL);
             this.groupBox2.Controls.Add(this.textBoxJiraPass);
@@ -126,7 +147,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(12, 223);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(385, 152);
+            this.groupBox2.Size = new System.Drawing.Size(385, 164);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "JIRA";
@@ -134,7 +155,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 60);
+            this.label4.Location = new System.Drawing.Point(6, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 13);
             this.label4.TabIndex = 15;
@@ -142,7 +163,7 @@
             // 
             // textBoxJiraJQL
             // 
-            this.textBoxJiraJQL.Location = new System.Drawing.Point(9, 76);
+            this.textBoxJiraJQL.Location = new System.Drawing.Point(9, 89);
             this.textBoxJiraJQL.Multiline = true;
             this.textBoxJiraJQL.Name = "textBoxJiraJQL";
             this.textBoxJiraJQL.Size = new System.Drawing.Size(368, 66);
@@ -153,36 +174,36 @@
             // 
             // textBoxJiraPass
             // 
-            this.textBoxJiraPass.Location = new System.Drawing.Point(195, 32);
+            this.textBoxJiraPass.Location = new System.Drawing.Point(264, 45);
             this.textBoxJiraPass.Name = "textBoxJiraPass";
             this.textBoxJiraPass.PasswordChar = '*';
-            this.textBoxJiraPass.Size = new System.Drawing.Size(182, 20);
+            this.textBoxJiraPass.Size = new System.Drawing.Size(110, 20);
             this.textBoxJiraPass.TabIndex = 13;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(192, 16);
+            this.label3.Location = new System.Drawing.Point(202, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 12;
-            this.label3.Text = "JIRA password:";
+            this.label3.Text = "Password:";
             // 
             // textBoxJiraUser
             // 
-            this.textBoxJiraUser.Location = new System.Drawing.Point(9, 32);
+            this.textBoxJiraUser.Location = new System.Drawing.Point(68, 45);
             this.textBoxJiraUser.Name = "textBoxJiraUser";
-            this.textBoxJiraUser.Size = new System.Drawing.Size(176, 20);
+            this.textBoxJiraUser.Size = new System.Drawing.Size(110, 20);
             this.textBoxJiraUser.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Location = new System.Drawing.Point(6, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 10;
-            this.label2.Text = "JIRA username:";
+            this.label2.Text = "Username:";
             // 
             // groupBox3
             // 
@@ -241,22 +262,21 @@
             this.inpScreenShotEnabled.Text = "Take screen shot every";
             this.inpScreenShotEnabled.UseVisualStyleBackColor = true;
             // 
-            // textBoxHoursPerDay
+            // label8
             // 
-            this.textBoxHoursPerDay.Location = new System.Drawing.Point(129, 62);
-            this.textBoxHoursPerDay.Name = "textBoxHoursPerDay";
-            this.textBoxHoursPerDay.Size = new System.Drawing.Size(42, 20);
-            this.textBoxHoursPerDay.TabIndex = 14;
-            this.textBoxHoursPerDay.Text = "8";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Base Url:";
             // 
-            // label7
+            // textBoxJiraUrl
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Working hours per day:";
+            this.textBoxJiraUrl.Location = new System.Drawing.Point(68, 19);
+            this.textBoxJiraUrl.Name = "textBoxJiraUrl";
+            this.textBoxJiraUrl.Size = new System.Drawing.Size(306, 20);
+            this.textBoxJiraUrl.TabIndex = 17;
             // 
             // FormSettings
             // 
@@ -264,7 +284,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(401, 413);
+            this.ClientSize = new System.Drawing.Size(401, 427);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -308,5 +328,7 @@
         private System.Windows.Forms.CheckBox inpScreenShotEnabled;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxHoursPerDay;
+        private System.Windows.Forms.TextBox textBoxJiraUrl;
+        private System.Windows.Forms.Label label8;
     }
 }

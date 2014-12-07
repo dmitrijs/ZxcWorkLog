@@ -4,6 +4,11 @@ namespace ZxcWorkLog
 {
     internal static class Common
     {
+        public static string JiraUrl
+        {
+            get { return Settings.Default.JiraUrl; }
+        }
+
         public static string JiraUser
         {
             get { return Settings.Default.JiraUser; }

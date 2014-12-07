@@ -67,16 +67,14 @@ namespace ZxcWorkLog
 
             comboBox1.Items.Clear();
 
-            var client = new JiraSoapServiceClient();
-
-            var token = client.login(Common.JiraUser, Common.JiraPass);
-
-            var issues = client.getIssuesFromJqlSearch(token, Common.JiraJql, 100);
+            var client = new JiraRestClient(Common.JiraUrl, Common.JiraUser, Common.JiraPass);
+            var issues = client.FindIssues(Common.JiraJql);
 
             foreach (var issue in issues)
             {
-                comboBox1.Items.Add(issue.key + " " + issue.summary);
+                comboBox1.Items.Add(issue.Id + " " + issue.Summary);
             }
+            
             btnUpdate.Text = originalText;
 
             comboBox1.DroppedDown = true;
