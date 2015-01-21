@@ -107,7 +107,7 @@ namespace ZxcWorkLog
                 {
                     if (itemInProgress != null)
                     {
-                        EndProgess();
+                        TryEndProgessWithConfirmation();
                         return;
                     }
                     if (listView1.Items.Count == 0) return;
@@ -131,8 +131,10 @@ namespace ZxcWorkLog
                 if (e.Key == Keys.End)
                 {
                     var wi = itemInProgress;
-                    EndProgess();
-                    EditItem(wi);
+                    if (TryEndProgessWithConfirmation())
+                    {
+                        EditItem(wi);
+                    }
                 }
                 if (e.Key == Keys.PageUp)
                 {
@@ -329,6 +331,24 @@ namespace ZxcWorkLog
             LoadWorkItems();
         }
 
+        private bool TryEndProgessWithConfirmation()
+        {
+            var timeSpent = DateTime.Now.Ticks - timerStart.Ticks;
+
+            if (timeSpent > TimeSpan.FromMinutes(3).Ticks && timeSpent < TimeSpan.FromMinutes(40).Ticks)
+            {
+                if (
+                    MessageBox.Show(
+                        "You have not spent the recommended 40 minutes working.\n\nAre you sure you want to stop the timer?",
+                        "Are you sure?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    EndProgess();
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private void EndProgess(long extraTicksToSubtract = 0)
         {
             if (itemInProgress == null) return;
@@ -486,6 +506,7 @@ namespace ZxcWorkLog
                 MessageBox.Show(
                     @"Directory where screenshots are saved doesn't exist!\nScreen shot saving will be disabled.");
                 timerScreenShots.Stop();
+                return;
             }
 
             if (DateTime.Now.Ticks - lastScreenShotTaken.Ticks >= TimeSpan.FromSeconds(Common.ScreenShotsTimeout).Ticks)
