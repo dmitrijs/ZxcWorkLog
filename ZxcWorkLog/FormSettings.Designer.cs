@@ -37,6 +37,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxJiraUrl = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxJiraJQL = new System.Windows.Forms.TextBox();
             this.textBoxJiraPass = new System.Windows.Forms.TextBox();
@@ -49,8 +51,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.inpScreenShotTimeout = new System.Windows.Forms.TextBox();
             this.inpScreenShotEnabled = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBoxJiraUrl = new System.Windows.Forms.TextBox();
+            this.cbEfectivenessWarning = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -80,6 +81,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbEfectivenessWarning);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBoxHoursPerDay);
             this.groupBox1.Controls.Add(this.checkBoxAutostart);
@@ -151,6 +153,22 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "JIRA";
+            // 
+            // textBoxJiraUrl
+            // 
+            this.textBoxJiraUrl.Location = new System.Drawing.Point(68, 19);
+            this.textBoxJiraUrl.Name = "textBoxJiraUrl";
+            this.textBoxJiraUrl.Size = new System.Drawing.Size(306, 20);
+            this.textBoxJiraUrl.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Base Url:";
             // 
             // label4
             // 
@@ -262,21 +280,15 @@
             this.inpScreenShotEnabled.Text = "Take screen shot every";
             this.inpScreenShotEnabled.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // cbEfectivenessWarning
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Base Url:";
-            // 
-            // textBoxJiraUrl
-            // 
-            this.textBoxJiraUrl.Location = new System.Drawing.Point(68, 19);
-            this.textBoxJiraUrl.Name = "textBoxJiraUrl";
-            this.textBoxJiraUrl.Size = new System.Drawing.Size(306, 20);
-            this.textBoxJiraUrl.TabIndex = 17;
+            this.cbEfectivenessWarning.AutoSize = true;
+            this.cbEfectivenessWarning.Location = new System.Drawing.Point(184, 64);
+            this.cbEfectivenessWarning.Name = "cbEfectivenessWarning";
+            this.cbEfectivenessWarning.Size = new System.Drawing.Size(167, 17);
+            this.cbEfectivenessWarning.TabIndex = 16;
+            this.cbEfectivenessWarning.Text = "Warn about low effectiveness";
+            this.cbEfectivenessWarning.UseVisualStyleBackColor = true;
             // 
             // FormSettings
             // 
@@ -330,5 +342,6 @@
         private System.Windows.Forms.TextBox textBoxHoursPerDay;
         private System.Windows.Forms.TextBox textBoxJiraUrl;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox cbEfectivenessWarning;
     }
 }

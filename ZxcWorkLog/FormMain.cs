@@ -335,16 +335,17 @@ namespace ZxcWorkLog
         {
             var timeSpent = DateTime.Now.Ticks - timerStart.Ticks;
 
+            var allowToStop = true;
             if (timeSpent > TimeSpan.FromMinutes(3).Ticks && timeSpent < TimeSpan.FromMinutes(40).Ticks)
             {
-                if (
-                    MessageBox.Show(
-                        "You have not spent the recommended 40 minutes working.\n\nAre you sure you want to stop the timer?",
-                        "Are you sure?", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    EndProgess();
-                    return true;
-                }
+                allowToStop = (MessageBox.Show(
+                    "You have not spent the recommended 40 minutes working.\n\nAre you sure you want to stop the timer?",
+                    "Are you sure?", MessageBoxButtons.YesNo) == DialogResult.Yes);
+            }
+            if (allowToStop) 
+            {
+                EndProgess();
+                return true;
             }
             return false;
         }
@@ -727,6 +728,10 @@ namespace ZxcWorkLog
                 workingDayStartTime.AddTicks(ticksTotalToWork).ToString("yyyy.MM.dd HH:mm:ss"));
 
             if (quiet || itemInProgress != null) return;
+            if (!Common.EfectivenessWarningEnabled)
+            {
+                return;
+            }
 
             if (percent >= 100)
             {

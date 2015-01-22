@@ -47,5 +47,10 @@ namespace ZxcWorkLog
         public static string LogPath {
             get { return Settings.Default.LogPath; }
         }
+
+        public static bool EfectivenessWarningEnabled
+        {
+            get { return Settings.Default.EfectivenessWarningEnabled; }
+        }
     }
 }

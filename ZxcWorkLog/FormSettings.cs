@@ -31,6 +31,7 @@ namespace ZxcWorkLog
             Settings.Default.ScreenShotsEnabled = inpScreenShotEnabled.Checked;
             Settings.Default.ScreenShotsTimeout = Int32.Parse(inpScreenShotTimeout.Text);
             Settings.Default.ScreenShotsDir = inpScreenShotDir.Text;
+            Settings.Default.EfectivenessWarningEnabled = cbEfectivenessWarning.Checked;
             Settings.Default.Save();
             Close();
         }
@@ -52,6 +53,7 @@ namespace ZxcWorkLog
             inpScreenShotTimeout.Text = string.Format("{0}", Settings.Default.ScreenShotsTimeout);
             inpScreenShotDir.Text = Settings.Default.ScreenShotsDir;
             checkBoxAutostart.Checked = AutoStarter.IsAutoStartEnabled;
+            cbEfectivenessWarning.Checked = Settings.Default.EfectivenessWarningEnabled;
         }
     }
 }
