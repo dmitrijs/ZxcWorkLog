@@ -160,10 +160,10 @@ namespace ZxcWorkLog.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool EfectivenessWarningEnabled {
             get {
-                return ((bool)(this["cbEfectivenessWarningEnabled"]));
+                return ((bool)(this["EfectivenessWarningEnabled"]));
             }
             set {
-                this["cbEfectivenessWarningEnabled"] = value;
+                this["EfectivenessWarningEnabled"] = value;
             }
         }
     }
