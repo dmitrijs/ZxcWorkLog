@@ -272,9 +272,7 @@ namespace ZxcWorkLog
 
                 var lvsi = new ListViewItem.ListViewSubItem
                            {
-                               Text =
-                                   string.Format("{0}.{1} {2}", wi.StartTime.Day, wi.StartTime.Month,
-                                       wi.StartTime.ToShortTimeString())
+                               Text = wi.StartTime.ToString("MM.dd HH:mm")
                            };
                 wi.SubItems.Add(lvsi);
 
