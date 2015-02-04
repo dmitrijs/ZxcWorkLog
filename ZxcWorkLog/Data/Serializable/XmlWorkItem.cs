@@ -18,6 +18,7 @@ namespace ZxcWorkLog.Data.Serializable
             PeriodTicks = wi.PeriodTicks;
             StartTime = wi.StartTime;
             WasWorkLogged = wi.WasWorkLogged;
+            IsDistributed = wi.IsDistributed;
         }
 
         [XmlElement]
@@ -37,5 +38,7 @@ namespace ZxcWorkLog.Data.Serializable
 
         [XmlAttribute]
         public bool WasWorkLogged { get; set; }
-    }
+
+        [XmlAttribute]
+        public bool IsDistributed { get; set; }}
 }

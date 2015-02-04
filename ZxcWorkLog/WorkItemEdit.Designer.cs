@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.labelGroup = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -123,6 +124,16 @@
             this.labelGroup.TabIndex = 8;
             this.labelGroup.Text = "Group: ";
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(126, 282);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(85, 17);
+            this.checkBox2.TabIndex = 9;
+            this.checkBox2.Text = "Is distributed";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // WorkItemEdit
             // 
             this.AcceptButton = this.button1;
@@ -130,6 +141,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(398, 336);
+            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.labelGroup);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label3);
@@ -161,5 +173,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label labelGroup;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

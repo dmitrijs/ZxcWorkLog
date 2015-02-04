@@ -245,7 +245,26 @@ namespace ZxcWorkLog
 
             var i = 0;
             var wis = WorkLog.getWorkItems();
-            foreach (WorkItem wi in wis.GetSortedList())
+            var totalNonDistributedTicksPerGroup = new Dictionary<String, long>();
+            var totalDistributedTicksPerGroup = new Dictionary<String, long>();
+            var sortedList = wis.GetSortedList();
+            foreach (WorkItem wi in sortedList)
+            {
+                if (!totalNonDistributedTicksPerGroup.ContainsKey(wi.GroupName))
+                    totalNonDistributedTicksPerGroup[wi.GroupName] = 0;
+                if (!totalDistributedTicksPerGroup.ContainsKey(wi.GroupName))
+                    totalDistributedTicksPerGroup[wi.GroupName] = 0;
+                if (wi.IsDistributed)
+                {
+                    totalDistributedTicksPerGroup[wi.GroupName] += wi.PeriodTicks;
+                }
+                else
+                {
+                    totalNonDistributedTicksPerGroup[wi.GroupName] += wi.PeriodTicks;
+                }
+            }
+            var wiList = new WorkItem[wis.Count];
+            foreach (WorkItem wi in sortedList)
             {
                 var group = GetGroupByName(wi.GroupName);
                 if (wi.GroupName != "" && group == null)
@@ -260,6 +279,10 @@ namespace ZxcWorkLog
                 if (wi.WasWorkLogged)
                 {
                     wi.ForeColor = Color.LightGray;
+                }
+                if (wi.IsDistributed)
+                {
+                    wi.ForeColor = Color.LightSalmon;
                 }
                 if (i == listItemId)
                 {
@@ -297,15 +320,36 @@ namespace ZxcWorkLog
                 lvsi = new ListViewItem.ListViewSubItem {Text = firstLine};
                 wi.SubItems.Add(lvsi);
 
+                wi.RealTicks = wi.PeriodTicks;
+                if (totalNonDistributedTicksPerGroup[wi.GroupName] > 0 && totalDistributedTicksPerGroup[wi.GroupName] > 0)
+                {
+                    Console.WriteLine("totalNonDistributedTicks=" + TimeUtil.ToReadableTime(totalNonDistributedTicksPerGroup[wi.GroupName]));
+                    Console.WriteLine("totalDistributedTicks=" + TimeUtil.ToReadableTime(totalDistributedTicksPerGroup[wi.GroupName]));
+                    Console.WriteLine("wi.PeriodTicks=" + TimeUtil.ToReadableTime(wi.PeriodTicks));
+                    if (wi.IsDistributed)
+                    {
+                        wi.RealTicks = 0;
+                    }
+                    else 
+                    {
+                        wi.RealTicks += (long)(((totalDistributedTicksPerGroup[wi.GroupName] * 1.0) / totalNonDistributedTicksPerGroup[wi.GroupName]) * wi.PeriodTicks);
+                    }
+                }
                 lvsi = new ListViewItem.ListViewSubItem
-                       {
-                           Text = (wi.InProgress ? "> " : "") + TimeUtil.ToReadableTime(wi.PeriodTicks)
-                       };
+                    {
+                        Text = (wi.InProgress ? "> " : "") + TimeUtil.ToReadableTime(wi.RealTicks)
+                    };
+                if (wi.PeriodTicks != wi.RealTicks)
+                {
+                    lvsi.Text = string.Format("{0} ({1})", lvsi.Text, TimeUtil.ToReadableTime(wi.PeriodTicks));
+                }
                 wi.SubItems.Add(lvsi);
 
-                listView1.Items.Add(wi);
+                wiList[i] = wi;
                 i++;
             }
+            listView1.Items.AddRange(wiList);
+
             OriganizeGroups();
             CheckWorkRatio(true);
         }
@@ -454,15 +498,16 @@ namespace ZxcWorkLog
 
         private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            long ticks = 0;
+            long ticks = 0, realTicks = 0;
             foreach (var item in listView1.Items)
             {
                 if (item is WorkItem && ((WorkItem) item).Selected)
                 {
                     ticks += ((WorkItem) item).PeriodTicks;
+                    realTicks += ((WorkItem)item).RealTicks;
                 }
             }
-            label2.Text = string.Format("Total time: {0}", TimeUtil.ToReadableTime(ticks, false, false));
+            label2.Text = string.Format("Total time: {0} ({1})", TimeUtil.ToReadableTime(realTicks, false, false), TimeUtil.ToReadableTime(ticks, false, false));
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

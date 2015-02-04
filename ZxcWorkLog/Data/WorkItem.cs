@@ -38,5 +38,9 @@ namespace ZxcWorkLog.Data
         }
 
         public bool WasWorkLogged { get; set; }
+
+        public bool IsDistributed { get; set; }
+
+        public long RealTicks { get; set; }
     }
 }

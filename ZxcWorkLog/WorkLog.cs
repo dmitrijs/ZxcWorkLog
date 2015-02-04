@@ -51,6 +51,10 @@ namespace ZxcWorkLog
                 textWriter.WriteString(wi.WasWorkLogged.ToString());
                 textWriter.WriteEndAttribute();
 
+                textWriter.WriteStartAttribute("IsDistributed");
+                textWriter.WriteString(wi.IsDistributed.ToString());
+                textWriter.WriteEndAttribute();
+
                 textWriter.WriteStartAttribute("GroupName");
                 textWriter.WriteString(wi.GroupName);
                 textWriter.WriteEndAttribute();
@@ -99,6 +103,10 @@ namespace ZxcWorkLog
                     if (textReader.GetAttribute("WasWorkLogged") != null)
                     {
                         wi.WasWorkLogged = Boolean.Parse(textReader.GetAttribute("WasWorkLogged"));
+                    }
+                    if (textReader.GetAttribute("IsDistributed") != null)
+                    {
+                        wi.IsDistributed = Boolean.Parse(textReader.GetAttribute("IsDistributed"));
                     }
                     if (textReader.GetAttribute("GroupName") != null)
                     {

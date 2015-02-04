@@ -25,7 +25,7 @@ namespace ZxcWorkLog.Util
             if (minutes > 0) result += minutes + "m ";
             if (seconds > 0 && showSeconds) result += seconds + "s";
 
-            if (result != "") return result;
+            if (result != "") return result.TrimEnd(new []{' '});
             return showSeconds ? "0s" : "0m";
         }
 

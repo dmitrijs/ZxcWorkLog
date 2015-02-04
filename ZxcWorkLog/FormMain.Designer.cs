@@ -169,7 +169,7 @@
             // Period
             // 
             this.Period.Text = "Period";
-            this.Period.Width = 91;
+            this.Period.Width = 100;
             // 
             // contextMenuStripList
             // 

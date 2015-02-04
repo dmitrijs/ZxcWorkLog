@@ -18,6 +18,7 @@ namespace ZxcWorkLog
 
             textBox1.Text = editedItem.Title;
             checkBox1.Checked = editedItem.WasWorkLogged;
+            checkBox2.Checked = editedItem.IsDistributed;
             textBox2.Text = TimeUtil.ToReadableTime(editedItem.PeriodTicks);
         }
 
@@ -33,6 +34,7 @@ namespace ZxcWorkLog
             }
             _editedItem.PeriodTicks = TimeUtil.FromReadableTime(textBox2.Text).Ticks;
             _editedItem.WasWorkLogged = checkBox1.Checked;
+            _editedItem.IsDistributed = checkBox2.Checked;
             WorkLog.updateItem(_editedItem.Id, _editedItem);
 
             _formMain.LoadWorkItems();
