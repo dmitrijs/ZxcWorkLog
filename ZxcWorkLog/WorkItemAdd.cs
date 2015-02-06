@@ -70,8 +70,14 @@ namespace ZxcWorkLog
             var client = new JiraRestClient(Common.JiraUrl, Common.JiraUser, Common.JiraPass);
             var issues = client.FindIssues(Common.JiraJql);
 
+            var currentStatus = "";
             foreach (var issue in issues)
             {
+                if (issue.Status != currentStatus)
+                {
+                    comboBox1.Items.Add("----- " + issue.Status);
+                    currentStatus = issue.Status;
+                }
                 comboBox1.Items.Add(issue.Id + " " + issue.Summary);
             }
             

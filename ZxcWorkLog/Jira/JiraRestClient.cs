@@ -71,7 +71,7 @@ namespace ZxcWorkLog.Jira
             var issues = new List<JiraIssue>();
             foreach (var issue in stuff["issues"])
             {
-                issues.Add(new JiraIssue((string)issue["key"], (string)issue["fields"]["summary"]));
+                issues.Add(new JiraIssue((string)issue["key"], (string)issue["fields"]["summary"], (string)issue["fields"]["status"]["name"]));
             }
             return issues;
         }
