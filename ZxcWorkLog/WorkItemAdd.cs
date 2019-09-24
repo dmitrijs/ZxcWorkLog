@@ -43,7 +43,7 @@ namespace ZxcWorkLog
                 comboBox1.Items.Add(TextUtil.GetFirstLine(item.Title));
             }
 
-            var workDate = DateTime.Now.Hour < 10 ? DateTime.Now.AddDays(-1) : DateTime.Now;
+            var workDate = (DateTime.Now.Hour < 9 && DateTime.Now.Minute < 30) ? DateTime.Now.AddDays(-1) : DateTime.Now;
             inpGroup.Text = workDate.ToString("yyyy.MM.dd");
 
             foreach (ListViewGroup group in _formMain.getItemGroups())
