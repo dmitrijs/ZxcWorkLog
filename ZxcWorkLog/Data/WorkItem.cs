@@ -12,6 +12,7 @@ namespace ZxcWorkLog.Data
         public int Id { get; set; }
 
         public long PeriodTicks { get; set; }
+        public string Notes { get; set; }
 
         public string Title
         {

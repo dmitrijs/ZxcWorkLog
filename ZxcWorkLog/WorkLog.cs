@@ -39,6 +39,10 @@ namespace ZxcWorkLog
                 textWriter.WriteString(wi.Title);
                 textWriter.WriteEndAttribute();
 
+                textWriter.WriteStartAttribute("Notes");
+                textWriter.WriteString(wi.Notes);
+                textWriter.WriteEndAttribute();
+
                 textWriter.WriteStartAttribute("PeriodTicks");
                 textWriter.WriteString(wi.PeriodTicks.ToString());
                 textWriter.WriteEndAttribute();
@@ -100,6 +104,7 @@ namespace ZxcWorkLog
                     wi.PeriodTicks = long.Parse(textReader.GetAttribute("PeriodTicks"));
                     wi.StartTime = DateTime.Parse(textReader.GetAttribute("StartTime"));
                     wi.Title = textReader.GetAttribute("Title");
+                    wi.Notes = textReader.GetAttribute("Notes");
                     if (textReader.GetAttribute("WasWorkLogged") != null)
                     {
                         wi.WasWorkLogged = Boolean.Parse(textReader.GetAttribute("WasWorkLogged"));

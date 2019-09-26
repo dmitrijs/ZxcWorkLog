@@ -38,6 +38,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.labelGroup = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +57,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(369, 185);
+            this.textBox1.Size = new System.Drawing.Size(369, 112);
             this.textBox1.TabIndex = 1;
             // 
             // label2
@@ -134,6 +136,23 @@
             this.checkBox2.Text = "Is distributed";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(12, 161);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(369, 50);
+            this.textBox3.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Notes:";
+            // 
             // WorkItemEdit
             // 
             this.AcceptButton = this.button1;
@@ -141,6 +160,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(398, 336);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.labelGroup);
             this.Controls.Add(this.checkBox1);
@@ -174,5 +195,7 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label labelGroup;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -378,7 +378,8 @@ namespace ZxcWorkLog
             var timeSpent = DateTime.Now.Ticks - timerStart.Ticks;
 
             var allowToStop = true;
-            if (timeSpent > TimeSpan.FromMinutes(3).Ticks && timeSpent < TimeSpan.FromMinutes(40).Ticks)
+            var minimumSessionMinutes = Settings.Default.MinimumSessionMinutes;
+            if (minimumSessionMinutes > 0 && timeSpent > TimeSpan.FromMinutes(3).Ticks && timeSpent < TimeSpan.FromMinutes((double)minimumSessionMinutes).Ticks)
             {
                 allowToStop = (MessageBox.Show(
                     "You have not spent the recommended 40 minutes working.\n\nAre you sure you want to stop the timer?",

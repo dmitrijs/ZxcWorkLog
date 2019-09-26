@@ -31,6 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbEfectivenessWarning = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxHoursPerDay = new System.Windows.Forms.TextBox();
             this.checkBoxAutostart = new System.Windows.Forms.CheckBox();
@@ -51,10 +52,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.inpScreenShotTimeout = new System.Windows.Forms.TextBox();
             this.inpScreenShotEnabled = new System.Windows.Forms.CheckBox();
-            this.cbEfectivenessWarning = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.sessionMinutesUpDown = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionMinutesUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -81,6 +85,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.sessionMinutesUpDown);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.cbEfectivenessWarning);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBoxHoursPerDay);
@@ -93,6 +100,16 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "General";
+            // 
+            // cbEfectivenessWarning
+            // 
+            this.cbEfectivenessWarning.AutoSize = true;
+            this.cbEfectivenessWarning.Location = new System.Drawing.Point(184, 64);
+            this.cbEfectivenessWarning.Name = "cbEfectivenessWarning";
+            this.cbEfectivenessWarning.Size = new System.Drawing.Size(167, 17);
+            this.cbEfectivenessWarning.TabIndex = 16;
+            this.cbEfectivenessWarning.Text = "Warn about low effectiveness";
+            this.cbEfectivenessWarning.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -280,15 +297,30 @@
             this.inpScreenShotEnabled.Text = "Take screen shot every";
             this.inpScreenShotEnabled.UseVisualStyleBackColor = true;
             // 
-            // cbEfectivenessWarning
+            // label9
             // 
-            this.cbEfectivenessWarning.AutoSize = true;
-            this.cbEfectivenessWarning.Location = new System.Drawing.Point(184, 64);
-            this.cbEfectivenessWarning.Name = "cbEfectivenessWarning";
-            this.cbEfectivenessWarning.Size = new System.Drawing.Size(167, 17);
-            this.cbEfectivenessWarning.TabIndex = 16;
-            this.cbEfectivenessWarning.Text = "Warn about low effectiveness";
-            this.cbEfectivenessWarning.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(154, 87);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(121, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Minimum session length:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(331, 87);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "minutes";
+            // 
+            // sessionMinutesUpDown
+            // 
+            this.sessionMinutesUpDown.Location = new System.Drawing.Point(281, 83);
+            this.sessionMinutesUpDown.Name = "sessionMinutesUpDown";
+            this.sessionMinutesUpDown.Size = new System.Drawing.Size(44, 20);
+            this.sessionMinutesUpDown.TabIndex = 5;
             // 
             // FormSettings
             // 
@@ -313,6 +345,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionMinutesUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -343,5 +376,8 @@
         private System.Windows.Forms.TextBox textBoxJiraUrl;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox cbEfectivenessWarning;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown sessionMinutesUpDown;
     }
 }

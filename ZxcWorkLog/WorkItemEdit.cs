@@ -17,6 +17,7 @@ namespace ZxcWorkLog
             InitializeComponent();
 
             textBox1.Text = editedItem.Title;
+            textBox3.Text = editedItem.Notes;
             checkBox1.Checked = editedItem.WasWorkLogged;
             checkBox2.Checked = editedItem.IsDistributed;
             textBox2.Text = TimeUtil.ToReadableTime(editedItem.PeriodTicks);
@@ -25,6 +26,7 @@ namespace ZxcWorkLog
         private void Button1_Click(object sender, EventArgs e)
         {
             _editedItem.Title = textBox1.Text;
+            _editedItem.Notes = textBox3.Text;
             if (TimeUtil.ToReadableTime(_editedItem.PeriodTicks) != textBox2.Text)
             {
                 if (_editedItem.Title.IndexOf("*", StringComparison.Ordinal) != 0)
