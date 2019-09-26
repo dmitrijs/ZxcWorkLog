@@ -98,10 +98,9 @@ namespace ZxcWorkLog
                             string.Format("Work Item: {0}\n\nTime spent now: {1}\nTime spent total: {2}",
                                 itemInProgress.Title, TimeUtil.ToReadableTime(timeSpent), TimeUtil.ToReadableTime(timeTotal));
                         notifyIcon1.ShowBalloonTip(1, "Already In Progress", tipText, ToolTipIcon.Info);
-                        return;
                     }
 
-                    var wia = new WorkItemAdd(this);
+                    var wia = new WorkItemAdd(this, itemInProgress != null);
                     wia.Show();
                 }
                 if (e.Key == Keys.Home)
@@ -283,7 +282,7 @@ namespace ZxcWorkLog
                 }
                 if (wi.IsDistributed)
                 {
-                    wi.ForeColor = Color.LightSalmon;
+                    wi.ForeColor = Color.MediumPurple;
                 }
                 if (i == listItemId)
                 {
@@ -383,7 +382,7 @@ namespace ZxcWorkLog
             if (minimumSessionMinutes > 0 && timeSpent > TimeSpan.FromMinutes(3).Ticks && timeSpent < TimeSpan.FromMinutes((double)minimumSessionMinutes).Ticks)
             {
                 allowToStop = (MessageBox.Show(
-                    "You have not spent the recommended 40 minutes working.\n\nAre you sure you want to stop the timer?",
+                    $"You have not spent the minimum {minimumSessionMinutes} minutes working.\n\nAre you sure you want to stop the timer?",
                     "Are you sure?", MessageBoxButtons.YesNo) == DialogResult.Yes);
             }
             if (allowToStop) 
@@ -865,18 +864,15 @@ namespace ZxcWorkLog
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             Regex rgx = new Regex(@"\b[A-Z]{2,5}-\d{3,5}\b");
-            String s = "";
 
             foreach (ListViewItem selectedItem in listView1.SelectedItems)
             {
                 foreach (Match match in rgx.Matches(((WorkItem)selectedItem).Title))
                 {
-                    s += match.Value + " ";
+                    Clipboard.SetText(match.Value);
+                    return;
                 }
             }
-
-            s = s.Trim();
-            Clipboard.SetText(s);
         }
     }
 }

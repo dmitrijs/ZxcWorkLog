@@ -11,9 +11,12 @@ namespace ZxcWorkLog
     {
         private readonly FormMain _formMain;
 
-        public WorkItemAdd(FormMain formMain)
+        public bool IsItemInProgress { get; }
+
+        public WorkItemAdd(FormMain formMain, bool isItemInProgress)
         {
             _formMain = formMain;
+            IsItemInProgress = isItemInProgress;
             InitializeComponent();
         }
 
@@ -41,6 +44,11 @@ namespace ZxcWorkLog
             {
                 var item = (WorkItem) listViewItem;
                 comboBox1.Items.Add(TextUtil.GetFirstLine(item.Title));
+            }
+
+            if (IsItemInProgress)
+            {
+                checkBox1.Checked = checkBox1.Enabled = false;
             }
 
             var workDate = (DateTime.Now.Hour < 9 && DateTime.Now.Minute < 30) ? DateTime.Now.AddDays(-1) : DateTime.Now;
