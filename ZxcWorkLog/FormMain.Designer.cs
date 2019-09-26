@@ -58,6 +58,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerWorkRatio = new System.Windows.Forms.Timer(this.components);
             this.timerCheckForUpdates = new System.Windows.Forms.Timer(this.components);
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStripList.SuspendLayout();
             this.SuspendLayout();
@@ -174,12 +175,13 @@
             // contextMenuStripList
             // 
             this.contextMenuStripList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
             this.moveToGroupToolStripMenuItem,
             this.toolStripMenuItem2,
             this.markWorkLoggedToolStripMenuItem,
             this.add5MinutesToolStripMenuItem});
             this.contextMenuStripList.Name = "contextMenuStripList";
-            this.contextMenuStripList.Size = new System.Drawing.Size(171, 76);
+            this.contextMenuStripList.Size = new System.Drawing.Size(181, 120);
             this.contextMenuStripList.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripList_Opening);
             // 
             // moveToGroupToolStripMenuItem
@@ -187,20 +189,20 @@
             this.moveToGroupToolStripMenuItem.Enabled = false;
             this.moveToGroupToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.moveToGroupToolStripMenuItem.Name = "moveToGroupToolStripMenuItem";
-            this.moveToGroupToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.moveToGroupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.moveToGroupToolStripMenuItem.Text = "Move to group:";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(167, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
             // 
             // markWorkLoggedToolStripMenuItem
             // 
             this.markWorkLoggedToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.markWorkLoggedNowToolStripMenuItem});
             this.markWorkLoggedToolStripMenuItem.Name = "markWorkLoggedToolStripMenuItem";
-            this.markWorkLoggedToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.markWorkLoggedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.markWorkLoggedToolStripMenuItem.Text = "Mark work logged";
             this.markWorkLoggedToolStripMenuItem.Click += new System.EventHandler(this.markWorkLoggedToolStripMenuItem_Click);
             // 
@@ -216,7 +218,7 @@
             this.add5MinutesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.add5MinutesNowToolStripMenuItem});
             this.add5MinutesToolStripMenuItem.Name = "add5MinutesToolStripMenuItem";
-            this.add5MinutesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.add5MinutesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.add5MinutesToolStripMenuItem.Text = "Add 5 minutes";
             // 
             // add5MinutesNowToolStripMenuItem
@@ -280,6 +282,13 @@
             // 
             this.timerCheckForUpdates.Tick += new System.EventHandler(this.timerCheckForUpdates_Tick);
             // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem3.Text = "Copy task ID";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,6 +344,7 @@
         private System.Windows.Forms.Timer timerWorkRatio;
         private System.Windows.Forms.Timer timerCheckForUpdates;
         private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
     }
 }
 

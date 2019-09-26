@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using ZxcWorkLog.Data;
 using ZxcWorkLog.Properties;
@@ -859,6 +860,23 @@ namespace ZxcWorkLog
             {
                 MessageBox.Show("No updates were found.");
             }
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Regex rgx = new Regex(@"\b[A-Z]{2,5}-\d{3,5}\b");
+            String s = "";
+
+            foreach (ListViewItem selectedItem in listView1.SelectedItems)
+            {
+                foreach (Match match in rgx.Matches(((WorkItem)selectedItem).Title))
+                {
+                    s += match.Value + " ";
+                }
+            }
+
+            s = s.Trim();
+            Clipboard.SetText(s);
         }
     }
 }
